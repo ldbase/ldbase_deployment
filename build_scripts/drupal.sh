@@ -11,7 +11,7 @@ echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal-build-params.txt
 
 
 # Run updates & installations
-apt -y install apache2 php php-dev php-gd php-soap php-mysql php-mbstring composer > /root/drupal-dependencies.txt 2>&1
+apt -y install apache2 unzip php php-dev php-gd php-soap php-mysql php-mbstring php-zip composer > /root/drupal-dependencies.txt 2>&1
 
 
 # Configure MySQL
