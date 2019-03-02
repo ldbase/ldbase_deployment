@@ -519,7 +519,11 @@
             "Fn::Join": [
               "\n", [
                "#!/bin/bash \n",
+               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/timezone.sh \n",
+               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/update.sh \n",
                "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/bastion.sh -O /root/bastion.sh \n",
+               "sh /root/timezone.sh > /root/build-log.timezone.txt 2>&1"
+               "sh /root/update.sh > /root/build-log.update.txt 2>&1"
                "sh /root/bastion.sh > /root/build-log.txt 2>&1"
               ]
             ]
@@ -581,10 +585,14 @@
                "export DRUPAL_ADMIN_USER=", { "Ref" : "DrupalAdminUser" }, "\n",
                "export DRUPAL_ADMIN_PASS=", { "Ref" : "DrupalAdminPass" }, "\n",
                "export DRUPAL_ADMIN_EMAIL=", { "Ref" : "DrupalAdminEmail" }, "\n",
-               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/awsmount.sh \n",
+               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/mount.sh \n",
+               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/timezone.sh \n",
+               "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/awsmount.sh -O /root/update.sh \n",
                "wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/drupal.sh -O /root/drupal.sh \n",
-               "sh /root/awsmount.sh > /root/build-log.mount.txt 2>&1"
-               "sh /root/drupal.sh aws > /root/build-log.drupal.txt 2>&1"
+               "sh /root/mount.sh > /root/build-log.mount.txt 2>&1"
+               "sh /root/timezone.sh > /root/build-log.timezone.txt 2>&1"
+               "sh /root/update.sh > /root/build-log.update.txt 2>&1"
+               "sh /root/drupal.sh > /root/build-log.drupal.txt 2>&1"
               ]
             ]
           }
