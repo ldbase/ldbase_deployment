@@ -39,14 +39,27 @@ mysql --user="${DATABASE_ROOT_USER}" \
 	>> /root/mysql-setup.txt 2>&1
 
 
-# Install and configure Drupal
+# Set up Drupal codebase
 cd /var/www/html/
 rm index.html
-composer global require zaporylie/composer-drupal-optimizations
-composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+composer global require zaporylie/composer-drupal-optimizations >> /root/drupal-download.txt 2>&1
+composer create-project drupal-composer/drupal-project:8.x-dev drupal \
+	--stability dev --no-interaction \
+        >> /root/drupal-download.txt 2>&1
 echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /root/.bashrc
 echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 . /root/.bashrc
+
+
+# Pre-install missing dependencies
+cd /var/www/html/drupal
+composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/search_api_autocomplete >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
+
+
+# Install Drupal
 cd /var/www/html/drupal/web/profiles
 git clone https://github.com/ldbase/ldbase_profile
 cd /var/www/html/drupal
@@ -63,7 +76,8 @@ drupal site:install ldbase \
 	--account-name="${DRUPAL_ADMIN_USER}" \
 	--account-pass="${DRUPAL_ADMIN_PASS}" \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
-	--no-interaction
+	--no-interaction \
+        >> /root/drupal-installation.txt 2>&1
 drupal cache:rebuild
 
 
