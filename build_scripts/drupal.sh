@@ -47,8 +47,10 @@ composer create-project drupal-composer/drupal-project:8.x-dev drupal --stabilit
 echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /root/.bashrc
 echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 . /root/.bashrc
+cd /var/www/html/drupal/web/profiles
+git clone https://github.com/ldbase/ldbase_profile
 cd /var/www/html/drupal
-drupal site:install standard \
+drupal site:install ldbase \
 	--langcode="en" \
 	--db-type="mysql" \
 	--db-host="${DATABASE_ENDPOINT}" \
