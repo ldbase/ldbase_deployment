@@ -52,11 +52,18 @@ echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 
 
 # Pre-install missing dependencies
+if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api_autocomplete >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/webform >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/webform_views >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
+if [ -d /vagrant ]; then service mysql start; fi
 
 
 # Install Drupal
