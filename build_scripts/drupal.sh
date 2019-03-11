@@ -55,6 +55,7 @@ echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/simple_sitemap >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api_autocomplete >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
