@@ -39,6 +39,14 @@ mysql --user="${DATABASE_ROOT_USER}" \
 	>> /root/mysql-setup.txt 2>&1
 
 
+# Set up swapfile because composer is greedy
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+swapon -a /swapfile
+
+
 # Set up Drupal codebase
 cd /var/www/html/
 rm index.html
@@ -56,6 +64,7 @@ if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/simple_sitemap >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/metatag >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api_autocomplete >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
