@@ -10,10 +10,25 @@ echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal-build-params.txt
 echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal-build-params.txt
 
 
+# Set up swapfile because composer is greedy
+fallocate -l 1G /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
+swapon -a /swapfile
+
+
 # Run updates & installations
 apt -y install apache2 unzip \
-	php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl composer \
+	php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl \
 	> /root/drupal-dependencies.txt 2>&1
+
+
+# Install latest & greatest version of Composer
+cd /root
+curl -sS https://getcomposer.org/installer | php >> /root/composer-install.txt 2>&1
+mv composer.phar /usr/local/bin/composer >> /root/composer-install.txt 2>&1
+chmod +x /usr/local/bin/composer >> /root/composer-install.txt 2>&1
 
 
 # Configure MySQL
@@ -39,14 +54,6 @@ mysql --user="${DATABASE_ROOT_USER}" \
 	>> /root/mysql-setup.txt 2>&1
 
 
-# Set up swapfile because composer is greedy
-fallocate -l 1G /swapfile
-chmod 600 /swapfile
-mkswap /swapfile
-echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
-swapon -a /swapfile
-
-
 # Set up Drupal codebase
 cd /var/www/html/
 rm index.html
@@ -63,6 +70,7 @@ echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/backup_migrate >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/simple_sitemap >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/metatag >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
