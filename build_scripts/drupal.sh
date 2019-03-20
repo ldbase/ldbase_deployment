@@ -79,6 +79,7 @@ composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/group >> /root/composer-preinstalls.txt 2>&1
 composer require strawberryfield/strawberryfield >> /root/composer-preinstalls.txt 2>&1
 composer require strawberryfield/webform_strawberryfield >> /root/composer-preinstalls.txt 2>&1
 composer require strawberryfield/format_strawberryfield >> /root/composer-preinstalls.txt 2>&1
