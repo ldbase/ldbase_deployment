@@ -105,6 +105,7 @@ drupal site:install ldbase \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
         >> /root/drupal-installation.txt 2>&1
+drupal node:access:rebuild
 drupal cache:rebuild
 
 
