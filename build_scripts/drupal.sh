@@ -76,6 +76,9 @@ composer require drupal/metatag >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/search_api_autocomplete >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/facets >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/crop >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/better_exposed_filters >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/entity_reference_revisions >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
