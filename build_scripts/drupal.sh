@@ -83,6 +83,12 @@ composer require drupal/better_exposed_filters >> /root/composer-preinstalls.txt
 composer require drupal/entity_reference_revisions >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/fontawesome >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/fontyourface >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/juicerio >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/superfish >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/token >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/tvi >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/video_embed_field >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/views_infinite_scroll >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/inline_entity_form >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
