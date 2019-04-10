@@ -94,9 +94,6 @@ composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/group >> /root/composer-preinstalls.txt 2>&1
-composer require strawberryfield/strawberryfield >> /root/composer-preinstalls.txt 2>&1
-composer require strawberryfield/webform_strawberryfield >> /root/composer-preinstalls.txt 2>&1
-composer require strawberryfield/format_strawberryfield >> /root/composer-preinstalls.txt 2>&1
 if [ -d /vagrant ]; then service mysql start; fi
 
 
@@ -104,6 +101,8 @@ if [ -d /vagrant ]; then service mysql start; fi
 cd /var/www/html/drupal/web/profiles
 git clone https://github.com/ldbase/ldbase_profile
 cd /var/www/html/drupal
+echo "\$config_directories['sync'] = '/var/www/html/drupal/web/profiles/ldbase_profile/config/sync';" \
+	>> /var/www/html/drupal/web/sites/default/settings.php
 drupal site:install ldbase \
 	--langcode="en" \
 	--db-type="mysql" \
