@@ -70,6 +70,8 @@ echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /home/vagrant/.bashrc
 if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/webform >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/webform_views >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/backup_migrate >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/simple_sitemap >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/metatag >> /root/composer-preinstalls.txt 2>&1
@@ -101,7 +103,7 @@ if [ -d /vagrant ]; then service mysql start; fi
 cd /var/www/html/drupal/web/profiles
 git clone https://github.com/ldbase/ldbase_profile
 cd /var/www/html/drupal
-echo "\$config_directories['sync'] = '/var/www/html/drupal/web/profiles/ldbase_profile/config/sync';" \
+echo '$config_directories["sync"] = "/var/www/html/drupal/web/profiles/ldbase_profile/config/sync";' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 drupal site:install ldbase \
 	--langcode="en" \
@@ -118,8 +120,25 @@ drupal site:install ldbase \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
         >> /root/drupal-installation.txt 2>&1
-drupal node:access:rebuild
-drupal cache:rebuild
+
+
+# Post-install configurations
+cd /var/www/html/drupal; mkdir -p private_files/ldbase; chmod -R 777 private_files
+echo '$settings["file_private_path"] = "/var/www/html/drupal/private_files/ldbase";' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+echo '$settings["trusted_host_patterns"] = [' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+if [ -d /vagrant ]; then 
+	echo '"^localhost$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+else
+	echo '"^www\.ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+	echo '"^dev\.ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+fi
+echo '];' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
 
 
 # Configure Apache 
@@ -127,4 +146,9 @@ echo "AddHandler php5-script .php" >> /etc/apache2/apache2.conf
 echo "AddType text/html .php" >> /etc/apache2/apache2.conf
 sed -i -e 's/AllowOverride\ None/AllowOverride\ All/g' /etc/apache2/apache2.conf
 sed -i -e 's/\/var\/www\/html/\/var\/www\/html\/drupal\/web/g' /etc/apache2/sites-available/000-default.conf
+
+
+# Prepare for lift off 
+drupal node:access:rebuild
+drupal cache:rebuild
 service apache2 restart
