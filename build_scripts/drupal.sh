@@ -140,6 +140,10 @@ fi
 echo '];' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 
+cd /var/www/html/drupal/web/libraries
+git clone https://github.com/components/highlightjs
+mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js
+
 
 # Configure Apache 
 echo "AddHandler php5-script .php" >> /etc/apache2/apache2.conf
