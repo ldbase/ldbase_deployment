@@ -17,3 +17,7 @@ sh /vagrant/build_scripts/timezone.sh
 sh /vagrant/build_scripts/update.sh
 sh /vagrant/build_scripts/mysql.sh
 sh /vagrant/build_scripts/drupal.sh
+
+
+# Install bash helpers 
+cat /vagrant/build_scripts/bash.sh >> /root/.bashrc
