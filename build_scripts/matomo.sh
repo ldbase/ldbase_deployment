@@ -32,9 +32,13 @@ wget https://builds.matomo.org/matomo.zip
 unzip matomo.zip
 mv matomo /var/www/html/matomo
 cp /vagrant/build_scripts/matomo.config.ini.php /var/www/html/matomo/config/config.ini.php
-cd /var/www/html/
+git clone https://github.com/fsulib/IslandoraReports /var/www/html/matomo/plugins/IslandoraReports
+cd /var/www/html
 chown -R www-data:www-data matomo/
 chmod -R 775 matomo/
+
+
+# Add Matomo to Apache docroot
 cp /vagrant/build_scripts/matomo.conf /etc/apache2/conf-available/matomo.conf
 cp /vagrant/build_scripts/matomo.conf /etc/apache2/sites-available/matomo.conf
 cp /vagrant/build_scripts/matomo.conf /etc/apache2/sites-enabled/matomo.conf
