@@ -16,7 +16,8 @@ export DRUPAL_ADMIN_EMAIL="admin@admin.edu"
 sh /vagrant/build_scripts/timezone.sh
 sh /vagrant/build_scripts/update.sh
 sh /vagrant/build_scripts/mysql.sh
-sh /vagrant/build_scripts/drupal.sh
+sh /vagrant/build_scripts/drupal-build.sh
+sh /vagrant/build_scripts/drupal-config.sh
 sh /vagrant/build_scripts/matomo.sh
 
 

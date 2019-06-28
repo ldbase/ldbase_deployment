@@ -28,8 +28,8 @@ mysql --user="${DATABASE_ROOT_USER}" \
 
 # Install Matomo
 cd /root
-wget https://builds.matomo.org/matomo.zip
-unzip matomo.zip
+wget https://builds.matomo.org/matomo.zip >> /dev/null
+unzip matomo.zip >> /dev/null
 mv matomo /var/www/html/matomo
 cp /vagrant/build_scripts/matomo.config.ini.php /var/www/html/matomo/config/config.ini.php
 git clone https://github.com/fsulib/IslandoraReports /var/www/html/matomo/plugins/IslandoraReports
