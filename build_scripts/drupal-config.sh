@@ -53,14 +53,6 @@ composer require drupal/matomo >> /root/composer-preinstalls.txt 2>&1
 if [ -d /vagrant ]; then service mysql start; fi
 
 
-# Download JavaScript libraries
-cd /var/www/html/drupal/web/libraries
-git clone https://github.com/components/highlightjs
-mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js >> /dev/null 2>&1
-cd /var/www/html/drupal 
-/var/www/html/drupal/vendor/bin/drush webform:libraries:download >> /root/drupal-module-installation.txt 2>&1
-
-
 # Import LDbase configuration data
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config-set "system.site" uuid "6d3939a8-a52f-4862-a77a-176786dcad2a" -y >> /root/ldbase-system-config.txt 2>&1
@@ -68,6 +60,14 @@ cd /var/www/html/drupal/
 cd /root/
 git clone https://github.com/ldbase/ldbase_config
 /root/ldbase_config/bin/import.sh >> /root/ldbase-system-config.txt 2>&1
+
+
+# Download JavaScript libraries
+cd /var/www/html/drupal/web/libraries
+git clone https://github.com/components/highlightjs
+mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js >> /dev/null 2>&1
+cd /var/www/html/drupal 
+/var/www/html/drupal/vendor/bin/drush webform:libraries:download >> /root/drupal-module-installation.txt 2>&1
 
 
 # Prepare for lift off 
