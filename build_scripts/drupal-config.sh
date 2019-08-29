@@ -1,7 +1,13 @@
 # Post-install configurations
-cd /var/www/html/drupal; mkdir -p private_files/ldbase; chmod -R 777 private_files
+cd /var/www/html/drupal
+
+# Set up private file storage
+mkdir -p private_files/ldbase
+chmod -R 777 private_files
 echo '$settings["file_private_path"] = "/var/www/html/drupal/private_files/ldbase";' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
+
+# Set up trusted host patterns dynamically depending on VM status
 echo '$settings["trusted_host_patterns"] = [' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 if [ -d /vagrant ]; then 
@@ -15,7 +21,6 @@ else
 fi
 echo '];' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
-
 
 # Pre-install missing dependencies
 if [ -d /vagrant ]; then service mysql stop; fi
@@ -50,6 +55,12 @@ composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/group >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/matomo >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/address >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/pathauto >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/tokenuuid >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/collapsiblock >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/assetinjector >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/range >> /root/composer-preinstalls.txt 2>&1
 if [ -d /vagrant ]; then service mysql start; fi
 
 
