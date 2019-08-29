@@ -61,6 +61,8 @@ composer require drupal/tokenuuid >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/collapsiblock >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/assetinjector >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/range >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/context >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/redirect >> /root/composer-preinstalls.txt 2>&1
 if [ -d /vagrant ]; then service mysql start; fi
 
 
