@@ -1,18 +1,22 @@
 
 
 function git_set {
-  if [ "$1" = "b" ]
+  if [ "$1" = "bb" ]
   then
-	  echo "Setting git for Bryan"
-	  git config --global user.name "Bryan J. Brown"
-	  git config --global user.email "bjbrown@fsu.edu"
-  elif [ "$1" = "f" ]
+    echo "Setting git configurations for Bryan Brown"
+    git config --global user.name "Bryan J. Brown"
+    git config --global user.email "bjbrown@fsu.edu"
+  elif [ "$1" = "fc" ]
   then
-	  echo "Setting git for Favenzio"
-	  git config --global user.name "Favenzio Calvo"
-	  git config --global user.email "fcalvo@admin.fsu.edu"
+    echo "Setting git configurations for Favenzio Calvo"
+    git config --global user.name "Favenzio Calvo"
+    git config --global user.email "fcalvo@admin.fsu.edu"
+  elif [ "$1" = "ba" ]
+    echo "Setting git configurations for Brian Arsenault"
+    git config --global user.name "Brian Arsenault"
+    git config --global user.email "barsenault@fsu.edu"
   else
-	  echo "$1 is not a valid argument\n"
+    echo "$1 is not a valid argument\n"
   fi
   git config --list
 }
