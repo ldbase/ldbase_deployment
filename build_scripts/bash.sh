@@ -12,6 +12,7 @@ function git_set {
     git config --global user.name "Favenzio Calvo"
     git config --global user.email "fcalvo@admin.fsu.edu"
   elif [ "$1" = "ba" ]
+  then
     echo "Setting git configurations for Brian Arsenault"
     git config --global user.name "Brian Arsenault"
     git config --global user.email "barsenault@fsu.edu"
