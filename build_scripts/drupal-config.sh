@@ -67,6 +67,13 @@ composer require drupal/asset_injector >> /root/composer-preinstalls.txt 2>&1
 if [ -d /vagrant ]; then service mysql start; fi
 
 
+# Download LDbase custom module(s)
+cd /var/www/html/drupal/web/modules/
+mkdir custom
+cd custom
+git clone https://github.com/ldbase/ldbase_handlers.git
+
+
 # Import LDbase configuration data
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config-set "system.site" uuid "6d3939a8-a52f-4862-a77a-176786dcad2a" -y >> /root/ldbase-system-config.txt 2>&1
