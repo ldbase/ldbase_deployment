@@ -58,7 +58,7 @@ mysql --user="${DATABASE_ROOT_USER}" \
 cd /var/www/html/
 rm index.html
 composer global require zaporylie/composer-drupal-optimizations >> /root/drupal-download.txt 2>&1
-composer create-project drupal-composer/drupal-project:8.x-dev drupal \
+composer create-project drupal-composer/drupal-project:8.7-dev drupal \
 	--stability dev --no-interaction \
         >> /root/drupal-download.txt 2>&1
 echo "PATH=/var/www/html/drupal/vendor/bin/:$PATH" >> /root/.bashrc
