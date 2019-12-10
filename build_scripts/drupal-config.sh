@@ -27,7 +27,6 @@ if [ -d /vagrant ]; then service mysql stop; fi
 cd /var/www/html/drupal
 composer require drupal/devel >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/devel_php >> /root/composer-preinstalls.txt 2>&1
-composer require drupal/entity >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/webform >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/webform_views >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/honeypot >> /root/composer-preinstalls.txt 2>&1
