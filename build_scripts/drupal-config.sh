@@ -52,6 +52,7 @@ composer require drupal/inline_entity_form >> /root/composer-preinstalls.txt 2>&
 composer require drupal/paragraphs >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_reference_revisions >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/entity_usage >> /root/composer-preinstalls.txt 2>&1
+composer require drupal/gnode >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/rules >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/matomo >> /root/composer-preinstalls.txt 2>&1
 composer require drupal/address >> /root/composer-preinstalls.txt 2>&1
