@@ -86,8 +86,10 @@ git clone https://github.com/ldbase/ldbase_config
 cd /var/www/html/drupal/web/libraries
 git clone https://github.com/components/highlightjs
 mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js >> /dev/null 2>&1
-cd /var/www/html/drupal 
-/var/www/html/drupal/vendor/bin/drush webform:libraries:download >> /root/drupal-module-installation.txt 2>&1
+cd /var/www/html/drupal/web
+wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-1.x/libraries.zip
+unzip libraries.zip
+rm libraries.zip
 
 
 # Prepare for lift off 
