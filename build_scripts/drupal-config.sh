@@ -91,7 +91,7 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' >> /root/ldbase-system-config.txt 2>&1
 git clone https://github.com/ldbase/ldbase_config /root/ldbase_config
 /var/www/html/drupal/vendor/bin/drupal config:import --directory="/root/ldbase_config/" >> /root/ldbase-system-config.txt 2>&1
-#/var/www/html/drupal/vendor/bin/drupal ldbase:importTerms >> /root/ldbase-system-config.txt 2>&1
+/var/www/html/drupal/vendor/bin/drupal ldbase:importTerms >> /root/ldbase-system-config.txt 2>&1
 
 
 # Prepare for lift off 
