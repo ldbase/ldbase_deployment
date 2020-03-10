@@ -81,16 +81,16 @@ rm libraries.zip
 cd /var/www/html/drupal/web/modules/
 mkdir custom
 cd custom
-git clone https://github.com/ldbase/ldbase_handlers.git
-git clone https://github.com/ldbase/ldbase_content.git
+git clone https://github.com/ldbase/ldbase_handlers
+git clone https://github.com/ldbase/ldbase_content
+git clone https://github.com/ldbase/ldbase_config
 
 
 # Import LDbase configuration data
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config-set "system.site" uuid "6d3939a8-a52f-4862-a77a-176786dcad2a" -y >> /root/ldbase-system-config.txt 2>&1
 /var/www/html/drupal/vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' >> /root/ldbase-system-config.txt 2>&1
-git clone https://github.com/ldbase/ldbase_config /root/ldbase_config
-/var/www/html/drupal/vendor/bin/drupal config:import --directory="/root/ldbase_config/" >> /root/ldbase-system-config.txt 2>&1
+/var/www/html/drupal/vendor/bin/drupal config:import --directory='web/modules/custom/ldbase_config/' >> /root/ldbase-system-config.txt 2>&1
 /var/www/html/drupal/vendor/bin/drupal ldbase:importTerms >> /root/ldbase-system-config.txt 2>&1
 
 
