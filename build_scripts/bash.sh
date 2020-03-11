@@ -1,4 +1,6 @@
 
+# Custom bash extensions created by ldbase_deployment vagrant boot 
+alias ldbx="/var/www/html/drupal/vendor/bin/drush config:export --destination=/var/www/html/drupal/web/modules/custom/ldbase_config"
 
 function git_set {
   if [ "$1" = "bb" ]
