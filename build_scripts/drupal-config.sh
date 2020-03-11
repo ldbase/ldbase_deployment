@@ -84,6 +84,8 @@ cd custom
 git clone https://github.com/ldbase/ldbase_handlers
 git clone https://github.com/ldbase/ldbase_content
 git clone https://github.com/ldbase/ldbase_config
+cd /var/www/html/drupal/web/themes/
+git clone https://github.com/fsulib/portcullis
 
 
 # Import LDbase configuration data
