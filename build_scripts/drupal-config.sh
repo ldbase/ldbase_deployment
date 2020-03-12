@@ -22,6 +22,13 @@ fi
 echo '];' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 
+mkdir /root/.composer
+cp /vagrant/composer/auth.json /root/.composer/auth.json
+cd /var/www/html/drupal
+rm composer.*
+cp /vagrant/composer/composer.json /var/www/html/drupal/composer.json
+composer install >> /root/composer-reinstall.txt 2>&1
+
 
 # Download JavaScript libraries
 cd /var/www/html/drupal/web/libraries
@@ -34,11 +41,11 @@ rm libraries.zip
 
 
 # Import LDbase configuration data
-#cd /var/www/html/drupal/
-#/var/www/html/drupal/vendor/bin/drush config-set "system.site" uuid "6d3939a8-a52f-4862-a77a-176786dcad2a" -y >> /root/ldbase-system-config.txt 2>&1
-#/var/www/html/drupal/vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' >> /root/ldbase-system-config.txt 2>&1
-#/var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/modules/custom/ldbase_config/sync >> /root/ldbase-system-config.txt 2>&1
-#/var/www/html/drupal/vendor/bin/drupal ldbase:importTerms >> /root/ldbase-system-config.txt 2>&1
+cd /var/www/html/drupal/
+/var/www/html/drupal/vendor/bin/drush config-set "system.site" uuid "6d3939a8-a52f-4862-a77a-176786dcad2a" -y >> /root/ldbase-system-config.txt 2>&1
+/var/www/html/drupal/vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();' >> /root/ldbase-system-config.txt 2>&1
+/var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/modules/custom/ldbase_config/sync >> /root/ldbase-system-config.txt 2>&1
+/var/www/html/drupal/vendor/bin/drupal ldbase:importTerms >> /root/ldbase-system-config.txt 2>&1
 
 
 # Prepare for lift off 
