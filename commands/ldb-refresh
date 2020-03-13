@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo ""
+echo "Refreshing LDbase..."
+echo ""
+
+echo ""
+echo "Rebuilding Drupal database..."
+composer database:drop --no-interaction
+sh ../build/drupal-core-config.sh
+
+echo ""
+echo "Updating LDbase custom modules..."
+sh ../build/ldbase-custom-codebase-update.sh
+
+echo ""
+echo "Updating LDbase system configuration..."
+sh ../build/drupal-custom-system-config.sh
+
+echo ""
+echo "Done. LDbase refreshed."
