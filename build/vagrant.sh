@@ -13,13 +13,16 @@ export DRUPAL_ADMIN_EMAIL="admin@admin.edu"
 
 
 # Install components
-sh /vagrant/build_scripts/timezone.sh
-sh /vagrant/build_scripts/update.sh
-sh /vagrant/build_scripts/mysql.sh
-sh /vagrant/build_scripts/drupal-build.sh
-sh /vagrant/build_scripts/drupal-config.sh
-sh /vagrant/build_scripts/matomo.sh
+sh /vagrant/build/timezone.sh
+sh /vagrant/build/swap.sh
+sh /vagrant/build/osdeps-install.sh
+sh /vagrant/build/mysql-install.sh
+sh /vagrant/build/drupal-mysql-config.sh
+sh /vagrant/build/drupal-apache-config.sh
+sh /vagrant/build/drupal-install.sh
+sh /vagrant/build/drupal-load-config.sh
+sh /vagrant/build/matomo-install.sh
 
 
 # Install bash helpers 
-cat /vagrant/build_scripts/bash.sh >> /root/.bashrc
+cat /vagrant/assets/bash.sh >> /root/.bashrc
