@@ -23,10 +23,10 @@ echo '];' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 
 mkdir /root/.composer
-cp /vagrant/composer/auth.json /root/.composer/auth.json
+wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
 cd /var/www/html/drupal
 rm composer.*
-cp /vagrant/composer/composer.json /var/www/html/drupal/composer.json
+wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/build_scripts/composer.json
 composer install >> /root/composer-reinstall.txt 2>&1
 
 
