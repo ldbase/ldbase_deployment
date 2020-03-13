@@ -1,3 +1,5 @@
+echo "drupal-mysql-config.sh started." >> /root/build-process.txt
+
 # Record build parameters
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-mysql-config.txt
 echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/drupal-mysql-config.txt
@@ -28,3 +30,5 @@ mysql --user="${DATABASE_ROOT_USER}" \
 	--execute="FLUSH PRIVILEGES;" \
 	>> /root/drupal-mysql-config.txt 2>&1
 service mysql restart >> /root/drupal-mysql-config.txt 2>&1
+
+echo "drupal-mysql-config.sh completed." >> /root/build-process.txt

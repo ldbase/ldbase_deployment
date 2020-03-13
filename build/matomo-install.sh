@@ -1,3 +1,5 @@
+echo "matomo-install.sh started." >> /root/build-process.txt
+
 # Save build parameters
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/matomo-install.txt
 echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/matomo-install.txt
@@ -5,6 +7,7 @@ echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/matomo-install.txt
 
 
 # Configure MySQL
+echo "Matomo MySQL configuration started." >> /root/build-process.txt
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
@@ -30,9 +33,11 @@ mysql --user="${DATABASE_ROOT_USER}" \
 	--host="${DATABASE_ENDPOINT}" \
 	matomodb < /vagrant/assets/matomo.sql \
 	>> /root/matomo-install.txt 2>&1
+echo "Matomo MySQL configuration completed." >> /root/build-process.txt
 
 
 # Install Matomo
+echo "Matomo installation started." >> /root/build-process.txt
 cd /root
 wget https://builds.matomo.org/matomo.zip >> /dev/null
 unzip matomo.zip >> /dev/null
@@ -49,3 +54,6 @@ cp /vagrant/assets/matomo.conf /etc/apache2/conf-available/matomo.conf
 cp /vagrant/assets/matomo.conf /etc/apache2/sites-available/matomo.conf
 cp /vagrant/assets/matomo.conf /etc/apache2/sites-enabled/matomo.conf
 service apache2 restart
+echo "Matomo installation completed." >> /root/build-process.txt
+
+echo "matomo-install.sh completed." >> /root/build-process.txt

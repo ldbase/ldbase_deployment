@@ -1,3 +1,5 @@
+echo "drupal-core-config.sh started." >> /root/build-process.txt
+
 # Record build parameters
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-build-params.txt
 echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal-install.txt
@@ -23,3 +25,5 @@ drupal site:install standard \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
         >> /root/drupal-install.txt 2>&1
+
+echo "drupal-core-config.sh completed." >> /root/build-process.txt
