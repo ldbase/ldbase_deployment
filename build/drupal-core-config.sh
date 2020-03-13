@@ -11,7 +11,7 @@ echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal-install.txt
 
 # Install Drupal
 cd /var/www/html/drupal
-drupal site:install standard \
+/var/www/html/drupal/vendor/bin/drupal site:install standard \
 	--langcode="en" \
 	--db-type="mysql" \
 	--db-host="${DATABASE_ENDPOINT}" \
