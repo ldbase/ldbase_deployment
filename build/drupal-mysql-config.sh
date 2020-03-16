@@ -4,7 +4,7 @@ echo "drupal-mysql-config.sh started." >> /root/build-process.txt
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-mysql-config.txt
 echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/drupal-mysql-config.txt
 echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/drupal-mysql-config.txt
-echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /drupal-mysql-config.txt
+echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal-mysql-config.txt
 echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal-mysql-config.txt
 
 

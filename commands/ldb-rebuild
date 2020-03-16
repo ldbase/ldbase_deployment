@@ -14,14 +14,14 @@ mysql --user="${DATABASE_ROOT_USER}" \
 
 echo ""
 echo "Rebuilding Drupal..."
-sh ../build/drupal-mysql-config.sh
-sh ../build/drupal-core-download.sh
-sh ../build/drupal-core-config.sh
+sh /root/ldbase_deployment/build/drupal-mysql-config.sh
+sh /root/ldbase_deployment/build/drupal-core-download.sh
+sh /root/ldbase_deployment/build/drupal-core-config.sh
 
 echo ""
 echo "Configuring LDbase..."
-sh ../build/drupal-custom-codebase-config.sh
-sh ../build/drupal-custom-system-config.sh
+sh /root/ldbase_deployment/build/drupal-custom-codebase-config.sh
+sh /root/ldbase_deployment/build/drupal-custom-system-config.sh
 
 echo ""
 echo "Done. LDbase rebuilt."

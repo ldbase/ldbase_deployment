@@ -30,6 +30,11 @@
             "url": "git@github.com:ldbase/ldbase_config.git"
         },
         {
+	    "name": "ldbase/ldbase_deployment",
+            "type": "vcs",
+            "url": "git@github.com:ldbase/ldbase_deployment.git"
+        },
+        {
 	    "name": "fsulib/portcullis",
             "type": "vcs",
             "url": "git@github.com:fsulib/portcullis.git"
@@ -90,6 +95,7 @@
 	"ldbase/ldbase_handlers": "dev-master",
 	"ldbase/ldbase_content": "dev-master",
 	"ldbase/ldbase_config": "dev-master"
+	"ldbase/ldbase_deployment": "dev-master"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"

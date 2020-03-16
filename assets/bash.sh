@@ -1,7 +1,7 @@
 
 
 # Custom bash extensions created by ldbase_deployment vagrant boot 
-PATH=/var/www/html/drupal/vendor/bin/:$PATH
+PATH=/var/www/html/drupal/web/libraries/ldbase_deployment/commands/:/var/www/html/drupal/vendor/bin/:$PATH
 
 alias ldbi="/var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync"
 alias ldbx="/var/www/html/drupal/vendor/bin/drush config:export --destination=/var/www/html/drupal/web/libraries/ldbase_config/sync"

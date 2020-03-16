@@ -6,16 +6,17 @@ echo ""
 
 echo ""
 echo "Rebuilding Drupal database..."
-composer database:drop --no-interaction
-sh ../build/drupal-core-config.sh
+cd /var/www/html/drupal
+/var/www/html/drupal/vendor/bin/drupal database:drop --no-interaction
+sh /root/ldbase_deployment/build/drupal-core-config.sh
 
 echo ""
 echo "Updating LDbase custom modules..."
-sh ../build/ldbase-custom-codebase-update.sh
+sh /root/ldbase_deployment/build/ldbase-custom-codebase-update.sh
 
 echo ""
 echo "Updating LDbase system configuration..."
-sh ../build/drupal-custom-system-config.sh
+sh /root/ldbase_deployment/build/drupal-custom-system-config.sh
 
 echo ""
 echo "Done. LDbase refreshed."
