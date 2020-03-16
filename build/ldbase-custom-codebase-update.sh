@@ -1,5 +1,7 @@
 # Update custom modules related to LDbase
-composer update \
+cd /ldbase_deployment; git pull
+
+cd /var/www/html/drupal; composer update \
 	fsulib/portcullis \
 	ldbase/ldbase_content \
         ldbase/ldbase_handlers \

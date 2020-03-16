@@ -6224,53 +6224,6 @@
             "time": "2020-03-13T01:39:48+00:00"
         },
         {
-            "name": "ldbase/ldbase_deployment",
-            "version": "dev-aws-rebuild",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ldbase/ldbase_deployment.git",
-                "reference": "48b8a1dc5792bad0693216174d8c9dd13f5af674"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_deployment/zipball/48b8a1dc5792bad0693216174d8c9dd13f5af674",
-                "reference": "48b8a1dc5792bad0693216174d8c9dd13f5af674",
-                "shasum": ""
-            },
-            "type": "drupal-library",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Bryan J. Brown",
-                    "email": "bjbrown@fsu.edu",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Brian Arsenault",
-                    "email": "barsenault@fsu.edu",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Favenzio Calvo",
-                    "email": "fcalvo@fsu.edu",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Build scripts for the LDbase project",
-            "homepage": "https://github.com/ldbase/ldbase_deployment",
-            "keywords": [
-                "Drupal",
-                "LDbase"
-            ],
-            "support": {
-                "source": "https://github.com/ldbase/ldbase_deployment/tree/aws-rebuild",
-                "issues": "https://github.com/ldbase/ldbase_deployment/issues"
-            },
-            "time": "2020-03-16T20:19:41+00:00"
-        },
-        {
             "name": "ldbase/ldbase_handlers",
             "version": "dev-master",
             "source": {

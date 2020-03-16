@@ -19,11 +19,15 @@ echo "apt installations completed." >> /root/build-process.txt
 
 # Install latest & greatest version of Composer
 echo "composer installation started." >> /root/build-process.txt
-cd /root
-curl -sS https://getcomposer.org/installer | php >> /root/osdeps-install.txt 2>&1
+cd /root; curl -sS https://getcomposer.org/installer | php >> /root/osdeps-install.txt 2>&1
 mv composer.phar /usr/local/bin/composer >> /root/osdeps-install.txt 2>&1
 chmod +x /usr/local/bin/composer >> /root/osdeps-install.txt 2>&1
 /usr/local/bin/composer global require zaporylie/composer-drupal-optimizations >> /root/osdeps-install.txt 2>&1
 echo "composer installation completed." >> /root/build-process.txt
+
+echo "Cloning ldbase_deployment to /." >> /root/build-process.txt
+cd /; git clone https://github.com/ldbase/ldbase_deployment
+cd /ldbase_deployment; git checkout aws-rebuild
+echo "ldbase_deployment cloned to /." >> /root/build-process.txt
 
 echo "osdeps-install.sh completed." >> /root/build-process.txt

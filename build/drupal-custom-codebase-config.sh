@@ -32,9 +32,9 @@ wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
 
 cd /var/www/html/drupal
 rm composer.*
-cp /var/www/html/drupal/web/libraries/ldbase_deployment/assets/composer.* .
+cp /ldbase_deployment/assets/composer.* .
 composer install >> /root/composer-reinstall.txt 2>&1
-sh /var/www/html/drupal/web/libraries/ldbase_deployment/build/ldbase-custom-codebase-update.sh >> /root/composer-update.txt 2>&1
+sh /ldbase_deployment/build/ldbase-custom-codebase-update.sh >> /root/composer-update.txt 2>&1
 echo "Composer reinstallation completed." >> /root/build-process.txt
 
 
