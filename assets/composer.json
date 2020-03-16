@@ -94,8 +94,8 @@
 	"fsulib/portcullis": "dev-master",
 	"ldbase/ldbase_handlers": "dev-master",
 	"ldbase/ldbase_content": "dev-master",
-	"ldbase/ldbase_config": "dev-master"
-	"ldbase/ldbase_deployment": "dev-master"
+	"ldbase/ldbase_config": "dev-master",
+	"ldbase/ldbase_deployment": "dev-aws-rebuild"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"
