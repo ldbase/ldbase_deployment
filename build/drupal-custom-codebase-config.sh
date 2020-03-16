@@ -26,12 +26,15 @@ echo '];' \
 
 # Install LDbase dependencies from customized composer.json
 echo "Composer reinstallation started." >> /root/build-process.txt
+cd /root/
+git clone https://github.com/ldbase/ldbase_deployment
+cd /root/ldbase_deployment; git checkout aws-rebuild
 mkdir /root/.composer
 cd /root/.composer/
 wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
 cd /var/www/html/drupal
 rm composer.*
-wget https://raw.githubusercontent.com/ldbase/ldbase_deployment/master/assets/composer.json
+cp /root/ldbase_deployment/assets/composer.json .
 composer install >> /root/composer-reinstall.txt 2>&1
 echo "Composer reinstallation completed." >> /root/build-process.txt
 
@@ -47,4 +50,4 @@ unzip libraries.zip
 rm libraries.zip
 echo "Javascript libraries download completed." >> /root/build-process.txt
 
-echo "drupal-custom-codebase-config.sh started." >> /root/build-process.txt
+echo "drupal-custom-codebase-config.sh completed." >> /root/build-process.txt

@@ -10,12 +10,15 @@ cd /var/www/html/drupal/
 echo "LDbase configuration inload completed." >> /root/build-process.txt
 
 # Prepare for lift off 
-echo "Service and Drupal Cron reload started." >> /root/build-process.txt
+echo "HTTPD and MySQL restarting." >> /root/build-process.txt
 service apache2 restart
 service mysql restart
+echo "HTTPD and MySQL restarted." >> /root/build-process.txt
+
+echo "Rebuilding Drupal caches." >> /root/build-process.txt
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
 /var/www/html/drupal/vendor/bin/drupal cache:rebuild
-echo "Service and Drupal Cron reload completed." >> /root/build-process.txt
+echo "Drupal caches rebuilt." >> /root/build-process.txt
 
 echo "drupal-custom-system-config.sh completed." >> /root/build-process.txt

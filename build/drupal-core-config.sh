@@ -1,7 +1,7 @@
 echo "drupal-core-config.sh started." >> /root/build-process.txt
 
 # Record build parameters
-echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-build-params.txt
+echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-install.txt
 echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal-install.txt
 echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal-install.txt
 echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal-install.txt
