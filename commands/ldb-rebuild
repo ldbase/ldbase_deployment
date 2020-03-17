@@ -18,3 +18,4 @@ sh /ldbase_deployment/build/drupal-custom-system-config.sh
 
 echo ""
 echo "Done. LDbase rebuilt."
+echo "A new admin password has been automatically generated, find it at /root/u1p.txt."
