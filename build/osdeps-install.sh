@@ -30,7 +30,6 @@ mkdir /root/.composer
 cd /root/.composer/
 wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
 cd /; git clone https://github.com/ldbase/ldbase_deployment
-cd /ldbase_deployment; git checkout aws-rebuild
 echo "ldbase_deployment cloned to /." >> /root/build-process.txt
 
 echo "osdeps-install.sh completed." >> /root/build-process.txt
