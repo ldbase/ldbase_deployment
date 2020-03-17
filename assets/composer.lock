@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e97b879e553062b27e51158d9f8b1cc",
+    "content-hash": "1f3e1b5f83cf8da85eb5e8ffbea23382",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -6135,12 +6135,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "971c3843614f5fc9a7aeceb17f09ef7d0e7bb1c4"
+                "reference": "04a1b7c7b9a1c8038db1c2ea12c86ce66771afaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/971c3843614f5fc9a7aeceb17f09ef7d0e7bb1c4",
-                "reference": "971c3843614f5fc9a7aeceb17f09ef7d0e7bb1c4",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/04a1b7c7b9a1c8038db1c2ea12c86ce66771afaa",
+                "reference": "04a1b7c7b9a1c8038db1c2ea12c86ce66771afaa",
                 "shasum": ""
             },
             "type": "drupal-library",
@@ -6174,7 +6174,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2020-03-16T18:50:33+00:00"
+            "time": "2020-03-16T21:35:27+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -12316,8 +12316,7 @@
         "fsulib/portcullis": 20,
         "ldbase/ldbase_handlers": 20,
         "ldbase/ldbase_content": 20,
-        "ldbase/ldbase_config": 20,
-        "ldbase/ldbase_deployment": 20
+        "ldbase/ldbase_config": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
