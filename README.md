@@ -1,4 +1,5 @@
 # ldbase_deployment
+Scripts for provisioning a fresh LDbase instance
 
 ## Commands
 Once inside a running VM, change to the super user with `sudo su` to execute any of provided commands, which live in the `ldbase_deployment/commands/` directory and are automatically added to the root user's `$PATH` by `ldbase_deployment/assets/bash.sh` during the build process.
