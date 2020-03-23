@@ -39,8 +39,11 @@ echo "Javascript libraries download started." >> /root/build-process.txt
 cd /var/www/html/drupal/web/libraries
 git clone https://github.com/components/highlightjs
 mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js >> /dev/null 2>&1
+mkdir jquery-ui-slider-pips; cd jquery-ui-slider-pips; mkdir dist; cd dist;
+wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.css >> /dev/null 2>&1
+wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.js >> /dev/null 2>&1
 cd /var/www/html/drupal/web
-wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-1.x/libraries.zip
+wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-1.x/libraries.zip >> /dev/null 2>&1
 unzip libraries.zip
 rm libraries.zip
 echo "Javascript libraries download completed." >> /root/build-process.txt
