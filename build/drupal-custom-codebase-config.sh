@@ -45,4 +45,9 @@ unzip libraries.zip
 rm libraries.zip
 echo "Javascript libraries download completed." >> /root/build-process.txt
 
+# Make Portcullis owned by Vagrant so NetBeans doesn't yell at Favenzio
+if [ -d /vagrant ]; then 
+  chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis
+fi
+
 echo "drupal-custom-codebase-config.sh completed." >> /root/build-process.txt
