@@ -28,7 +28,7 @@ echo '];' \
 echo "Composer reinstallation started." >> /root/build-process.txt
 cd /var/www/html/drupal
 rm composer.*
-cp /ldbase_deployment/assets/composer.* .
+cp /ldbase_deployment/assets/composer.json .
 composer install >> /root/composer-reinstall.txt 2>&1
 sh /ldbase_deployment/build/ldbase-custom-codebase-update.sh >> /root/composer-update.txt 2>&1
 echo "Composer reinstallation completed." >> /root/build-process.txt

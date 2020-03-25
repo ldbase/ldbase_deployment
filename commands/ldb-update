@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo ""
+echo "Updating LDbase modules and configuration..."
+echo ""
+
+echo ""
+echo "Updating all LDbase modules and configuration..."
+sh /ldbase_deployment/build/ldbase-custom-codebase-update
+cd /var/www/html/drupal
+/var/www/html/drupal/vendor/bin/drush config:export --destination=/var/www/html/drupal/web/libraries/ldbase_config/sync
+
+echo ""
+echo "Done. LDbase modules and configuration updated."
