@@ -28,3 +28,4 @@ sh /vagrant/build/matomo-install.sh
 
 # Install bash helpers 
 cat /vagrant/assets/bash.sh >> /root/.bashrc
+cat /vagrant/assets/.vimrc >> /root/.vimrc
