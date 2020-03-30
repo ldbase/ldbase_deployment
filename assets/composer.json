@@ -15,22 +15,27 @@
             "url": "https://packages.drupal.org/8"
         },
         {
-	    "name": "ldbase/ldbase_handlers",
+            "name": "ldbase/ldbase_handlers",
             "type": "vcs",
             "url": "git@github.com:ldbase/ldbase_handlers.git"
         },
         {
-	    "name": "ldbase/ldbase_content",
+            "name": "ldbase/ldbase_content",
             "type": "vcs",
             "url": "git@github.com:ldbase/ldbase_content.git"
         },
         {
-	    "name": "ldbase/ldbase_config",
+            "name": "ldbase/ldbase_config",
             "type": "vcs",
             "url": "git@github.com:ldbase/ldbase_config.git"
         },
         {
-	    "name": "fsulib/portcullis",
+            "name": "fsulib/embargoes",
+            "type": "vcs",
+            "url": "git@github.com:fsulib/embargoes.git"
+        },
+        {
+            "name": "fsulib/portcullis",
             "type": "vcs",
             "url": "git@github.com:fsulib/portcullis.git"
         }
@@ -62,6 +67,7 @@
         "drupal/image_widget_crop": "^2.2",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/juicerio": "^1.0@alpha",
+        "drupal/masquerade": "^2.0",
         "drupal/matomo": "^1.9",
         "drupal/menu_token": "^1.0@alpha",
         "drupal/metatag": "^1.11",
@@ -86,10 +92,11 @@
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0",
-	"fsulib/portcullis": "dev-master",
-	"ldbase/ldbase_handlers": "dev-master",
-	"ldbase/ldbase_content": "dev-master",
-	"ldbase/ldbase_config": "dev-master"
+        "fsulib/portcullis": "dev-master",
+        "fsulib/embargoes": "dev-master",
+        "ldbase/ldbase_handlers": "dev-master",
+        "ldbase/ldbase_content": "dev-master",
+        "ldbase/ldbase_config": "dev-master"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"
