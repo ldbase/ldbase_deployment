@@ -12,7 +12,7 @@ echo "apt upgrade completed." >> /root/build-process.txt
 # Run updates & installations
 echo "apt installations started." >> /root/build-process.txt
 apt -y install apache2 unzip \
-	php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl \
+	php7.2 php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl \
 	>> /root/osdeps-install.txt 2>&1
 service apache2 restart >> /root/osdeps-install.txt 2>&1
 echo "apt installations completed." >> /root/build-process.txt
