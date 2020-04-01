@@ -75,7 +75,7 @@ Plugins[] = "ProfessionalServices"
 Plugins[] = "UserId"
 Plugins[] = "CustomPiwikJs"
 Plugins[] = "Tour"
-Plugins[] = "IslandoraReports"
+Plugins[] = "LDbaseReports"
 
 [PluginsInstalled]
 PluginsInstalled[] = "Diagnostics"
