@@ -43,7 +43,7 @@ wget https://builds.matomo.org/matomo.zip >> /dev/null
 unzip matomo.zip >> /dev/null
 mv matomo /var/www/html/matomo
 cp /vagrant/assets/matomo.config.ini.php /var/www/html/matomo/config/config.ini.php
-git clone https://github.com/fsulib/IslandoraReports /var/www/html/matomo/plugins/IslandoraReports
+git clone https://github.com/ldbase/LDbaseReports /var/www/html/matomo/plugins/LDbaseReports
 cd /var/www/html
 chown -R www-data:www-data matomo/
 chmod -R 775 matomo/
