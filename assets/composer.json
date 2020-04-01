@@ -88,6 +88,7 @@
         "drupal/views_infinite_scroll": "^1.6",
         "drupal/webform": "^5.8",
         "drupal/webform_views": "^5.0@alpha",
+        "drupal/registration_link": "^2.3",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
