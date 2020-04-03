@@ -89,6 +89,7 @@
         "drupal/webform": "^5.8",
         "drupal/webform_views": "^5.0@alpha",
         "drupal/registration_link": "^2.3",
+        "drupal/eva": "^2.0",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
