@@ -43,6 +43,38 @@ INSERT INTO `matomo_access` VALUES (1,'anonymous',1,'view');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `matomo_archive_numeric_2020_04`
+--
+
+DROP TABLE IF EXISTS `matomo_archive_numeric_2020_04`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `matomo_archive_numeric_2020_04` (
+  `idarchive` int(10) unsigned NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `idsite` int(10) unsigned DEFAULT NULL,
+  `date1` date DEFAULT NULL,
+  `date2` date DEFAULT NULL,
+  `period` tinyint(3) unsigned DEFAULT NULL,
+  `ts_archived` datetime DEFAULT NULL,
+  `value` double DEFAULT NULL,
+  PRIMARY KEY (`idarchive`,`name`),
+  KEY `index_idsite_dates_period` (`idsite`,`date1`,`date2`,`period`,`ts_archived`),
+  KEY `index_period_archived` (`period`,`ts_archived`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `matomo_archive_numeric_2020_04`
+--
+
+LOCK TABLES `matomo_archive_numeric_2020_04` WRITE;
+/*!40000 ALTER TABLE `matomo_archive_numeric_2020_04` DISABLE KEYS */;
+INSERT INTO `matomo_archive_numeric_2020_04` VALUES (1,'done',1,'2020-04-02','2020-04-02',1,'2020-04-03 18:18:39',1);
+/*!40000 ALTER TABLE `matomo_archive_numeric_2020_04` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `matomo_brute_force_log`
 --
 
@@ -133,7 +165,7 @@ DROP TABLE IF EXISTS `matomo_log_action`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `matomo_log_action` (
   `idaction` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` text,
+  `name` varchar(4096) DEFAULT NULL,
   `hash` int(10) unsigned NOT NULL,
   `type` tinyint(3) unsigned DEFAULT NULL,
   `url_prefix` tinyint(2) DEFAULT NULL,
@@ -169,7 +201,7 @@ CREATE TABLE `matomo_log_conversion` (
   `buster` int(10) unsigned NOT NULL,
   `idorder` varchar(100) DEFAULT NULL,
   `items` smallint(5) unsigned DEFAULT NULL,
-  `url` text NOT NULL,
+  `url` varchar(4096) NOT NULL,
   `visitor_days_since_first` smallint(5) unsigned DEFAULT NULL,
   `visitor_days_since_order` smallint(5) unsigned DEFAULT NULL,
   `visitor_returning` tinyint(1) DEFAULT NULL,
@@ -466,7 +498,7 @@ CREATE TABLE `matomo_option` (
 
 LOCK TABLES `matomo_option` WRITE;
 /*!40000 ALTER TABLE `matomo_option` DISABLE KEYS */;
-INSERT INTO `matomo_option` VALUES ('install_version','3.9.1',0),('MobileMessaging_DelegatedManagement','false',0),('PrivacyManager.doNotTrackEnabled','1',0),('PrivacyManager.ipAnonymizerEnabled','1',0),('SitesManager_DefaultTimezone','America/New_York',0),('UpdateCheck_LastTimeChecked','1585661041',1),('UpdateCheck_LatestVersion','3.13.4',0),('useridsalt','J8DgkHS$$0j1YuWDkZdMD05xtUgW_swrE9dodvbU',1),('UsersManager.lastSeen.matomo','1557427690',1),('version_Actions','3.13.4',1),('version_Annotations','3.13.4',1),('version_API','3.13.4',1),('version_BulkTracking','3.13.4',1),('version_Contents','3.13.4',1),('version_core','3.13.4',1),('version_CoreAdminHome','3.13.4',1),('version_CoreConsole','3.13.4',1),('version_CoreHome','3.13.4',1),('version_CorePluginsAdmin','3.13.4',1),('version_CoreUpdater','3.13.4',1),('version_CoreVisualizations','3.13.4',1),('version_CustomPiwikJs','3.13.4',1),('version_CustomVariables','3.13.4',1),('version_Dashboard','3.13.4',1),('version_DevicePlugins','3.13.4',1),('version_DevicesDetection','3.13.4',1),('version_Diagnostics','3.13.4',1),('version_Ecommerce','3.13.4',1),('version_Events','3.13.4',1),('version_ExampleAPI','3.13.4',1),('version_ExamplePlugin','3.13.4',1),('version_Feedback','3.13.4',1),('version_GeoIp2','3.13.4',1),('version_Goals','3.13.4',1),('version_Heartbeat','3.13.4',1),('version_ImageGraph','3.13.4',1),('version_Insights','3.13.4',1),('version_Installation','3.13.4',1),('version_Intl','3.13.4',1),('version_IntranetMeasurable','3.13.4',1),('version_IslandoraReports','0.1.0',1),('version_LanguagesManager','3.13.4',1),('version_Live','3.13.4',1),('version_Login','3.13.4',1),('version_log_conversion.revenue','float default NULL',1),('version_log_conversion.revenue_discount','float default NULL',1),('version_log_conversion.revenue_shipping','float default NULL',1),('version_log_conversion.revenue_subtotal','float default NULL',1),('version_log_conversion.revenue_tax','float default NULL',1),('version_log_link_visit_action.idaction_content_interaction','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_name','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_piece','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_target','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_event_action','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_event_category','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_name','INTEGER(10) UNSIGNED',1),('version_log_link_visit_action.idaction_url','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idpageview','CHAR(6) NULL DEFAULT NULL',1),('version_log_link_visit_action.interaction_position','SMALLINT UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.server_time','DATETIME NOT NULL',1),('version_log_link_visit_action.time_spent_ref_action','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.config_browser_engine','VARCHAR(10) NULL',1),('version_log_visit.config_browser_name','VARCHAR(10) NULL',1),('version_log_visit.config_browser_version','VARCHAR(20) NULL',1),('version_log_visit.config_cookie','TINYINT(1) NULL',1),('version_log_visit.config_device_brand','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL1',1),('version_log_visit.config_device_model','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL1',1),('version_log_visit.config_device_type','TINYINT( 100 ) NULL DEFAULT NULL1',1),('version_log_visit.config_director','TINYINT(1) NULL',1),('version_log_visit.config_flash','TINYINT(1) NULL',1),('version_log_visit.config_gears','TINYINT(1) NULL',1),('version_log_visit.config_java','TINYINT(1) NULL',1),('version_log_visit.config_os','CHAR(3) NULL',1),('version_log_visit.config_os_version','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL',1),('version_log_visit.config_pdf','TINYINT(1) NULL',1),('version_log_visit.config_quicktime','TINYINT(1) NULL',1),('version_log_visit.config_realplayer','TINYINT(1) NULL',1),('version_log_visit.config_resolution','VARCHAR(18) NULL',1),('version_log_visit.config_silverlight','TINYINT(1) NULL',1),('version_log_visit.config_windowsmedia','TINYINT(1) NULL',1),('version_log_visit.location_browser_lang','VARCHAR(20) NULL',1),('version_log_visit.location_city','varchar(255) DEFAULT NULL1',1),('version_log_visit.location_country','CHAR(3) NULL1',1),('version_log_visit.location_latitude','decimal(9, 6) DEFAULT NULL1',1),('version_log_visit.location_longitude','decimal(9, 6) DEFAULT NULL1',1),('version_log_visit.location_region','char(3) DEFAULT NULL1',1),('version_log_visit.referer_keyword','VARCHAR(255) NULL1',1),('version_log_visit.referer_name','VARCHAR(70) NULL1',1),('version_log_visit.referer_type','TINYINT(1) UNSIGNED NULL1',1),('version_log_visit.referer_url','TEXT NULL',1),('version_log_visit.user_id','VARCHAR(200) NULL',1),('version_log_visit.visitor_count_visits','INT(11) UNSIGNED NOT NULL1',1),('version_log_visit.visitor_days_since_first','SMALLINT(5) UNSIGNED NULL1',1),('version_log_visit.visitor_days_since_last','SMALLINT(5) UNSIGNED NULL',1),('version_log_visit.visitor_days_since_order','SMALLINT(5) UNSIGNED NULL1',1),('version_log_visit.visitor_localtime','TIME NULL',1),('version_log_visit.visitor_returning','TINYINT(1) NULL1',1),('version_log_visit.visit_entry_idaction_name','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.visit_entry_idaction_url','INTEGER(11) UNSIGNED NULL  DEFAULT NULL',1),('version_log_visit.visit_exit_idaction_name','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.visit_exit_idaction_url','INTEGER(10) UNSIGNED NULL DEFAULT 0',1),('version_log_visit.visit_first_action_time','DATETIME NOT NULL',1),('version_log_visit.visit_goal_buyer','TINYINT(1) NULL',1),('version_log_visit.visit_goal_converted','TINYINT(1) NULL',1),('version_log_visit.visit_total_actions','INT(11) UNSIGNED NULL',1),('version_log_visit.visit_total_events','INT(11) UNSIGNED NULL',1),('version_log_visit.visit_total_interactions','SMALLINT UNSIGNED DEFAULT 0',1),('version_log_visit.visit_total_searches','SMALLINT(5) UNSIGNED NULL',1),('version_log_visit.visit_total_time','INT(11) UNSIGNED NOT NULL',1),('version_Marketplace','3.13.4',1),('version_MobileMessaging','3.13.4',1),('version_Monolog','3.13.4',1),('version_Morpheus','3.13.4',1),('version_MultiSites','3.13.4',1),('version_Overlay','3.13.4',1),('version_PrivacyManager','3.13.4',1),('version_ProfessionalServices','3.13.4',1),('version_Proxy','3.13.4',1),('version_Referrers','3.13.4',1),('version_Resolution','3.13.4',1),('version_RssWidget','1.0',1),('version_ScheduledReports','3.13.4',1),('version_SegmentEditor','3.13.4',1),('version_SEO','3.13.4',1),('version_SitesManager','3.13.4',1),('version_Tour','3.13.4',1),('version_Transitions','3.13.4',1),('version_TwoFactorAuth','3.13.4',1),('version_UserCountry','3.13.4',1),('version_UserCountryMap','3.13.4',1),('version_UserId','3.13.4',1),('version_UserLanguage','3.13.4',1),('version_UsersManager','3.13.4',1),('version_VisitFrequency','3.13.4',1),('version_VisitorInterest','3.13.4',1),('version_VisitsSummary','3.13.4',1),('version_VisitTime','3.13.4',1),('version_WebsiteMeasurable','3.13.4',1),('version_Widgetize','3.13.4',1);
+INSERT INTO `matomo_option` VALUES ('install_version','3.13.4',0),('MobileMessaging_DelegatedManagement','false',0),('PrivacyManager.doNotTrackEnabled','1',0),('PrivacyManager.ipAnonymizerEnabled','1',0),('SitesManager_DefaultTimezone','America/New_York',0),('UpdateCheck_LastTimeChecked','1585937777',1),('UpdateCheck_LatestVersion','3.13.4',0),('useridsalt','57FHl6T1CJSj_UIlLoVlEE6UP8cikpJdpPAAcMM6',1),('UsersManager.lastSeen.matomo','1585937888',1),('version_Actions','3.13.4',1),('version_Annotations','3.13.4',1),('version_API','3.13.4',1),('version_BulkTracking','3.13.4',1),('version_Contents','3.13.4',1),('version_core','3.13.4',1),('version_CoreAdminHome','3.13.4',1),('version_CoreConsole','3.13.4',1),('version_CoreHome','3.13.4',1),('version_CorePluginsAdmin','3.13.4',1),('version_CoreUpdater','3.13.4',1),('version_CoreVisualizations','3.13.4',1),('version_CustomPiwikJs','3.13.4',1),('version_CustomVariables','3.13.4',1),('version_Dashboard','3.13.4',1),('version_DevicePlugins','3.13.4',1),('version_DevicesDetection','3.13.4',1),('version_Diagnostics','3.13.4',1),('version_Ecommerce','3.13.4',1),('version_Events','3.13.4',1),('version_Feedback','3.13.4',1),('version_GeoIp2','3.13.4',1),('version_Goals','3.13.4',1),('version_Heartbeat','3.13.4',1),('version_ImageGraph','3.13.4',1),('version_Insights','3.13.4',1),('version_Installation','3.13.4',1),('version_Intl','3.13.4',1),('version_IntranetMeasurable','3.13.4',1),('version_LanguagesManager','3.13.4',1),('version_Live','3.13.4',1),('version_Login','3.13.4',1),('version_log_conversion.revenue','float default NULL',1),('version_log_conversion.revenue_discount','float default NULL',1),('version_log_conversion.revenue_shipping','float default NULL',1),('version_log_conversion.revenue_subtotal','float default NULL',1),('version_log_conversion.revenue_tax','float default NULL',1),('version_log_link_visit_action.idaction_content_interaction','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_name','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_piece','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_content_target','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_event_action','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_event_category','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idaction_name','INTEGER(10) UNSIGNED',1),('version_log_link_visit_action.idaction_url','INTEGER(10) UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.idpageview','CHAR(6) NULL DEFAULT NULL',1),('version_log_link_visit_action.interaction_position','SMALLINT UNSIGNED DEFAULT NULL',1),('version_log_link_visit_action.server_time','DATETIME NOT NULL',1),('version_log_link_visit_action.time_spent_ref_action','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.config_browser_engine','VARCHAR(10) NULL',1),('version_log_visit.config_browser_name','VARCHAR(10) NULL',1),('version_log_visit.config_browser_version','VARCHAR(20) NULL',1),('version_log_visit.config_cookie','TINYINT(1) NULL',1),('version_log_visit.config_device_brand','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL1',1),('version_log_visit.config_device_model','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL1',1),('version_log_visit.config_device_type','TINYINT( 100 ) NULL DEFAULT NULL1',1),('version_log_visit.config_director','TINYINT(1) NULL',1),('version_log_visit.config_flash','TINYINT(1) NULL',1),('version_log_visit.config_gears','TINYINT(1) NULL',1),('version_log_visit.config_java','TINYINT(1) NULL',1),('version_log_visit.config_os','CHAR(3) NULL',1),('version_log_visit.config_os_version','VARCHAR( 100 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL',1),('version_log_visit.config_pdf','TINYINT(1) NULL',1),('version_log_visit.config_quicktime','TINYINT(1) NULL',1),('version_log_visit.config_realplayer','TINYINT(1) NULL',1),('version_log_visit.config_resolution','VARCHAR(18) NULL',1),('version_log_visit.config_silverlight','TINYINT(1) NULL',1),('version_log_visit.config_windowsmedia','TINYINT(1) NULL',1),('version_log_visit.location_browser_lang','VARCHAR(20) NULL',1),('version_log_visit.location_city','varchar(255) DEFAULT NULL1',1),('version_log_visit.location_country','CHAR(3) NULL1',1),('version_log_visit.location_latitude','decimal(9, 6) DEFAULT NULL1',1),('version_log_visit.location_longitude','decimal(9, 6) DEFAULT NULL1',1),('version_log_visit.location_region','char(3) DEFAULT NULL1',1),('version_log_visit.referer_keyword','VARCHAR(255) NULL1',1),('version_log_visit.referer_name','VARCHAR(70) NULL1',1),('version_log_visit.referer_type','TINYINT(1) UNSIGNED NULL1',1),('version_log_visit.referer_url','TEXT NULL',1),('version_log_visit.user_id','VARCHAR(200) NULL',1),('version_log_visit.visitor_count_visits','INT(11) UNSIGNED NOT NULL1',1),('version_log_visit.visitor_days_since_first','SMALLINT(5) UNSIGNED NULL1',1),('version_log_visit.visitor_days_since_last','SMALLINT(5) UNSIGNED NULL',1),('version_log_visit.visitor_days_since_order','SMALLINT(5) UNSIGNED NULL1',1),('version_log_visit.visitor_localtime','TIME NULL',1),('version_log_visit.visitor_returning','TINYINT(1) NULL1',1),('version_log_visit.visit_entry_idaction_name','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.visit_entry_idaction_url','INTEGER(11) UNSIGNED NULL  DEFAULT NULL',1),('version_log_visit.visit_exit_idaction_name','INTEGER(10) UNSIGNED NULL',1),('version_log_visit.visit_exit_idaction_url','INTEGER(10) UNSIGNED NULL DEFAULT 0',1),('version_log_visit.visit_first_action_time','DATETIME NOT NULL',1),('version_log_visit.visit_goal_buyer','TINYINT(1) NULL',1),('version_log_visit.visit_goal_converted','TINYINT(1) NULL',1),('version_log_visit.visit_total_actions','INT(11) UNSIGNED NULL',1),('version_log_visit.visit_total_events','INT(11) UNSIGNED NULL',1),('version_log_visit.visit_total_interactions','SMALLINT UNSIGNED DEFAULT 0',1),('version_log_visit.visit_total_searches','SMALLINT(5) UNSIGNED NULL',1),('version_log_visit.visit_total_time','INT(11) UNSIGNED NOT NULL',1),('version_Marketplace','3.13.4',1),('version_MobileMessaging','3.13.4',1),('version_Monolog','3.13.4',1),('version_Morpheus','3.13.4',1),('version_MultiSites','3.13.4',1),('version_Overlay','3.13.4',1),('version_PrivacyManager','3.13.4',1),('version_ProfessionalServices','3.13.4',1),('version_Proxy','3.13.4',1),('version_Referrers','3.13.4',1),('version_Resolution','3.13.4',1),('version_RssWidget','1.0',1),('version_ScheduledReports','3.13.4',1),('version_SegmentEditor','3.13.4',1),('version_SEO','3.13.4',1),('version_SitesManager','3.13.4',1),('version_Tour','3.13.4',1),('version_Transitions','3.13.4',1),('version_TwoFactorAuth','3.13.4',1),('version_UserCountry','3.13.4',1),('version_UserCountryMap','3.13.4',1),('version_UserId','3.13.4',1),('version_UserLanguage','3.13.4',1),('version_UsersManager','3.13.4',1),('version_VisitFrequency','3.13.4',1),('version_VisitorInterest','3.13.4',1),('version_VisitsSummary','3.13.4',1),('version_VisitTime','3.13.4',1),('version_WebsiteMeasurable','3.13.4',1),('version_Widgetize','3.13.4',1);
 /*!40000 ALTER TABLE `matomo_option` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -650,6 +682,7 @@ CREATE TABLE `matomo_sequence` (
 
 LOCK TABLES `matomo_sequence` WRITE;
 /*!40000 ALTER TABLE `matomo_sequence` DISABLE KEYS */;
+INSERT INTO `matomo_sequence` VALUES ('matomo_archive_numeric_2020_04',1);
 /*!40000 ALTER TABLE `matomo_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -675,7 +708,7 @@ CREATE TABLE `matomo_session` (
 
 LOCK TABLES `matomo_session` WRITE;
 /*!40000 ALTER TABLE `matomo_session` DISABLE KEYS */;
-INSERT INTO `matomo_session` VALUES ('c7cgms5t31p5lkicbdrs9i3mug',1557427728,1209600,'a:1:{s:4:\"data\";s:368:\"YTo1OntzOjQ6Il9fWkYiO2E6MTp7czoxMToiTG9naW4ubG9naW4iO2E6MTp7czo0OiJFTlZUIjthOjE6e3M6NToibm9uY2UiO2k6MTU1NzQyODI4Njt9fX1zOjk6InVzZXIubmFtZSI7czo2OiJtYXRvbW8iO3M6MjI6InR3b2ZhY3RvcmF1dGgudmVyaWZpZWQiO2k6MDtzOjEyOiJzZXNzaW9uLmluZm8iO2E6Mjp7czoyOiJ0cyI7aToxNTU3NDI3NjkwO3M6MTA6InJlbWVtYmVyZWQiO2I6MDt9czoxMjoibm90aWZpY2F0aW9uIjthOjE6e3M6MTM6Im5vdGlmaWNhdGlvbnMiO2E6MDp7fX19\";}'),('cmi7kl862fp199vqgk7b77a67p',1585661097,1209600,'a:1:{s:4:\"data\";s:80:\"YToxOntzOjEyOiJub3RpZmljYXRpb24iO2E6MTp7czoxMzoibm90aWZpY2F0aW9ucyI7YTowOnt9fX0=\";}'),('ouer5bliai5mmfrrbohjdct8kt',1557413917,1209600,'a:1:{s:4:\"data\";s:368:\"YTo1OntzOjQ6Il9fWkYiO2E6MTp7czoxMToiTG9naW4ubG9naW4iO2E6MTp7czo0OiJFTlZUIjthOjE6e3M6NToibm9uY2UiO2k6MTU1NzQxNDM4Mzt9fX1zOjk6InVzZXIubmFtZSI7czo2OiJtYXRvbW8iO3M6MjI6InR3b2ZhY3RvcmF1dGgudmVyaWZpZWQiO2k6MDtzOjEyOiJzZXNzaW9uLmluZm8iO2E6Mjp7czoyOiJ0cyI7aToxNTU3NDEzNzg3O3M6MTA6InJlbWVtYmVyZWQiO2I6MDt9czoxMjoibm90aWZpY2F0aW9uIjthOjE6e3M6MTM6Im5vdGlmaWNhdGlvbnMiO2E6MDp7fX19\";}');
+INSERT INTO `matomo_session` VALUES ('1tpeer1dvq934t12fbh9mheana',1585937910,1209600,'a:1:{s:4:\"data\";s:412:\"YTo1OntzOjQ6Il9fWkYiO2E6MTp7czoxMToiTG9naW4ubG9naW4iO2E6MTp7czo0OiJFTlZUIjthOjE6e3M6NToibm9uY2UiO2k6MTU4NTkzODQ5MTt9fX1zOjk6InVzZXIubmFtZSI7czo2OiJtYXRvbW8iO3M6MjI6InR3b2ZhY3RvcmF1dGgudmVyaWZpZWQiO2k6MDtzOjEyOiJzZXNzaW9uLmluZm8iO2E6Mzp7czoyOiJ0cyI7aToxNTg1OTM3ODk1O3M6MTA6InJlbWVtYmVyZWQiO2I6MDtzOjEwOiJleHBpcmF0aW9uIjtpOjE1ODU5NDE1MTA7fXM6MTI6Im5vdGlmaWNhdGlvbiI7YToxOntzOjEzOiJub3RpZmljYXRpb25zIjthOjA6e319fQ==\";}'),('mqe8qq64t91bu62pdj6leev2ah',1585937891,1209600,'a:1:{s:4:\"data\";s:192:\"YToyOntzOjQ6Il9fWkYiO2E6MTp7czoxMToiTG9naW4ubG9naW4iO2E6MTp7czo0OiJFTlZUIjthOjE6e3M6NToibm9uY2UiO2k6MTU4NTkzODQ4Mzt9fX1zOjEyOiJub3RpZmljYXRpb24iO2E6MTp7czoxMzoibm90aWZpY2F0aW9ucyI7YTowOnt9fX0=\";}');
 /*!40000 ALTER TABLE `matomo_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -715,7 +748,7 @@ CREATE TABLE `matomo_site` (
 
 LOCK TABLES `matomo_site` WRITE;
 /*!40000 ALTER TABLE `matomo_site` DISABLE KEYS */;
-INSERT INTO `matomo_site` VALUES (1,'LDbase','http://ldbase.org','2019-05-09 18:56:19',0,1,'','','America/New_York','USD',0,'','','','','website',0,'anonymous');
+INSERT INTO `matomo_site` VALUES (1,'LDbaseb','http://localhost','2020-04-03 22:17:31',0,1,'','','America/New_York','USD',0,'','','','','website',0,'anonymous');
 /*!40000 ALTER TABLE `matomo_site` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -847,7 +880,7 @@ CREATE TABLE `matomo_user` (
 
 LOCK TABLES `matomo_user` WRITE;
 /*!40000 ALTER TABLE `matomo_user` DISABLE KEYS */;
-INSERT INTO `matomo_user` VALUES ('anonymous','','anonymous','anonymous@example.org','','anonymous',0,'2019-05-09 18:55:38','2019-05-09 18:55:38'),('matomo','$2y$10$0qyc0I7ZKxf07AsFBQ88Neye0z2Amqok7v/xUdlg5kkxe7s7UZiNi','matomo','matomo@example.org','','fff4791ce0f2b6c0ccf84dacffd5052d',1,'2019-05-09 18:56:07','2019-05-09 18:56:07');
+INSERT INTO `matomo_user` VALUES ('anonymous','','anonymous','anonymous@example.org','','anonymous',0,'2020-04-03 22:16:08','2020-04-03 22:16:08'),('matomo','$2y$10$wg8i6nSCH9mNuLPcrjctr.BHUXzAKs72ND2xDnRsVSxRyda1ZwKlq','matomo','admin@admin.edu','','fc8893d91864445ecc5913ff41bddda7',1,'2020-04-03 22:16:35','2020-04-03 22:16:35');
 /*!40000 ALTER TABLE `matomo_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -909,4 +942,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-31  9:25:04
+-- Dump completed on 2020-04-03 14:19:10
