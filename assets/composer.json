@@ -32,7 +32,12 @@
         {
             "name": "fsulib/embargoes",
             "type": "vcs",
-            "url": "git@github.com:bryjbrown/embargoes.git"
+            "url": "git@github.com:fsulib/embargoes.git"
+        },
+        {
+            "name": "fsulib/doi_crossref",
+            "type": "vcs",
+            "url": "git@github.com:fsulib/doi_crossref.git"
         },
         {
             "name": "fsulib/portcullis",
@@ -95,6 +100,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "fsulib/portcullis": "dev-master",
         "fsulib/embargoes": "dev-master",
+        "fsulib/doi_crossref": "dev-master",
         "ldbase/ldbase_handlers": "dev-master",
         "ldbase/ldbase_content": "dev-master",
         "ldbase/ldbase_config": "dev-master"
