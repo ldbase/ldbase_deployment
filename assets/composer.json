@@ -35,6 +35,11 @@
             "url": "git@github.com:fsulib/embargoes.git"
         },
         {
+            "name": "mjordan/persistent_identifiers",
+            "type": "vcs",
+            "url": "git@github.com:mjordan/persistent_identifiers.git"
+        },
+        {
             "name": "fsulib/doi_crossref",
             "type": "vcs",
             "url": "git@github.com:fsulib/doi_crossref.git"
