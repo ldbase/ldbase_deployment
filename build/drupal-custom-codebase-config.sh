@@ -53,4 +53,9 @@ if [ -d /vagrant ]; then
   chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis
 fi
 
+# Set up blocking robots.txt file so the test site doesn't get crawled
+cd /var/www/html/drupal/web/
+rm robots.txt
+cp /ldbase_deployment/assets/robots.txt .
+
 echo "drupal-custom-codebase-config.sh completed." >> /root/build-process.txt
