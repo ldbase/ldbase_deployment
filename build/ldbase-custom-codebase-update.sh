@@ -8,3 +8,5 @@ composer update \
   ldbase/ldbase_handlers \
   ldbase/ldbase_config \
   --no-interaction
+
+/var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync

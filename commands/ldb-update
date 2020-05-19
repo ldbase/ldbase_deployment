@@ -6,9 +6,7 @@ echo ""
 
 echo ""
 echo "Updating all LDbase modules and configuration..."
-sh /ldbase_deployment/build/ldbase-custom-codebase-update
-cd /var/www/html/drupal
-/var/www/html/drupal/vendor/bin/drush config:import --destination=/var/www/html/drupal/web/libraries/ldbase_config/sync
+sh /ldbase_deployment/build/ldbase-custom-codebase-update.sh
 
 echo ""
 echo "Done. LDbase modules and configuration updated."
