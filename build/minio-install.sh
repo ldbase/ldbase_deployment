@@ -8,7 +8,7 @@ wget https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
 mv mc /usr/local/bin/
 
-minio server /data > /dev/null 2>&1 &
-mc config host add localhost http://localhost:9000 minioadmin minioadmin
-mkdir /data/ldbase
-mc policy set public localhost/ldbase
+minio server /data >> minio-config.txt &
+mkdir /root/.mc; cp /vagrant/assets/mc.config.json /root/.mc/config.json
+mc mb localhost/ldbase >> minio-config.txt
+mc policy set public localhost/ldbase >> minio-config.txt

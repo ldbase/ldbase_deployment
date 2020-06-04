@@ -1,0 +1,19 @@
+{
+	"version": "9",
+	"hosts": {
+		"localhost": {
+			"url": "http://localhost:9000",
+			"accessKey": "minioadmin",
+			"secretKey": "minioadmin",
+			"api": "s3v4",
+			"lookup": "auto"
+		},
+		"s3": {
+			"url": "https://s3.amazonaws.com",
+			"accessKey": "YOUR-ACCESS-KEY-HERE",
+			"secretKey": "YOUR-SECRET-KEY-HERE",
+			"api": "S3v4",
+			"lookup": "dns"
+		}
+	}
+}
