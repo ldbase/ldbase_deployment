@@ -51,6 +51,7 @@ echo "Javascript libraries download completed." >> /root/build-process.txt
 # Make Portcullis owned by Vagrant so NetBeans doesn't yell at Favenzio
 if [ -d /vagrant ]; then 
   chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis
+  chown -R vagrant:vagrant /var/www/html/drupal/web/modules/custom/ldbase_new_account
 fi
 
 # Set up blocking robots.txt file so the test site doesn't get crawled
