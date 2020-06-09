@@ -4,8 +4,12 @@ echo "drupal-custom-codebase-config.sh started." >> /root/build-process.txt
 cd /var/www/html/drupal
 mkdir -p private_files/ldbase
 chmod -R 777 private_files
-echo '$settings["file_private_path"] = "/var/www/html/drupal/private_files/ldbase";' \
-	>> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings['file_private_path'] = '/var/www/html/drupal/private_files/ldbase';" >> /var/www/html/drupal/web/sites/default/settings.php
+
+# Set up S3FS file storage with default Minio local server
+echo "$settings['s3fs.access_key'] = 'minioadmin';" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings['s3fs.secret_key'] = 'minioadmin';" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$config['s3fs.settings']['bucket'] = 'ldbase';" >> /var/www/html/drupal/web/sites/default/settings.php
 
 
 # Set up trusted host patterns dynamically depending on VM status
