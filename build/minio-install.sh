@@ -12,3 +12,5 @@ minio server /data >> minio-config.txt &
 mkdir /root/.mc; cp /vagrant/assets/mc.config.json /root/.mc/config.json
 mc mb localhost/ldbase >> minio-config.txt
 mc policy set public localhost/ldbase >> minio-config.txt
+
+echo "alias minup='minio server /data >> minio-config.txt &'" >> /root/.bashrc

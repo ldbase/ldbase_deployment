@@ -12,4 +12,9 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--memory", 2048]
     end
   end
+  config.trigger.after :up do |trigger|
+    trigger.name = "Restart MinIO"
+    trigger.info = "Restarting MinIO server"
+    trigger.run_remote = {inline: "minio server /data >> minio-config.txt &"}
+  end
 end
