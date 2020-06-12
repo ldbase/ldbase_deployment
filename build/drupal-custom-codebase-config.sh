@@ -1,9 +1,12 @@
 echo "drupal-custom-codebase-config.sh started." >> /root/build-process.txt
 
 
-# Set up private file storage
+# Set up private file directory
+# In reality, S3 is used for private files but Drupal doesn't seem to understand that 
+# and complains if a local private files directory isn't available and configured.
 cd /var/www/html/drupal
 mkdir -p private_files
+cp /vagrant/assets/private_files_httaccess /var/www/html/drupal/private_files/.htaccess
 chmod -R 777 private_files
 echo '$settings["file_private_path"] = "/var/www/html/drupal/private_files";' >> /var/www/html/drupal/web/sites/default/settings.php
 
