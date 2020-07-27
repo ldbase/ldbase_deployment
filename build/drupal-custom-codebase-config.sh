@@ -59,8 +59,8 @@ echo "Javascript libraries download completed." >> /root/build-process.txt
 
 # Set up CiteProc-PHP
 cd /var/www/html/drupal/vendor/seboettg/citeproc-php
-/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales
-/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales >> /root/citeproc-install.txt 2>&1
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution >> /root/citeproc-install.txt 2>&1
 
 # Make Portcullis owned by Vagrant so NetBeans doesn't yell at Favenzio
 if [ -d /vagrant ]; then 
