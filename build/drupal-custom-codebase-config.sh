@@ -57,6 +57,11 @@ unzip libraries.zip
 rm libraries.zip
 echo "Javascript libraries download completed." >> /root/build-process.txt
 
+# Set up CiteProc-PHP
+cd /var/www/html/drupal/vendor/seboettg/citeproc-php
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution
+
 # Make Portcullis owned by Vagrant so NetBeans doesn't yell at Favenzio
 if [ -d /vagrant ]; then 
   chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis
