@@ -124,8 +124,15 @@ echo '];' \
 
 cd /var/www/html/drupal/web/libraries >/dev/null 2>&1
 git clone https://github.com/components/highlightjs >/dev/null 2>&1
-mkdir d3; cd d3; wget https://d3js.org/d3.v3.min.js; mv d3.v3.min.js d3.min.js >/dev/null 2>&1
-cd /var/www/html/drupal/web/libraries; mkdir jquery-ui-slider-pips; cd jquery-ui-slider-pips; mkdir dist; cd dist; >/dev/null 2>&1
+mkdir d3 >/dev/null 2>&1
+cd d3 >/dev/null 2>&1
+wget https://d3js.org/d3.v3.min.js >/dev/null 2>&1
+mv d3.v3.min.js d3.min.js >/dev/null 2>&1
+cd /var/www/html/drupal/web/libraries >/dev/null 2>&1
+mkdir jquery-ui-slider-pips >/dev/null 2>&1
+cd jquery-ui-slider-pips >/dev/null 2>&1
+mkdir dist >/dev/null 2>&1
+cd dist >/dev/null 2>&1
 wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.css >/dev/null 2>&1
 wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.js >/dev/null 2>&1
 cd /var/www/html/drupal/web >/dev/null 2>&1
