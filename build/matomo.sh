@@ -1,43 +1,43 @@
-echo "matomo-install.sh started." >> /root/build-process.txt
+echo "Configuring MySQL server for Matomo..." >> /root/matomo.txt 2>&1
+echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/matomo.txt
+echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/matomo.txt
+echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/matomo.txt
 
-# Save build parameters
-echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/matomo-install.txt
-echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/matomo-install.txt
-echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/matomo-install.txt
-
-
-# Configure MySQL
-echo "Matomo MySQL configuration started." >> /root/build-process.txt
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
 	--execute="CREATE DATABASE matomodb;" \
-	>> /root/matomo-install.txt 2>&1
+	>> /root/matomo.txt 2>&1
+
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
 	--execute="CREATE USER 'matomo'@'%' IDENTIFIED BY 'matomo';" \
-	>> /root/matomo-install.txt 2>&1
+	>> /root/matomo.txt 2>&1
+
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
 	--execute="GRANT ALL PRIVILEGES ON matomodb.* TO 'matomo'@'%';" \
-	>> /root/matomo-install.txt 2>&1
+	>> /root/matomo.txt 2>&1
+
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
 	--execute="FLUSH PRIVILEGES;" \
-	>> /root/matomo-install.txt 2>&1
+	>> /root/matomo.txt 2>&1
+
 mysql --user="${DATABASE_ROOT_USER}" \
 	--password="${DATABASE_ROOT_PASS}" \
 	--host="${DATABASE_ENDPOINT}" \
 	matomodb < /vagrant/assets/matomo.sql \
-	>> /root/matomo-install.txt 2>&1
-echo "Matomo MySQL configuration completed." >> /root/build-process.txt
+	>> /root/matomo.txt 2>&1
+
+service mysql restart >> /root/matomo.txt 2>&1
+echo "Done configuring MySQL server for Matomo." >> /root/matomo.txt 2>&1
 
 
-# Install Matomo
-echo "Matomo installation started." >> /root/build-process.txt
+echo "\n\nInstalling Matomo..." >> /root/matomo.txt 2>&1
 cd /root
 wget https://builds.matomo.org/matomo.zip >> /dev/null
 unzip matomo.zip >> /dev/null
@@ -47,12 +47,8 @@ cd /var/www/html
 chown -R www-data:www-data matomo/
 chmod -R 775 matomo/
 
-
-# Add Matomo to Apache docroot
 cp /vagrant/assets/matomo.conf /etc/apache2/conf-available/matomo.conf
 cp /vagrant/assets/matomo.conf /etc/apache2/sites-available/matomo.conf
 cp /vagrant/assets/matomo.conf /etc/apache2/sites-enabled/matomo.conf
 service apache2 restart
-echo "Matomo installation completed." >> /root/build-process.txt
-
-echo "matomo-install.sh completed." >> /root/build-process.txt
+echo "Done installing Matomo." >> /root/matomo.txt 2>&1
