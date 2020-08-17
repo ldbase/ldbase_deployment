@@ -91,7 +91,7 @@ cd /var/www/html/drupal >/dev/null 2>&1
 	--account-pass="${DRUPAL_ADMIN_PASS}" \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
-        >> /root/drupal-install.txt 2>&1
+        >> /root/drupal.txt 2>&1
 echo "Done downloading & installing Drupal." >> /root/drupal.txt 2>&1
 
 
