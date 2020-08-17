@@ -56,17 +56,17 @@ echo "Done installing Composer." >> /root/drupal.txt 2>&1
 
 
 echo "\n\nDownloading & installing Drupal..." >> /root/drupal.txt 2>&1
-echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal-install.txt
-echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal-install.txt
-echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal-install.txt
-echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal-install.txt
-echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal-install.txt
-echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal-install.txt
+echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal.txt
+echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal.txt
+echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal.txt
+echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal.txt
+echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal.txt
+echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal.txt
 cd /var/www/html
 rm index.html
 composer create-project drupal-composer/drupal-project:8.x-dev drupal \
 	--stability dev --no-interaction \
-        >> /root/drupal-install.txt 2>&1
+        >> /root/drupal.txt 2>&1
 
 cd /var/www/html/drupal
 rm composer.*
