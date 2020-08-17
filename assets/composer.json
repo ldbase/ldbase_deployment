@@ -64,7 +64,7 @@
         "drupal/backup_migrate": "^4.1",
         "drupal/better_exposed_filters": "^4.0@alpha",
         "drupal/collapsiblock": "^2.0",
-        "drupal/console": "^1.0.2",
+        "drupal/console": "1.9.4",
         "drupal/context": "^4.0@beta",
         "drupal/core": "^8.8.0",
         "drupal/core-composer-scaffold": "^8.8.0",
