@@ -52,7 +52,6 @@ chmod +x /usr/local/bin/composer >> /root/drupal.txt 2>&1
 mkdir /root/.composer
 cd /root/.composer/
 wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
-cd /; git clone https://github.com/ldbase/ldbase_deployment
 echo "Done installing Composer." >> /root/drupal.txt 2>&1
 
 

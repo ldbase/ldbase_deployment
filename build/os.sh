@@ -22,4 +22,5 @@ apt -y upgrade > /root/os.txt 2>&1
 apt -y install mysql-server apache2 unzip php7.2 php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl >> /root/os.txt 2>&1
 service mysql restart >> /root/os.txt 2>&1
 service apache2 restart >> /root/os.txt 2>&1
+cd /; git clone https://github.com/ldbase/ldbase_deployment
 echo "Done installing system dependencies." >> /root/os.txt 2>&1
