@@ -11,10 +11,10 @@ fallocate -l 1G /swapfile >/dev/null
 chmod 600 /swapfile >/dev/null
 mkswap /swapfile >/dev/null
 echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
-swapon -a /swapfile >/dev/null
-/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024 >/dev/null
-/sbin/mkswap /var/swap.1 >/dev/null
-/sbin/swapon /var/swap.1 >/dev/null
+/sbin/swapon -a /swapfile >/dev/null 2>&1
+/bin/dd if=/dev/zero of=/var/swap.1 bs=1M count=1024 >/dev/null 2>&1
+/sbin/mkswap /var/swap.1 >/dev/null 2>&1
+/sbin/swapon /var/swap.1 >/dev/null 2>&1
 echo "Done configuring swap files." >> /root/os.txt 2>&1
 
 
