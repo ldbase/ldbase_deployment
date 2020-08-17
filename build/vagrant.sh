@@ -13,7 +13,6 @@ export DRUPAL_ADMIN_EMAIL="admin@admin.edu"
 
 
 # Install components
-echo "\n\n"
 sh /vagrant/build/os.sh
 sh /vagrant/build/minio.sh
 sh /vagrant/build/matomo.sh
