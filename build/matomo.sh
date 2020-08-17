@@ -1,4 +1,5 @@
 echo "Configuring MySQL server for Matomo..." >> /root/matomo.txt 2>&1
+echo "Configuring MySQL server for Matomo..."
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/matomo.txt
 echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/matomo.txt
 echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/matomo.txt
@@ -38,17 +39,18 @@ echo "Done configuring MySQL server for Matomo." >> /root/matomo.txt 2>&1
 
 
 echo "\n\nInstalling Matomo..." >> /root/matomo.txt 2>&1
-cd /root
+echo "Installing Matomo..."
+cd /root >/dev/null
 wget https://builds.matomo.org/matomo.zip >> /dev/null
 unzip matomo.zip >> /dev/null
-mv matomo /var/www/html/matomo
-cp /vagrant/assets/matomo.config.ini.php /var/www/html/matomo/config/config.ini.php
-cd /var/www/html
-chown -R www-data:www-data matomo/
-chmod -R 775 matomo/
+mv matomo /var/www/html/matomo >/dev/null
+cp /vagrant/assets/matomo.config.ini.php /var/www/html/matomo/config/config.ini.php >/dev/null
+cd /var/www/html >/dev/null
+chown -R www-data:www-data matomo/ >/dev/null
+chmod -R 775 matomo/ >/dev/null
 
-cp /vagrant/assets/matomo.conf /etc/apache2/conf-available/matomo.conf
-cp /vagrant/assets/matomo.conf /etc/apache2/sites-available/matomo.conf
-cp /vagrant/assets/matomo.conf /etc/apache2/sites-enabled/matomo.conf
-service apache2 restart
+cp /vagrant/assets/matomo.conf /etc/apache2/conf-available/matomo.conf >/dev/null
+cp /vagrant/assets/matomo.conf /etc/apache2/sites-available/matomo.conf >/dev/null
+cp /vagrant/assets/matomo.conf /etc/apache2/sites-enabled/matomo.conf >/dev/null
+service apache2 restart >> /root/matomo.txt 2>&1
 echo "Done installing Matomo." >> /root/matomo.txt 2>&1
