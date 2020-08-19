@@ -57,26 +57,28 @@ wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json >/dev/null 2>&1
 echo "Done installing Composer." >> /root/drupal.txt 2>&1
 
 
-echo "\n\nDownloading & installing Drupal..." >> /root/drupal.txt 2>&1
-echo "Downloading & installing Drupal..."
+echo "\n\nDownloading Drupal..." >> /root/drupal.txt 2>&1
+echo "Downloading Drupal..."
+cd /var/www/html >/dev/null
+rm index.html >/dev/null
+composer create-project drupal-composer/drupal-project:8.x-dev drupal \
+	--stability dev --no-interaction \
+        >> /root/drupal.txt 2>&1
+cd /var/www/html/drupal >/dev/null 2>&1
+rm composer.* >/dev/null 2>&1
+cp /ldbase_deployment/assets/composer.json . >/dev/null 2>&1
+composer install >> /root/drupal.txt 2>&1
+echo "Done downloading Drupal." >> /root/drupal.txt 2>&1
+
+
+echo "\n\nInstalling Drupal..." >> /root/drupal.txt 2>&1
+echo "Installing Drupal..."
 echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal.txt
 echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal.txt
 echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal.txt
 echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal.txt
 echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal.txt
 echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal.txt
-cd /var/www/html >/dev/null
-rm index.html >/dev/null
-composer create-project drupal-composer/drupal-project:8.x-dev drupal \
-	--stability dev --no-interaction \
-        >> /root/drupal.txt 2>&1
-
-cd /var/www/html/drupal >/dev/null 2>&1
-rm composer.* >/dev/null 2>&1
-cp /ldbase_deployment/assets/composer.json . >/dev/null 2>&1
-composer install >> /root/drupal.txt 2>&1
-sh /ldbase_deployment/build/ldbase-custom-codebase-update.sh >> /root/drupal.txt 2>&1
-
 cd /var/www/html/drupal >/dev/null 2>&1
 /var/www/html/drupal/vendor/bin/drupal site:install standard \
 	--langcode="en" \
@@ -92,7 +94,7 @@ cd /var/www/html/drupal >/dev/null 2>&1
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
         >> /root/drupal.txt 2>&1
-echo "Done downloading & installing Drupal." >> /root/drupal.txt 2>&1
+echo "Done installing Drupal." >> /root/drupal.txt 2>&1
 
 
 echo "\n\nCustomizing Drupal codebase..." >> /root/drupal.txt 2>&1
