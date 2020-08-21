@@ -1,12 +1,5 @@
 #!/bin/bash
 
 echo ""
-echo "Updating LDbase modules and configuration..."
-echo ""
-
-echo ""
 echo "Updating all LDbase modules and configuration..."
-sh /ldbase_deployment/build/ldbase-custom-codebase-update.sh
-
-echo ""
-echo "Done. LDbase modules and configuration updated."
+sh /ldbase_deployment/build/drupal-update.sh
