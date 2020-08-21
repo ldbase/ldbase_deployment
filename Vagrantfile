@@ -15,6 +15,6 @@ Vagrant.configure("2") do |config|
   config.trigger.after :up do |trigger|
     trigger.name = "Restart MinIO"
     trigger.info = "Restarting MinIO server"
-    trigger.run_remote = {inline: "minio server /data >> minio-config.txt &"}
+    trigger.run_remote = {inline: "minio server /data >> /root/minio.txt &"}
   end
 end
