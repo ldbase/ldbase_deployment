@@ -40,6 +40,11 @@
             "url": "git@github.com:ldbase/ldbase_citations.git"
         },
         {
+            "name": "ldbase/ldbase_admin",
+            "type": "vcs",
+            "url": "git@github.com:ldbase/ldbase_admin.git"
+        },
+        {
             "name": "mjordan/persistent_identifiers",
             "type": "vcs",
             "url": "git@github.com:mjordan/persistent_identifiers.git"
@@ -117,6 +122,7 @@
         "ldbase/ldbase_handlers": "dev-master",
         "ldbase/ldbase_new_account": "dev-master",
         "ldbase/ldbase_citations": "dev-master",
+        "ldbase/ldbase_admin": "dev-master",
         "vlucas/phpdotenv": "^4.0",
         "webflo/drupal-finder": "^1.0.0",
         "zaporylie/composer-drupal-optimizations": "^1.0"
