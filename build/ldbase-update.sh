@@ -2,6 +2,8 @@
 cd /ldbase_deployment; git pull
 
 cd /var/www/html/drupal
+rm composer.*
+cp /ldbase_deployment/assets/composer.json .
 composer update --no-interaction
 
 /var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync
