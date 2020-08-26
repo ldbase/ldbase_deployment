@@ -2,4 +2,4 @@
 
 echo ""
 echo "Updating all LDbase modules and configuration..."
-sh /ldbase_deployment/build/drupal-update.sh
+sh /ldbase_deployment/build/ldbase-update.sh
