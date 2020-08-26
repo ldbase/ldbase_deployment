@@ -1,19 +1,17 @@
-echo "\n\nDownloading Drupal..." >> /root/drupal.download.txt 2>&1
-echo "Downloading Drupal..."
+echo "Downloading Drupal..." | tee /root/drupal.download.log 2>&1
 cd /var/www/html >/dev/null
 rm index.html >/dev/null
 composer create-project drupal-composer/drupal-project:8.x-dev drupal \
 	--stability dev --no-interaction \
-        >> /root/drupal.download.txt 2>&1
+        >> /root/drupal.download.log 2>&1
 cd /var/www/html/drupal >/dev/null 2>&1
 rm composer.* >/dev/null 2>&1
 cp /ldbase_deployment/assets/composer.json . >/dev/null 2>&1
-composer install >> /root/drupal.download.txt 2>&1
-echo "Done downloading Drupal." >> /root/drupal.download.txt 2>&1
+composer install >> /root/drupal.download.log 2>&1
+echo "Done downloading Drupal." | tee /root/drupal.download.log 2>&1
 
 
-echo "\n\nCustomizing Drupal codebase..." >> /root/drupal.download.txt 2>&1
-echo "Customizing Drupal codebase..."
+echo "\n\nCustomizing Drupal codebase..." | tee /root/drupal.download.log 2>&1
 cd /var/www/html/drupal >/dev/null 2>&1
 mkdir -p private_files >/dev/null 2>&1
 chmod -R 777 private_files >/dev/null 2>&1
@@ -58,8 +56,8 @@ unzip libraries.zip >/dev/null 2>&1
 rm libraries.zip >/dev/null 2>&1
 
 cd /var/www/html/drupal/vendor/seboettg/citeproc-php >/dev/null 2>&1
-/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales >> /root/drupal.download.txt 2>&1
-/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution >> /root/drupal.download.txt 2>&1
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales >> /root/drupal.download.log 2>&1
+/var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution >> /root/drupal.download.log 2>&1
 
 if [ -d /vagrant ]; then 
   chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis >/dev/null 2>&1
@@ -67,6 +65,6 @@ if [ -d /vagrant ]; then
 fi
 
 cd /var/www/html/drupal/web/ >/dev/null 2>&1
-rm robots.txt >/dev/null 2>&1
-cp /ldbase_deployment/assets/robots.txt . >/dev/null 2>&1
-echo "Done customizing Drupal codebase." >> /root/drupal.download.txt 2>&1
+rm robots.log >/dev/null 2>&1
+cp /ldbase_deployment/assets/robots.log . >/dev/null 2>&1
+echo "Done customizing Drupal codebase." | tee /root/drupal.download.log 2>&1

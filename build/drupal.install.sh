@@ -1,11 +1,10 @@
-echo "\n\nInstalling Drupal..." >> /root/drupal.install.txt 2>&1
-echo "Installing Drupal..."
-echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal.install.txt
-echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal.install.txt
-echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal.install.txt
-echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal.install.txt
-echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal.install.txt
-echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal.install.txt
+echo "Installing Drupal..." | tee /root/drupal.install.log 2>&1
+echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/drupal.install.log
+echo "DrupalDatabaseUser: ${DRUPAL_DATABASE_USER}" >> /root/drupal.install.log
+echo "DrupalDatabasePass: ${DRUPAL_DATABASE_PASS}" >> /root/drupal.install.log
+echo "DrupalAdminUser: ${DRUPAL_ADMIN_USER}" >> /root/drupal.install.log
+echo "DrupalAdminPass: ${DRUPAL_ADMIN_PASS}" >> /root/drupal.install.log
+echo "DrupalAdminEmail: ${DRUPAL_ADMIN_EMAIL}" >> /root/drupal.install.log
 cd /var/www/html/drupal >/dev/null 2>&1
 /var/www/html/drupal/vendor/bin/drupal site:install standard \
 	--langcode="en" \
@@ -20,5 +19,5 @@ cd /var/www/html/drupal >/dev/null 2>&1
 	--account-pass="${DRUPAL_ADMIN_PASS}" \
 	--account-mail="${DRUPAL_ADMIN_EMAIL}" \
 	--no-interaction \
-        >> /root/drupal.install.txt 2>&1
-echo "Done installing Drupal." >> /root/drupal.install.txt 2>&1
+        >> /root/drupal.install.log 2>&1
+echo "Done installing Drupal." | tee /root/drupal.install.log 2>&1
