@@ -1,6 +1,8 @@
 echo "Installing Composer..." | tee /root/composer.log 2>&1
-cd /root; curl -sS https://getcomposer.org/installer | php >> /root/composer.log 2>&1
-mv composer.phar /usr/local/bin/composer >> /root/composer.log 2>&1
+cd /root
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" >> /root/composer.log 2>&1
+php composer-setup.php --version=1.10.10 --filename=composer --install-dir=/usr/local/bin >> /root/composer.log 2>&1
+php -r "unlink('composer-setup.php');" >> /root/composer.log 2>&1
 chmod +x /usr/local/bin/composer >> /root/composer.log 2>&1
 /usr/local/bin/composer global require zaporylie/composer-drupal-optimizations >> /root/composer.log 2>&1
 mkdir /root/.composer >/dev/null 2>&1

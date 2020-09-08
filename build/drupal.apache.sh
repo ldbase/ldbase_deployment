@@ -6,4 +6,4 @@ sed -i -e 's/\/var\/www\/html/\/var\/www\/html\/drupal\/web/g' /etc/apache2/site
 rm /etc/php/7.2/apache2/php.ini >/dev/null 2>&1
 cp /ldbase_deployment/assets/apache.php.ini /etc/php/7.2/apache2/php.ini >/dev/null 2>&1
 service apache2 restart >> /root/drupal.apache.log 2>&1
-echo "Done configuring Apache server for Drupal..." | tee /root/drupal.apache.log 2>&1
+echo "Done configuring Apache server for Drupal." | tee /root/drupal.apache.log 2>&1
