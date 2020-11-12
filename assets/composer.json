@@ -90,6 +90,7 @@
         "drupal/image_widget_crop": "^2.2",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/juicerio": "^1.0@alpha",
+        "drupal/login_destination": "^2.0@beta",
         "drupal/masquerade": "^2.0",
         "drupal/matomo": "^1.9",
         "drupal/menu_token": "^1.0@alpha",
