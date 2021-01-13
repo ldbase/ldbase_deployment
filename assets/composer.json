@@ -55,9 +55,9 @@
             "url": "git@github.com:fsulib/doi_crossref.git"
         },
         {
-            "name": "fsulib/embargoes",
+            "name": "ldbase/ldbase_embargoes",
             "type": "vcs",
-            "url": "git@github.com:fsulib/embargoes.git"
+            "url": "git@github.com:ldbase/ldbase_embargoes.git"
         },
         {
             "name": "fsulib/portcullis",
@@ -126,11 +126,11 @@
         "drush/drush": "^9.7.1 | ^10.0.0",
         "fsulib/doi_crossref": "dev-master",
         "fsulib/portcullis": "dev-master",
-        "fsulib/embargoes": "dev-ldbase",
         "ldbase/ldbase_admin": "dev-master",
         "ldbase/ldbase_citations": "dev-master",
         "ldbase/ldbase_config": "dev-master",
         "ldbase/ldbase_content": "dev-master",
+	"ldbase/ldbase_embargoes": "dev-main",
         "ldbase/ldbase_handlers": "dev-master",
         "ldbase/ldbase_new_account": "dev-master",
         "vlucas/phpdotenv": "^4.0",
