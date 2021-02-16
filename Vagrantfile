@@ -12,10 +12,14 @@ Vagrant.configure("2") do |config|
       v.customize ["modifyvm", :id, "--memory", 4096]
     end
   end
+  config.trigger.after :halt do |trigger|
+    trigger.name = "Stop MinIO"
+    trigger.info = "Stopping MinIO server"
+    trigger.run_remote = {inline: "mc admin service stop localhost/ldbase"}
+  end
   config.trigger.after :up do |trigger|
     trigger.name = "Restart MinIO"
     trigger.info = "Restarting MinIO server"
-    trigger.run_remote = {inline: "minio server /data >> /root/minio.log &"}
-    trigger.run_remote = {inline: "mc admin service restart localhost/ldbase >> /root/minio.log &"}
+    trigger.run_remote = {inline: "minio server /data >/dev/null 2>&1 &"}
   end
 end
