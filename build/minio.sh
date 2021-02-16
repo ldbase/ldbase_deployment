@@ -1,7 +1,6 @@
 echo "Downloading MinIO server & client..." | tee /root/minio.log 2>&1
 cd /root/ >/dev/null 2>&1
-wget https://dl.min.io/server/minio/release/linux-amd64/archive/minio.RELEASE.2021-02-01T22-56-52Z >/dev/null 2>&1
-mv minio.RELEASE.2021-02-01T22-56-52Z minio
+wget https://dl.min.io/server/minio/release/linux-amd64/minio >/dev/null 2>&1
 chmod +x minio >/dev/null 2>&1
 mv minio /usr/local/bin/  >/dev/null 2>&1
 wget https://dl.min.io/client/mc/release/linux-amd64/mc >/dev/null 2>&1
