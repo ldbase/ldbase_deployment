@@ -1,35 +1,34 @@
-echo "Configuring MySQL server for Matomo..." | tee /root/matomo.log 2>&1
-echo "DatabaseEndpoint: ${DATABASE_ENDPOINT}" >> /root/matomo.log
-echo "DatabaseRootUser: ${DATABASE_ROOT_USER}" >> /root/matomo.log
-echo "DatabaseRootPass: ${DATABASE_ROOT_PASS}" >> /root/matomo.log
+source /etc/environment
 
-mysql --user="${DATABASE_ROOT_USER}" \
-	--password="${DATABASE_ROOT_PASS}" \
-	--host="${DATABASE_ENDPOINT}" \
+echo "Configuring MySQL server for Matomo..." | tee /root/matomo.log 2>&1
+
+mysql --user="root" \
+	--password="root" \
+	--host="${RDS_DATABASE_HOST}" \
 	--execute="CREATE DATABASE matomodb;" \
 	>> /root/matomo.log 2>&1
 
-mysql --user="${DATABASE_ROOT_USER}" \
-	--password="${DATABASE_ROOT_PASS}" \
-	--host="${DATABASE_ENDPOINT}" \
+mysql --user="root" \
+	--password="root" \
+	--host="${RDS_DATABASE_HOST}" \
 	--execute="CREATE USER 'matomo'@'%' IDENTIFIED BY 'matomo';" \
 	>> /root/matomo.log 2>&1
 
-mysql --user="${DATABASE_ROOT_USER}" \
-	--password="${DATABASE_ROOT_PASS}" \
-	--host="${DATABASE_ENDPOINT}" \
+mysql --user="root" \
+	--password="root" \
+	--host="${RDS_DATABASE_HOST}" \
 	--execute="GRANT ALL PRIVILEGES ON matomodb.* TO 'matomo'@'%';" \
 	>> /root/matomo.log 2>&1
 
-mysql --user="${DATABASE_ROOT_USER}" \
-	--password="${DATABASE_ROOT_PASS}" \
-	--host="${DATABASE_ENDPOINT}" \
+mysql --user="root" \
+	--password="root" \
+	--host="${RDS_DATABASE_HOST}" \
 	--execute="FLUSH PRIVILEGES;" \
 	>> /root/matomo.log 2>&1
 
-mysql --user="${DATABASE_ROOT_USER}" \
-	--password="${DATABASE_ROOT_PASS}" \
-	--host="${DATABASE_ENDPOINT}" \
+mysql --user="root" \
+	--password="root" \
+	--host="${RDS_DATABASE_HOST}" \
 	matomodb < /vagrant/assets/matomo.sql \
 	>> /root/matomo.log 2>&1
 

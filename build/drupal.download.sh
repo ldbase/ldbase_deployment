@@ -1,4 +1,7 @@
 echo "Downloading Drupal..." | tee /root/drupal.download.log 2>&1
+
+source /etc/environment
+
 cd /var/www/html >/dev/null
 rm index.html >/dev/null
 composer create-project drupal-composer/drupal-project:8.x-dev drupal \
@@ -6,7 +9,7 @@ composer create-project drupal-composer/drupal-project:8.x-dev drupal \
         >> /root/drupal.download.log 2>&1
 cd /var/www/html/drupal >/dev/null 2>&1
 rm composer.* >/dev/null 2>&1
-cp /ldbase_deployment/assets/composer.json . >/dev/null 2>&1
+cp /vagrant/assets/composer.json . >/dev/null 2>&1
 composer install >> /root/drupal.download.log 2>&1
 echo "Done downloading Drupal." | tee /root/drupal.download.log 2>&1
 
@@ -17,11 +20,11 @@ mkdir -p private_files >/dev/null 2>&1
 chmod -R 777 private_files >/dev/null 2>&1
 echo '$settings["file_private_path"] = "/var/www/html/drupal/private_files";' >> /var/www/html/drupal/web/sites/default/settings.php
 
-echo '$settings["s3fs.access_key"] = "minioadmin";' >> /var/www/html/drupal/web/sites/default/settings.php
-echo '$settings["s3fs.secret_key"] = "minioadmin";' >> /var/www/html/drupal/web/sites/default/settings.php
-echo '$config["s3fs.settings"]["bucket"] = "ldbase";' >> /var/www/html/drupal/web/sites/default/settings.php
-echo '$settings["s3fs.use_s3_for_private"] = TRUE;' >> /var/www/html/drupal/web/sites/default/settings.php
-echo '$settings["s3fs.upload_as_private"] = TRUE;' >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings[\"s3fs.access_key\"] = \"${S3_ACCESS_KEY}\";" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings[\"s3fs.secret_key\"] = \"${S3_SECRET_KEY}\";" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$config[\"s3fs.settings\"][\"bucket\"] = \"${S3_BUCKET_NAME}\";" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings[\"s3fs.use_s3_for_private\"] = TRUE;" >> /var/www/html/drupal/web/sites/default/settings.php
+echo "$settings[\"s3fs.upload_as_private\"] = TRUE;" >> /var/www/html/drupal/web/sites/default/settings.php
 
 echo '$settings["trusted_host_patterns"] = [' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
@@ -65,6 +68,4 @@ if [ -d /vagrant ]; then
 fi
 
 cd /var/www/html/drupal/web/ >/dev/null 2>&1
-rm robots.log >/dev/null 2>&1
-cp /ldbase_deployment/assets/robots.log . >/dev/null 2>&1
 echo "Done customizing Drupal codebase." | tee /root/drupal.download.log 2>&1

@@ -1,3 +1,5 @@
+source /etc/environment
+
 echo "Downloading MinIO server & client..." | tee /root/minio.log 2>&1
 cd /root/ >/dev/null 2>&1
 wget https://dl.min.io/server/minio/release/linux-amd64/minio >/dev/null 2>&1
@@ -12,5 +14,5 @@ echo "\n\nStarting  MinIO server and provisioning LDbase bucket..." | tee /root/
 minio server /data >> minio.log & >/dev/null 2>&1
 mkdir /root/.mc; cp /vagrant/assets/mc.config.json /root/.mc/config.json >/dev/null 2>&1
 mc mb localhost/ldbase >> minio.log >/dev/null 2>&1
-mc policy set public localhost/ldbase >> minio.log 2>&1
+mc policy set public localhost/${S3_BUCKET_NAME} >> minio.log 2>&1
 echo "Done starting MinIO server and provisioning LDbase bucket." | tee /root/minio.log 2>&1
