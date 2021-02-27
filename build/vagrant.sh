@@ -4,15 +4,15 @@
 cat /vagrant/assets/vagrant.env >> /etc/environment
 
 # Install components
-sh /vagrant/build/os.sh
-sh /vagrant/build/minio.sh
-sh /vagrant/build/matomo.sh
-sh /vagrant/build/composer.sh
-sh /vagrant/build/drupal.mysql.sh
-sh /vagrant/build/drupal.apache.sh
-sh /vagrant/build/drupal.download.sh
-sh /vagrant/build/drupal.install.sh
-sh /vagrant/build/drupal.config.sh
+bash /vagrant/build/os.sh
+bash /vagrant/build/minio.sh
+bash /vagrant/build/matomo.sh
+bash /vagrant/build/composer.sh
+bash /vagrant/build/drupal.mysql.sh
+bash /vagrant/build/drupal.apache.sh
+bash /vagrant/build/drupal.download.sh
+bash /vagrant/build/drupal.install.sh
+bash /vagrant/build/drupal.config.sh
 
 
 # Install bash helpers 

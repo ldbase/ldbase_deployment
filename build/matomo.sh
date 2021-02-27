@@ -36,8 +36,7 @@ service mysql restart >> /root/matomo.log 2>&1
 echo "Done configuring MySQL server for Matomo." >> /root/matomo.log 2>&1
 
 
-echo "\n\nInstalling Matomo..." >> /root/matomo.log 2>&1
-echo "Installing Matomo..."
+echo "Installing Matomo..." >> /root/matomo.log 2>&1
 cd /root >/dev/null 2>&1
 wget https://builds.matomo.org/matomo.zip >/dev/null 2>&1
 unzip matomo.zip >/dev/null 2>&1

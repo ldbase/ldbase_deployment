@@ -14,7 +14,7 @@ composer install >> /root/drupal.download.log 2>&1
 echo "Done downloading Drupal." | tee /root/drupal.download.log 2>&1
 
 
-echo "\n\nCustomizing Drupal codebase..." | tee /root/drupal.download.log 2>&1
+echo "Customizing Drupal codebase..." | tee /root/drupal.download.log 2>&1
 cd /var/www/html/drupal >/dev/null 2>&1
 mkdir -p private_files >/dev/null 2>&1
 chmod -R 777 private_files >/dev/null 2>&1
