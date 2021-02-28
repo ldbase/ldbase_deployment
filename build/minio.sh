@@ -9,6 +9,6 @@ chmod +x mc
 mv mc /usr/local/bin/
 
 minio server /data >> minio.log &
-mkdir /root/.mc; cp /vagrant/assets/mc.config.json /root/.mc/config.json
+mkdir /root/.mc; cp /ldbase_deployment/assets/mc.config.json /root/.mc/config.json
 mc mb "localhost/${S3_BUCKET_NAME}"
 mc policy set public "localhost/${S3_BUCKET_NAME}"

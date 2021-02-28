@@ -5,7 +5,7 @@ rm index.html
 composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction > /dev/null 2>&1
 cd /var/www/html/drupal
 rm composer.*
-cp /vagrant/assets/composer.json .
+cp /ldbase_deployment/assets/composer.json .
 composer install > /dev/null 2>&1
 
 cd /var/www/html/drupal
