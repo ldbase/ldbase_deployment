@@ -24,6 +24,8 @@ if [ -d /vagrant ]; then
 	echo '"^localhost$",' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 else
+	echo '"^ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
 	echo '"^www\.ldbase\.org$",' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 	echo '"^test\.ldbase\.org$",' \
