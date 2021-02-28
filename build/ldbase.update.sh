@@ -12,6 +12,7 @@ case $EC2_HOSTNAME in
   ldbase_prod)
     USE_CUSTOM_HOST=0
     ;;
+esac
 
 cd /ldbase_deployment; git pull
 cd /var/www/html/drupal

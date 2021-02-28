@@ -10,8 +10,8 @@ Executes the `drupal config:import` command with the directory argument preset t
 ### `ldb-export` (replaces `ldbx`)
 Executes the `drush config:export` command with the destination argument preset to the correct location (/var/www/html/drupal/web/libraries/ldbase_config/sync/).
 
-### `ldb-reset`
-Empties the Drupal database from MySQL without actually dropping the table, preserving the Drupal database user's privileges, and then runs `ldb-update` (explained below). **WARNING:** This will drop all the content data, so don't run this on a production site unless you have a good reason.
+### `ldb-rebuild`
+Empties the Drupal database (preserves the Drupal user and privileges) and deletes the Drupal file system, then rebuilds from scratch. Only use when you want to completely wipe the system and start fresh, all content will be lost.
 
 ### `ldb-update`
 Updates all development modules relevant to the LDbase project, reloads configurations, and overrides environment-specific configurations with environmental variables.
