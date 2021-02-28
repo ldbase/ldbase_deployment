@@ -18,3 +18,6 @@ bash /vagrant/build/drupal.config.sh
 # Install bash helpers 
 cat /vagrant/assets/bash.sh >> /root/.bashrc
 cat /vagrant/assets/.vimrc >> /root/.vimrc
+
+# Install secondary ldbase_deployment inside VM
+git clone https://github.com/ldbase/ldbase_deployment /ldbase_deployment
