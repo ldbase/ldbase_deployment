@@ -28,8 +28,8 @@ mysql --user="root" \
 service mysql restart
 
 cd /root
-wget https://builds.matomo.org/matomo.zip
-unzip matomo.zip
+wget https://builds.matomo.org/matomo.zip > /dev/null 2>&1
+unzip matomo.zip > /dev/null 2>&1
 mv matomo /var/www/html/matomo
 rm /root/'How to install Matomo.html'
 rm /root/matomo.zip

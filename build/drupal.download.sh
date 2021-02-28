@@ -2,11 +2,11 @@ source /etc/environment
 
 cd /var/www/html
 rm index.html
-composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction > /dev/null 2>&1
 cd /var/www/html/drupal
 rm composer.*
 cp /vagrant/assets/composer.json .
-composer install
+composer install > /dev/null 2>&1
 
 cd /var/www/html/drupal
 mkdir -p private_files
@@ -33,21 +33,21 @@ echo '];' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 
 cd /var/www/html/drupal/web/libraries
-git clone https://github.com/components/highlightjs
+git clone https://github.com/components/highlightjs > /dev/null 2>&1
 mkdir d3
 cd d3
-wget https://d3js.org/d3.v3.min.js
+wget https://d3js.org/d3.v3.min.js > /dev/null 2>&1
 mv d3.v3.min.js d3.min.js
 cd /var/www/html/drupal/web/libraries
 mkdir jquery-ui-slider-pips
 cd jquery-ui-slider-pips
 mkdir dist
 cd dist
-wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.css
-wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.js
+wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.css > /dev/null 2>&1
+wget https://raw.githubusercontent.com/simeydotme/jQuery-ui-Slider-Pips/v1.11.3/dist/jquery-ui-slider-pips.min.js > /dev/null 2>&1
 cd /var/www/html/drupal/web 
-wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-5.x/libraries.zip
-unzip libraries.zip
+wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-5.x/libraries.zip > /dev/null 2>&1
+unzip libraries.zip > /dev/null 2>&1
 rm libraries.zip
 
 cd /var/www/html/drupal/vendor/seboettg/citeproc-php

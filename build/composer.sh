@@ -6,4 +6,4 @@ chmod +x /usr/local/bin/composer
 /usr/local/bin/composer global require zaporylie/composer-drupal-optimizations
 mkdir /root/.composer
 cd /root/.composer/
-wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json
+wget https://www.dropbox.com/s/uu5qt5mnlovc7mz/auth.json > /dev/null

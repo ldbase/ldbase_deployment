@@ -1,10 +1,10 @@
 source /etc/environment
 
 cd /root/
-wget https://dl.min.io/server/minio/release/linux-amd64/minio
+wget https://dl.min.io/server/minio/release/linux-amd64/minio > /dev/null 2>&1
 chmod +x minio
 mv minio /usr/local/bin/
-wget https://dl.min.io/client/mc/release/linux-amd64/mc
+wget https://dl.min.io/client/mc/release/linux-amd64/mc > /dev/null 2>&1
 chmod +x mc
 mv mc /usr/local/bin/
 
