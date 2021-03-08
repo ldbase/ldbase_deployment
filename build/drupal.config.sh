@@ -3,8 +3,6 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
 /var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync
 /var/www/html/drupal/vendor/bin/drupal ldbase:importTerms
-service apache2 restart
-service mysql restart
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
 /var/www/html/drupal/vendor/bin/drupal cache:rebuild
