@@ -25,6 +25,7 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync
 
 /var/www/html/drupal/vendor/bin/drush config:set "matomo.settings" url_http "http://${MATOMO_DNS_NAME}/" -y
+/var/www/html/drupal/vendor/bin/drush config:set "matomo.settings" url_https "https://${MATOMO_DNS_NAME}/" -y
 /var/www/html/drupal/vendor/bin/drush config:set "ldbase_admin.settings" ldbase_matomo_user_token "${MATOMO_TOKEN}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "smtp.settings" smtp_username "${SMTP_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "smtp.settings" smtp_password "${SMTP_PASSWORD}" -y

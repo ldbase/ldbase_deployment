@@ -18,6 +18,22 @@ echo "\$config[\"s3fs.settings\"][\"bucket\"] = \"${S3_BUCKET_NAME}\";" >> /var/
 echo '$settings["s3fs.use_s3_for_private"] = TRUE;' >> /var/www/html/drupal/web/sites/default/settings.php
 echo '$settings["s3fs.upload_as_private"] = TRUE;' >> /var/www/html/drupal/web/sites/default/settings.php
 
+echo '$settings["trusted_host_patterns"] = [' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+if [ -d /vagrant ]; then
+	echo '"^localhost$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+else
+	echo '"^ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+	echo '"^www\.ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+	echo '"^test\.ldbase\.org$",' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+fi
+echo '];' \
+	>> /var/www/html/drupal/web/sites/default/settings.php
+
 cd /var/www/html/drupal/web/libraries
 git clone https://github.com/components/highlightjs > /dev/null 2>&1
 mkdir d3

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd /var/www/html/drupal
 /var/www/html/drupal/vendor/bin/drupal database:drop --no-interaction
 cd /ldbase_deployment; git pull

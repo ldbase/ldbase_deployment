@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bash /ldbase_deployment/commands/ldb-rebuild
+bash /ldbase_deployment/commands/ldb-rebuild
