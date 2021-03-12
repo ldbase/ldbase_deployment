@@ -56,6 +56,10 @@ cd /var/www/html/drupal/vendor/seboettg/citeproc-php
 /var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales
 /var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution
 
+cd /var/www/html/drupal/web/sites/default/files
+mkdir -p crossref-doi-xml
+chmod -R 777 crossref-doi-xml
+
 if [ -d /vagrant ]; then 
   chown -R vagrant:vagrant /var/www/html/drupal/web/themes/custom/portcullis
   chown -R vagrant:vagrant /var/www/html/drupal/web/modules/custom/ldbase_new_account
