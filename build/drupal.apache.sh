@@ -6,8 +6,4 @@ sed -i -e 's/\/var\/www\/html/\/var\/www\/html\/drupal\/web/g' /etc/apache2/site
 rm /etc/php/7.2/apache2/php.ini
 cp /ldbase_deployment/assets/apache.php.ini /etc/php/7.2/apache2/php.ini
 
-rm /etc/systemd/system/multi-user.target.wants/apache2.service
-cp /ldbase_deployment/assets/apache2.service /etc/systemd/system/multi-user.target.wants/apache2.service
-
-systemctl daemon-reload
 service apache2 restart
