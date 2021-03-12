@@ -30,6 +30,9 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config:set "smtp.settings" smtp_username "${SMTP_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "smtp.settings" smtp_password "${SMTP_PASSWORD}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost "${USE_CUSTOM_HOST}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_api_endpoint "${CROSSREF_ENDPOINT}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_username "${CROSSREF_USERNAME}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_password "${CROSSREF_PASSWORD}" -y
 
 /var/www/html/drupal/vendor/bin/drush updatedb
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
