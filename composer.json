@@ -67,7 +67,7 @@
     ],
     "require": {
         "php": ">=7.0.8",
-        "composer/installers": "^1.2",
+        "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/active_facet_pills": "^1.0@beta",
         "drupal/address": "^1.8",
@@ -137,8 +137,7 @@
         "ldbase/ldbase_handlers": "dev-master",
         "ldbase/ldbase_new_account": "dev-master",
         "vlucas/phpdotenv": "^4.0",
-        "webflo/drupal-finder": "^1.0.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "webflo/drupal-finder": "^1.0.0"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"
