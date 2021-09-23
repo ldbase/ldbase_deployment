@@ -52,6 +52,19 @@ wget https://git.drupalcode.org/sandbox/jrockowitz-2941983/raw/8.x-5.x/libraries
 unzip libraries.zip > /dev/null 2>&1
 rm libraries.zip
 
+cd /var/www/html/drupal/web/libraries
+#get slick libraries
+wget https://github.com/kenwheeler/slick/archive/1.8.0.tar.gz > /dev/null 2>&1
+tar xzvf 1.8.0.tar.gz > /dev/null 2>&1
+mv slick-1.8.0/ slick
+rm 1.8.0.tar.gz
+
+#get blazy libraries
+wget https://github.com/dinbror/blazy/archive/refs/heads/master.zip > /dev/null 2>&1
+unzip master.zip > /dev/null 2>&1
+mv blazy-master/ blazy
+rm master.zip
+
 cd /var/www/html/drupal/vendor/seboettg/citeproc-php
 /var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh locales
 /var/www/html/drupal/vendor/seboettg/citeproc-php/install.sh styles-distribution
