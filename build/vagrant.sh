@@ -1,23 +1,20 @@
 #!/bin/bash
 
-# Install secondary ldbase_deployment inside VM
-git clone https://github.com/ldbase/ldbase_deployment /ldbase_deployment
-
 # Dump Vagrant VM envars
-cat /vagrant/assets/vagrant.env >> /etc/environment
+cat /ldbase_deployment/assets/vagrant.env >> /etc/environment
 
 # Install components
-bash /vagrant/build/os.sh
-bash /vagrant/build/minio.sh
-bash /vagrant/build/matomo.sh
-bash /vagrant/build/composer.sh
-bash /vagrant/build/drupal.mysql.sh
-bash /vagrant/build/drupal.apache.sh
-bash /vagrant/build/drupal.download.sh
-bash /vagrant/build/drupal.install.sh
-bash /vagrant/build/drupal.config.sh
+bash /ldbase_deployment/build/os.sh
+bash /ldbase_deployment/build/minio.sh
+bash /ldbase_deployment/build/matomo.sh
+bash /ldbase_deployment/build/composer.sh
+bash /ldbase_deployment/build/drupal.mysql.sh
+bash /ldbase_deployment/build/drupal.apache.sh
+bash /ldbase_deployment/build/drupal.download.sh
+bash /ldbase_deployment/build/drupal.install.sh
+bash /ldbase_deployment/build/drupal.config.sh
 
 # Install bash helpers 
-cat /vagrant/assets/bash.sh >> /root/.bashrc
-cat /vagrant/assets/.vimrc >> /root/.vimrc
+cat /ldbase_deployment/assets/bash.sh >> /root/.bashrc
+cat /ldbase_deployment/assets/.vimrc >> /root/.vimrc
 

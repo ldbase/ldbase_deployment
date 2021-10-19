@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, 
   path: "build/vagrant.sh",
   keep_color: true
-  config.vm.synced_folder ".", "/vagrant", :mount_options => ["dmode=777","fmode=777"]
+  config.vm.synced_folder ".", "/ldbase_deployment", :mount_options => ["dmode=777","fmode=777"]
   config.vm.synced_folder "~/.ssh", "/local_keys", :mount_options => ["dmode=777","fmode=777"]
   config.vm.network :forwarded_port, host: 9999, guest: 80
   config.vm.network :forwarded_port, host: 9000, guest: 9000

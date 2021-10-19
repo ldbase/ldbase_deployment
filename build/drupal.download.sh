@@ -20,7 +20,7 @@ echo '$settings["s3fs.upload_as_private"] = TRUE;' >> /var/www/html/drupal/web/s
 
 echo '$settings["trusted_host_patterns"] = [' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
-if [ -d /vagrant ]; then
+if [ -d /home/vagrant ]; then
 	echo '"^localhost$",' \
 	>> /var/www/html/drupal/web/sites/default/settings.php
 else
