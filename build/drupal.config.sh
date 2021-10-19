@@ -6,3 +6,6 @@ cd /var/www/html/drupal/
 cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
 /var/www/html/drupal/vendor/bin/drupal cache:rebuild
+
+# Make request to host to bootstrap instance and purge error display
+wget -O - localhost > /dev/null
