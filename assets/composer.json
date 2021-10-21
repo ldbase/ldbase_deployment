@@ -69,7 +69,6 @@
         "php": ">=7.0.8",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
-        "drupal/active_facet_pills": "^1.0@beta",
         "drupal/address": "^1.8",
         "drupal/asset_injector": "^2.6",
         "drupal/backup_migrate": "^4.1",
