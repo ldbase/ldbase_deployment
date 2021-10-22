@@ -124,7 +124,7 @@
         "drupal/variationcache": "^1.0",
         "drupal/video_embed_field": "^2.2",
         "drupal/views_infinite_scroll": "^1.6",
-        "drupal/webform": "^5.8",
+        "drupal/webform": "^6.0",
         "drupal/webform_views": "^5.0@alpha",
         "drush/drush": "^9.7.1 | ^10.0.0",
         "fsulib/doi_crossref": "dev-master",
