@@ -90,7 +90,7 @@
         "drupal/fontyourface": "^3.2",
         "drupal/gdpr": "^1.0@alpha",
         "drupal/group": "^1.0@RC",
-        "drupal/honeypot": "^1.30",
+        "drupal/honeypot": "^2.0",
         "drupal/image_widget_crop": "^2.2",
         "drupal/inline_entity_form": "^1.0@RC",
         "drupal/login_destination": "^2.0@beta",
