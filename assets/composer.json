@@ -72,7 +72,7 @@
         "drupal/address": "^1.8",
         "drupal/asset_injector": "^2.6",
         "drupal/captcha": "^1.1",
-        "drupal/collapsiblock": "^2.0",
+        "drupal/collapsiblock": "^3.0",
         "drupal/console": "1.9.4",
         "drupal/context": "^4.0@beta",
         "drupal/core": "^8.8.0",
@@ -138,7 +138,8 @@
         "ldbase/ldbase_new_account": "dev-master",
         "mglaman/phpstan-drupal": "0.12.*",
         "vlucas/phpdotenv": "^4.0",
-        "webflo/drupal-finder": "^1.0.0"
+        "webflo/drupal-finder": "^1.0.0",
+        "wikimedia/composer-merge-plugin": "^2.0"
     },
     "require-dev": {
         "drupal/core-dev": "^8.8.0"
@@ -190,6 +191,11 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"]
-        }
+        },
+	"merge-plugin": {
+		"include": [
+			"web/modules/contrib/webform/composer.libraries.json"
+		]
+	}
     }
 }
