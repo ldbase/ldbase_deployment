@@ -18,11 +18,8 @@ service apache2 restart >> /root/build.log 2>&1
 
 composer require drupal/core-dev:^9.2.0 --dev --no-update --update-with-dependencies  >> /root/build.log 2>&1
 composer require drupal/core:^9.2.0 drupal/core-recommended:^9.2.0 drupal/core-composer-scaffold:^9.2.0 drupal/core-project-message:^9.2.0 --no-update --update-with-dependencies >> /root/build.log 2>&1
-
-composer remove drupal/console --no-update >> /root/build.log 2>&1
+composer require drupal/console:1.9.7 --no-update --update-with-dependencies >> /root/build.log 2>&1
 
 composer update >> /root/build.log 2>&1
 
 drush -y updb >> /root/build.log 2>&1
-
-composer require drupal/console >> /root/build.log 2>&1
