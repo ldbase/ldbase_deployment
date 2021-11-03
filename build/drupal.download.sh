@@ -6,7 +6,7 @@ composer create-project drupal-composer/drupal-project:8.x-dev drupal --stabilit
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.json .
-composer install > /dev/null 2>&1
+composer --no-interaction install > /dev/null 2>&1
 
 cd /var/www/html/drupal
 mkdir -p private_files
@@ -53,13 +53,11 @@ unzip libraries.zip > /dev/null 2>&1
 rm libraries.zip
 
 cd /var/www/html/drupal/web/libraries
-#get slick libraries
 wget https://github.com/kenwheeler/slick/archive/1.8.0.tar.gz > /dev/null 2>&1
 tar xzvf 1.8.0.tar.gz > /dev/null 2>&1
 mv slick-1.8.0/ slick
 rm 1.8.0.tar.gz
 
-#get blazy libraries
 wget https://github.com/dinbror/blazy/archive/refs/heads/master.zip > /dev/null 2>&1
 unzip master.zip > /dev/null 2>&1
 mv blazy-master/ blazy

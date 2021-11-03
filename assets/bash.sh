@@ -1,7 +1,7 @@
 
 
 # Custom bash extensions created by ldbase_deployment vagrant boot 
-PATH=/ldbase_deployment/commands/:/var/www/html/drupal/vendor/bin/:$PATH
+PATH=$PATH:/ldbase_deployment/commands/:/var/www/html/drupal/vendor/bin/
 
 function git_set {
   if [ "$1" = "bb" ]
