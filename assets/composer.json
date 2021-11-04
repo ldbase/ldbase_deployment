@@ -154,7 +154,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "preferred-install": {
+            "fsulib/*": "source",
+            "ldbase/*": "source"
+        }
     },
     "autoload": {
         "classmap": [
