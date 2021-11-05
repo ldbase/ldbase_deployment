@@ -12,7 +12,7 @@ bash /ldbase_deployment/build/drupal.mysql.sh
 bash /ldbase_deployment/build/drupal.apache.sh
 bash /ldbase_deployment/build/drupal.download.sh
 bash /ldbase_deployment/build/drupal.install.sh
-bash /ldbase_deployment/build/drupal.config.sh
+#bash /ldbase_deployment/build/drupal.config.sh
 
 # Install bash helpers 
 cat /ldbase_deployment/assets/bash.sh >> /root/.bashrc

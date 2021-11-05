@@ -13,6 +13,6 @@ echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 
 apt update > /dev/null 2>&1
 apt -y upgrade > /dev/null 2>&1
-apt -y install mysql-server apache2 unzip php7.2 php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl > /dev/null 2>&1
+apt -y install mysql-server apache2 unzip php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl > /dev/null 2>&1
 service mysql restart
 service apache2 restart
