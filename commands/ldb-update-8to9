@@ -2,24 +2,16 @@
 
 cd /var/www/html/drupal
 
-# Install PHP 7.4
-add-apt-repository -y ppa:ondrej/php >> /root/build.log 2>&1
-add-apt-repository -y ppa:ondrej/apache2  >> /root/build.log 2>&1
-apt -y update >> /root/build.log 2>&1
+echo "Adding Drupal 9 requirements to composer.json..."
+composer require drupal/core-dev:^9.2.0 --dev --no-update --update-with-dependencies --no-interaction
+composer require drupal/core:^9.2.0 drupal/core-recommended:^9.2.0 drupal/core-composer-scaffold:^9.2.0 drupal/core-project-message:^9.2.0 --no-update --update-with-dependencies --no-interaction
+composer require drupal/console:1.9.7 --no-update --update-with-dependencies --no-interaction
 
-apt -y install php7.4 php7.4-dev php7.4-gd php7.4-soap php7.4-mysql php7.4-mbstring php7.4-zip php7.4-curl php7.4-xml >> /root/build.log 2>&1
+echo "Updating to Drupal 9 via composer update..."
+composer update --no-interaction
 
-a2dismod php7.2 >> /root/build.log 2>&1
-a2enmod php7.4 >> /root/build.log 2>&1
+echo "Updating database schema..."
+drush -y updb
+drush cr
 
-service apache2 restart >> /root/build.log 2>&1
-
-# Update to Drupal 9
-
-composer require drupal/core-dev:^9.2.0 --dev --no-update --update-with-dependencies --no-interaction >> /root/build.log 2>&1
-composer require drupal/core:^9.2.0 drupal/core-recommended:^9.2.0 drupal/core-composer-scaffold:^9.2.0 drupal/core-project-message:^9.2.0 --no-update --update-with-dependencies --no-interaction >> /root/build.log 2>&1
-composer require drupal/console:1.9.7 --no-update --update-with-dependencies --no-interaction >> /root/build.log 2>&1
-
-composer update --no-interaction >> /root/build.log 2>&1
-
-drush -y updb >> /root/build.log 2>&1
+echo "Done!"

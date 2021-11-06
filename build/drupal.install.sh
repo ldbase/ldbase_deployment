@@ -4,7 +4,7 @@ cd /var/www/html/drupal
 /var/www/html/drupal/vendor/bin/drupal site:install standard \
 	--langcode="en" \
 	--db-type="mysql" \
-	--db-host="${RDS_DATABASE_HOST}" \
+	--db-host="127.0.0.1" \
 	--db-name="${RDS_DATABASE_NAME}" \
 	--db-user="${RDS_DATABASE_USER}" \
 	--db-pass="${RDS_DATABASE_PASSWORD}" \
