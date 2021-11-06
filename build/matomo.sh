@@ -1,31 +1,41 @@
 source /etc/environment
 
-mysql --user="root" \
-	--password="root" \
-	--host="${RDS_DATABASE_HOST}" \
-	--execute="CREATE DATABASE matomodb;"
+mysql \
+--user="root" \
+--password="root" \
+--host="${RDS_DATABASE_HOST}" \
+--protocol="tcp" \
+--execute="CREATE DATABASE matomodb;"
 
-mysql --user="root" \
-	--password="root" \
-	--host="${RDS_DATABASE_HOST}" \
-	--execute="CREATE USER 'matomo'@'%' IDENTIFIED BY 'matomo';"
+mysql \
+--user="root" \
+--password="root" \
+--host="${RDS_DATABASE_HOST}" \
+--protocol="tcp" \
+--execute="CREATE USER 'matomo'@'%' IDENTIFIED BY 'matomo';"
 
-mysql --user="root" \
-	--password="root" \
-	--host="${RDS_DATABASE_HOST}" \
-	--execute="GRANT ALL PRIVILEGES ON matomodb.* TO 'matomo'@'%';"
+mysql \
+--user="root" \
+--password="root" \
+--host="${RDS_DATABASE_HOST}" \
+--protocol="tcp" \
+--execute="GRANT ALL PRIVILEGES ON matomodb.* TO 'matomo'@'%';"
 
-mysql --user="root" \
-	--password="root" \
-	--host="${RDS_DATABASE_HOST}" \
-	--execute="FLUSH PRIVILEGES;"
+mysql \
+--user="root" \
+--password="root" \
+--host="${RDS_DATABASE_HOST}" \
+--protocol="tcp" \
+--execute="FLUSH PRIVILEGES;"
 
-mysql --user="root" \
-	--password="root" \
-	--host="${RDS_DATABASE_HOST}" \
-	matomodb < /ldbase_deployment/assets/matomo.sql
+mysql \
+--user="root" \
+--password="root" \
+--host="${RDS_DATABASE_HOST}" \
+--protocol="tcp" \
+matomodb < /ldbase_deployment/assets/matomo.sql
 
-service mysql restart
+docker restart mysql
 
 cd /root
 wget https://builds.matomo.org/matomo.zip > /dev/null 2>&1

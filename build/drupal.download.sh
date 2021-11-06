@@ -2,11 +2,11 @@ source /etc/environment
 
 cd /var/www/html
 rm index.html
-composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction > /dev/null 2>&1
+composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.json .
-composer --no-interaction install > /dev/null 2>&1
+composer --no-interaction install 
 
 cd /var/www/html/drupal
 mkdir -p private_files

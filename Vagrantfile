@@ -24,4 +24,9 @@ Vagrant.configure("2") do |config|
     trigger.info = "Restarting MinIO server"
     trigger.run_remote = {inline: "minio server /data >/dev/null 2>&1 &"}
   end
+  config.trigger.after :up do |trigger|
+    trigger.name = "Restart MySQL"
+    trigger.info = "Restarting MySQL container"
+    trigger.run_remote = {inline: "docker restart mysql >/dev/null 2>&1 &"}
+  end
 end
