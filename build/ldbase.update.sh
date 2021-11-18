@@ -34,7 +34,7 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_username "${CROSSREF_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_password "${CROSSREF_PASSWORD}" -y
 
-/var/www/html/drupal/vendor/bin/drush updatedb
+/var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
 /var/www/html/drupal/vendor/bin/drupal cache:rebuild
 /var/www/html/drupal/vendor/bin/drush -vvv search-api:index
