@@ -11,7 +11,7 @@ echo "Updating to Drupal 9 via composer update..."
 composer update --no-interaction
 
 echo "Updating database schema..."
-drush -y updb
-drush cr
+/var/www/html/drupal/vendor/bin/drush -y updb
+/var/www/html/drupal/vendor/bin/drush cr
 
 echo "Done!"
