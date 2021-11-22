@@ -12,6 +12,8 @@ composer update --no-interaction
 
 echo "Updating database schema..."
 /var/www/html/drupal/vendor/bin/drush -y updb
-/var/www/html/drupal/vendor/bin/drush cr
+/var/www/html/drupal/vendor/bin/drupal node:access:rebuild
+/var/www/html/drupal/vendor/bin/drush -vvv search-api:index
+/var/www/html/drupal/vendor/bin/drupal cache:rebuild
 
 echo "Done!"
