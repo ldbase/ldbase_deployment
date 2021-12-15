@@ -36,5 +36,6 @@ cd /var/www/html/drupal/
 
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
-/var/www/html/drupal/vendor/bin/drupal cache:rebuild
+#/var/www/html/drupal/vendor/bin/drupal cache:rebuild
+/var/www/html/drupal/vendor/bin/drush cr
 /var/www/html/drupal/vendor/bin/drush -vvv search-api:index
