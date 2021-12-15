@@ -22,7 +22,7 @@ composer update --no-interaction
 
 cd /var/www/html/drupal/
 
-/var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync
+/var/www/html/drupal/vendor/bin/drush config:import --source="/var/www/html/drupal/web/libraries/ldbase_config/sync" -y
 
 /var/www/html/drupal/vendor/bin/drush config:set "matomo.settings" url_http "http://${MATOMO_DNS_NAME}/" -y
 /var/www/html/drupal/vendor/bin/drush config:set "matomo.settings" url_https "https://${MATOMO_DNS_NAME}/" -y
