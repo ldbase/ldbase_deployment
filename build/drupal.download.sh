@@ -2,7 +2,7 @@ source /etc/environment
 
 cd /var/www/html
 rm index.html
-composer create-project drupal-composer/drupal-project:8.x-dev drupal --stability dev --no-interaction
+composer create-project drupal-composer/drupal-project:9.x-dev drupal --stability dev --no-interaction >> /root/build.log 2>&1
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.json .
