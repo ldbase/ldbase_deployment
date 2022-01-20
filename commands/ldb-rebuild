@@ -2,8 +2,9 @@
 
 cd /var/www/html/drupal
 /var/www/html/drupal/vendor/bin/drupal database:drop --no-interaction
-cd /ldbase_deployment; git pull
 rm -rf /var/www/html/drupal
+
+cd /ldbase_deployment; git pull
 bash /ldbase_deployment/build/drupal.download.sh
 bash /ldbase_deployment/build/drupal.install.sh
 bash /ldbase_deployment/build/drupal.config.sh

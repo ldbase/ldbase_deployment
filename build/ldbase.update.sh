@@ -14,14 +14,19 @@ case $EC2_HOSTNAME in
     ;;
 esac
 
+ssh-keyscan github.com >> ~/.ssh/known_hosts
 cd /ldbase_deployment; git pull
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.json .
 composer update --no-interaction
 
-cd /var/www/html/drupal/
+cd /var/www/html/drupal/web/libraries/ldbase_config/
+mkdir ext
+cp sync/core.extension.yml ext/
 
+cd /var/www/html/drupal/
+/var/www/html/drupal/vendor/bin/drush config:import --source="/var/www/html/drupal/web/libraries/ldbase_config/ext" -y --partial
 /var/www/html/drupal/vendor/bin/drush config:import --source="/var/www/html/drupal/web/libraries/ldbase_config/sync" -y
 
 /var/www/html/drupal/vendor/bin/drush config:set "matomo.settings" url_http "http://${MATOMO_DNS_NAME}/" -y
@@ -36,6 +41,5 @@ cd /var/www/html/drupal/
 
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
-#/var/www/html/drupal/vendor/bin/drupal cache:rebuild
-/var/www/html/drupal/vendor/bin/drush cr
+/var/www/html/drupal/vendor/bin/drush cache:rebuild
 /var/www/html/drupal/vendor/bin/drush -vvv search-api:index

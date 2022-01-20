@@ -1,3 +1,4 @@
 #!/bin/bash
 
+cd /ldbase_deployment; git pull
 bash /ldbase_deployment/build/ldbase.update.sh
