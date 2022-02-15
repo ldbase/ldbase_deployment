@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cd /var/www/html/drupal/; /var/www/html/drupal/vendor/bin/drupal config:import --directory=/var/www/html/drupal/web/libraries/ldbase_config/sync
+cd /var/www/html/drupal/; /var/www/html/drupal/vendor/bin/drush config:import --source=/var/www/html/drupal/web/libraries/ldbase_config/sync
