@@ -8,5 +8,6 @@ cd /var/www/html/drupal
   --site-mail="${DRUPAL_ADMIN_EMAIL}" \
   --account-name="${DRUPAL_ADMIN_USERNAME}" \
   --account-pass="${DRUPAL_ADMIN_PASSWORD}" \
-  --account-mail="${DRUPAL_ADMIN_EMAIL}"
+  --account-mail="${DRUPAL_ADMIN_EMAIL}" \
+  --yes
 
