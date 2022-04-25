@@ -19,6 +19,7 @@ cd /ldbase_deployment; git pull
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.json .
+cp /ldbase_deployment/assets/composer.lock .
 composer update --no-interaction
 
 cd /var/www/html/drupal/web/libraries/ldbase_config/

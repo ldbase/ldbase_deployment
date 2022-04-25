@@ -143,7 +143,6 @@
         "ldbase/ldbase_embargoes": "dev-main",
         "ldbase/ldbase_handlers": "dev-master",
         "ldbase/ldbase_new_account": "dev-master",
-        "mglaman/phpstan-drupal": "^1.0.0",
         "vlucas/phpdotenv": "^5",
         "webflo/drupal-finder": "^1.0.0",
         "wikimedia/composer-merge-plugin": "^2.0"
