@@ -5,7 +5,7 @@ rm index.html
 composer create-project drupal-composer/drupal-project:9.x-dev drupal --stability dev --no-interaction >> /root/build.log 2>&1
 cd /var/www/html/drupal
 rm composer.*
-cp /ldbase_deployment/assets/composer.json .
+cp /ldbase_deployment/assets/composer.* .
 composer --no-interaction install 
 
 cd /var/www/html/drupal

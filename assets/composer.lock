@@ -194,16 +194,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.220.3",
+            "version": "3.220.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "fbb2d7349916c15758ee02dfd001a714883a9adf"
+                "reference": "6c2e36bb61741c87ed7ffd53e15d903311ad6b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/fbb2d7349916c15758ee02dfd001a714883a9adf",
-                "reference": "fbb2d7349916c15758ee02dfd001a714883a9adf",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/6c2e36bb61741c87ed7ffd53e15d903311ad6b60",
+                "reference": "6c2e36bb61741c87ed7ffd53e15d903311ad6b60",
                 "shasum": ""
             },
             "require": {
@@ -279,9 +279,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.220.3"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.220.4"
             },
-            "time": "2022-04-22T18:18:31+00:00"
+            "time": "2022-04-25T18:16:08+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -8293,12 +8293,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "59c624df5450ccc1ad40fcae1dd3a53a0e5ad06a"
+                "reference": "c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/59c624df5450ccc1ad40fcae1dd3a53a0e5ad06a",
-                "reference": "59c624df5450ccc1ad40fcae1dd3a53a0e5ad06a",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d",
+                "reference": "c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8333,7 +8333,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2022-04-24T23:09:28+00:00"
+            "time": "2022-04-25T19:36:06+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -9480,16 +9480,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.5.7",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "7fb7e2e1e9f3d59a26a413b2d3d5e47f0edb75ac"
+                "reference": "b480ba2ae0699a72d43a340c20b9c00ede91ee3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/7fb7e2e1e9f3d59a26a413b2d3d5e47f0edb75ac",
-                "reference": "7fb7e2e1e9f3d59a26a413b2d3d5e47f0edb75ac",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/b480ba2ae0699a72d43a340c20b9c00ede91ee3e",
+                "reference": "b480ba2ae0699a72d43a340c20b9c00ede91ee3e",
                 "shasum": ""
             },
             "require": {
@@ -9515,7 +9515,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/1.5.7"
+                "source": "https://github.com/phpstan/phpstan/tree/1.6.0"
             },
             "funding": [
                 {
@@ -9535,7 +9535,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-04-20T12:20:27+00:00"
+            "time": "2022-04-26T05:43:03+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",

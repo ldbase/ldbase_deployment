@@ -18,9 +18,8 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 cd /ldbase_deployment; git pull
 cd /var/www/html/drupal
 rm composer.*
-cp /ldbase_deployment/assets/composer.json .
-cp /ldbase_deployment/assets/composer.lock .
-composer update --no-interaction
+cp /ldbase_deployment/assets/composer.* .
+composer install --no-interaction
 
 cd /var/www/html/drupal/web/libraries/ldbase_config/
 mkdir ext
