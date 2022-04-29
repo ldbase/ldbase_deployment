@@ -4315,14 +4315,6 @@
                     "homepage": "https://www.drupal.org/user/1160788"
                 },
                 {
-                    "name": "RobLoach",
-                    "homepage": "https://www.drupal.org/user/61114"
-                },
-                {
-                    "name": "inders",
-                    "homepage": "https://www.drupal.org/user/127640"
-                },
-                {
                     "name": "truls1502",
                     "homepage": "https://www.drupal.org/user/325866"
                 }
@@ -8293,12 +8285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d"
+                "reference": "aea39b76dbfcc30258a69fc73c5c229e11066403"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d",
-                "reference": "c268f8b6c613bb3338dbf3895f8b3c07ffc0c91d",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/aea39b76dbfcc30258a69fc73c5c229e11066403",
+                "reference": "aea39b76dbfcc30258a69fc73c5c229e11066403",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8333,7 +8325,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2022-04-25T19:36:06+00:00"
+            "time": "2022-04-29T16:38:40+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -8341,12 +8333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "cc30fcdd1c13a95884283783b5a801e3da218872"
+                "reference": "2e5ec876534906c75929c667fd1f986c181751d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/cc30fcdd1c13a95884283783b5a801e3da218872",
-                "reference": "cc30fcdd1c13a95884283783b5a801e3da218872",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/2e5ec876534906c75929c667fd1f986c181751d4",
+                "reference": "2e5ec876534906c75929c667fd1f986c181751d4",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8381,7 +8373,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2022-03-04T18:20:53+00:00"
+            "time": "2022-04-29T16:36:22+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
