@@ -7005,12 +7005,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "78f656fac61a1b667a7a1f2e088cab13c27b924d"
+                "reference": "692afef157d0c4bdc9bc823ec4eca7e21bdcb8f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/78f656fac61a1b667a7a1f2e088cab13c27b924d",
-                "reference": "78f656fac61a1b667a7a1f2e088cab13c27b924d",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/692afef157d0c4bdc9bc823ec4eca7e21bdcb8f5",
+                "reference": "692afef157d0c4bdc9bc823ec4eca7e21bdcb8f5",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7044,7 +7044,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2022-06-20T18:46:02+00:00"
+            "time": "2022-06-20T19:19:55+00:00"
         },
         {
             "name": "fsulib/tombstones",
