@@ -96,6 +96,7 @@
         "drupal/field_group": "^3.0",
         "drupal/flag": "^4.0@beta",
         "drupal/flag_anon": "^1.0",
+        "drupal/flag_search_api":"^1.5",
         "drupal/fontawesome": "^2.15",
         "drupal/fontyourface": "^3.2",
         "drupal/group": "^1.0@RC",
