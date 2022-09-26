@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f9d137636dc227db40618421f05be1f",
+    "content-hash": "998fcc8644edf976f9f8b98e6dd82d04",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4389,6 +4389,60 @@
             }
         },
         {
+            "name": "drupal/flag_search_api",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flag_search_api.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flag_search_api-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "e621e2c7d875a85ed8440c019a0c1f679a70caa0"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/flag": "*",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1648199417",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "tamerzg",
+                    "homepage": "https://www.drupal.org/user/464564"
+                },
+                {
+                    "name": "ws.agency",
+                    "homepage": "https://www.drupal.org/user/2851415"
+                },
+                {
+                    "name": "xSDx",
+                    "homepage": "https://www.drupal.org/user/3273632"
+                }
+            ],
+            "description": "Search API support for flag module.",
+            "homepage": "https://www.drupal.org/project/flag_search_api",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flag_search_api"
+            }
+        },
+        {
             "name": "drupal/fontawesome",
             "version": "2.23.0",
             "source": {
@@ -7137,12 +7191,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "c50baa99d84ac19f835941b5bd8c9ec451486847"
+                "reference": "41aebeb09adb1d76fa650e018b4a72e007cb3d52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/c50baa99d84ac19f835941b5bd8c9ec451486847",
-                "reference": "c50baa99d84ac19f835941b5bd8c9ec451486847",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/41aebeb09adb1d76fa650e018b4a72e007cb3d52",
+                "reference": "41aebeb09adb1d76fa650e018b4a72e007cb3d52",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7176,7 +7230,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2022-09-26T18:10:05+00:00"
+            "time": "2022-09-26T21:22:09+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -8452,12 +8506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "62a1306e3b33405fba0489ff8b6b13a3baf608c2"
+                "reference": "88fae17b72df25fd34f9ef8c20f70e5957a49546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/62a1306e3b33405fba0489ff8b6b13a3baf608c2",
-                "reference": "62a1306e3b33405fba0489ff8b6b13a3baf608c2",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/88fae17b72df25fd34f9ef8c20f70e5957a49546",
+                "reference": "88fae17b72df25fd34f9ef8c20f70e5957a49546",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8492,7 +8546,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2022-09-26T18:13:28+00:00"
+            "time": "2022-09-26T21:24:22+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
