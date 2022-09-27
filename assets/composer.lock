@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "998fcc8644edf976f9f8b98e6dd82d04",
+    "content-hash": "f85a7f50feb68a9eac3f2f5f05b0d5f3",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -7191,12 +7191,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "41aebeb09adb1d76fa650e018b4a72e007cb3d52"
+                "reference": "e105cfaf8433f0e1faf81780e8d33c50ead04081"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/41aebeb09adb1d76fa650e018b4a72e007cb3d52",
-                "reference": "41aebeb09adb1d76fa650e018b4a72e007cb3d52",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/e105cfaf8433f0e1faf81780e8d33c50ead04081",
+                "reference": "e105cfaf8433f0e1faf81780e8d33c50ead04081",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7230,7 +7230,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2022-09-26T21:22:09+00:00"
+            "time": "2022-09-27T18:33:32+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -8506,12 +8506,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "88fae17b72df25fd34f9ef8c20f70e5957a49546"
+                "reference": "d900713f4a5871d5c4571d043f75d288306fe2d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/88fae17b72df25fd34f9ef8c20f70e5957a49546",
-                "reference": "88fae17b72df25fd34f9ef8c20f70e5957a49546",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/d900713f4a5871d5c4571d043f75d288306fe2d9",
+                "reference": "d900713f4a5871d5c4571d043f75d288306fe2d9",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8546,7 +8546,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2022-09-26T21:24:22+00:00"
+            "time": "2022-09-27T18:40:10+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
