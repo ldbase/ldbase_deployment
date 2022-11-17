@@ -11,11 +11,10 @@ echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 /sbin/mkswap /var/swap.1
 /sbin/swapon /var/swap.1
 
-apt update > /dev/null 2>&1
-apt -y upgrade > /dev/null 2>&1
-apt install software-properties-common -y
-add-apt-repository ppa:ondrej/php -y
-apt -y install docker.io mysql-client apache2 unzip php8.1 php8.1-dev php8.1-gd php8.1-soap php8.1-mysql php8.1-mbstring php8.1-zip php8.1-curl php8.1-intl php8.1-xml > /dev/null 2>&1
+export DEBIAN_FRONTEND=noninteractive
+apt update
+apt -y upgrade
+apt -y install docker.io mysql-client apache2 unzip php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl php-intl php-xml
 service apache2 restart
 
 docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root mysql:5.7
