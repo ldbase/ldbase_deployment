@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Dump Vagrant VM envars
+echo "LDBASE_GITHUB_TOKEN=$LDBASE_GITHUB_TOKEN" >> /etc/environment
 cat /ldbase_deployment/assets/vagrant.env >> /etc/environment
 
 # Install components

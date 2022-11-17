@@ -2,6 +2,9 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/focal64"
   config.vm.provision :shell, 
   path: "build/vagrant.sh",
+  env: {
+    "LDBASE_GITHUB_TOKEN" => ENV['LDBASE_GITHUB_TOKEN']
+  },
   keep_color: true
   config.vm.synced_folder ".", "/ldbase_deployment", :mount_options => ["dmode=777","fmode=777"]
   config.vm.synced_folder "~/.ssh", "/local_keys", :mount_options => ["dmode=777","fmode=777"]

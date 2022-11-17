@@ -6,4 +6,5 @@ chmod +x /usr/local/bin/composer
 /usr/local/bin/composer --no-interaction global require zaporylie/composer-drupal-optimizations
 mkdir -p /root/.config/composer/
 cd /root/.config/composer/ 
-wget -O auth.json https://www.dropbox.com/s/ykrrlf7ysuc6iih/auth2.json > /dev/null
+cp /ldbase_deployment/assets/auth.json auth.json
+sed -i -e "s#_LDBASE_GITHUB_TOKEN_#${LDBASE_GITHUB_TOKEN}#g" /root/.config/composer/auth.json
