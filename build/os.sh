@@ -11,8 +11,9 @@ echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
 /sbin/mkswap /var/swap.1
 /sbin/swapon /var/swap.1
 
-apt update > /dev/null 2>&1
-apt -y upgrade > /dev/null 2>&1
+export DEBIAN_FRONTEND=noninteractive
+apt update
+apt -y upgrade
 apt -y install docker.io mysql-client apache2 unzip php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl php-intl > /dev/null 2>&1
 service apache2 restart
 
