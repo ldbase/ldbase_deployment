@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "205e8968854ee4b70e35287d4f9687c8",
+    "content-hash": "4a8489caa0b893600d64b6ad201e6a7f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5110,17 +5110,17 @@
         },
         {
             "name": "drupal/matomo",
-            "version": "1.20.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/matomo.git",
-                "reference": "8.x-1.20"
+                "reference": "8.x-1.21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/matomo-8.x-1.20.zip",
-                "reference": "8.x-1.20",
-                "shasum": "e440f1ab7498bea607dbeb00dc0fa979e0976147"
+                "url": "https://ftp.drupal.org/files/projects/matomo-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "9b1b1da48fae888c586c2cb060a78503039b6e57"
             },
             "require": {
                 "drupal/core": "^9.0 || ^10"
@@ -5136,8 +5136,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.20",
-                    "datestamp": "1674152478",
+                    "version": "8.x-1.21",
+                    "datestamp": "1674531082",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5739,93 +5739,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/s3fs",
                 "issues": "https://www.drupal.org/project/issues/s3fs"
-            }
-        },
-        {
-            "name": "drupal/schemadotorg",
-            "version": "dev-1.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/schemadotorg.git",
-                "reference": "a4cdf4f151f4b441de6d92265eeff05f29b18422"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10.0",
-                "michelf/php-markdown": "^1.0",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "drupal/address": "~1.0",
-                "drupal/allowed_formats": "*",
-                "drupal/auto_entitylabel": "*",
-                "drupal/ckeditor": "~1.0",
-                "drupal/devel": "*",
-                "drupal/entity_reference_revisions": "*",
-                "drupal/entity_usage": "~2.0",
-                "drupal/field_group": "*",
-                "drupal/flexfield": "*",
-                "drupal/focal_point": "*",
-                "drupal/inline_entity_form": "*",
-                "drupal/jsonapi_extras": "*",
-                "drupal/layout_paragraphs": "*",
-                "drupal/link_attributes": "*",
-                "drupal/metatag": "*",
-                "drupal/office_hours": "*",
-                "drupal/paragraphs": "*",
-                "drupal/paragraphs-paragraphs_library": "*",
-                "drupal/range": "~1.0",
-                "drupal/rdf": "~2.0",
-                "drupal/scheduler": "~1.0",
-                "drupal/schemadotorg_jsonapi": "*",
-                "drupal/schemadotorg_jsonld": "*",
-                "drupal/schemadotorg_media": "*",
-                "drupal/schemadotorg_paragraphs": "*",
-                "drupal/simple_sitemap": "*",
-                "drupal/smart_date": "*",
-                "drupal/smart_date_recur": "*"
-            },
-            "suggest": {
-                "drupal/address": "Provides functionality for storing, validating and displaying international postal addresses.",
-                "drupal/field_group": "Provides the ability to group your fields on both form and display.",
-                "drupal/inline_entity_form": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
-                "drupal/jsonapi_extras": "Builds on top of JSON:API to deliver extra functionality.",
-                "drupal/paragraphs": "Enables the creation of paragraphs (i.e. component) entities."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "1.0.x-dev",
-                    "datestamp": "1672501973",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jacob Rockowitz (jrockowitz)",
-                    "homepage": "https://www.drupal.org/u/jrockowitz",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Uses Schema.org types and properties as the content architecture foundation for Drupal website.",
-            "homepage": "https://drupal.org/project/schemadotorg",
-            "support": {
-                "source": "https://git.drupalcode.org/project/schemadotorg",
-                "issues": "https://drupal.org/project/issues/schemadotorg"
             }
         },
         {
@@ -9265,59 +9178,6 @@
                 }
             ],
             "time": "2022-12-22T14:42:15+00:00"
-        },
-        {
-            "name": "michelf/php-markdown",
-            "version": "1.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/michelf/php-markdown.git",
-                "reference": "5024d623c1a057dcd2d076d25b7d270a1d0d55f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/michelf/php-markdown/zipball/5024d623c1a057dcd2d076d25b7d270a1d0d55f3",
-                "reference": "5024d623c1a057dcd2d076d25b7d270a1d0d55f3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": ">=4.3 <5.8"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Michelf\\": "Michelf/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Michel Fortin",
-                    "email": "michel.fortin@michelf.ca",
-                    "homepage": "https://michelf.ca/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "John Gruber",
-                    "homepage": "https://daringfireball.net/"
-                }
-            ],
-            "description": "PHP Markdown",
-            "homepage": "https://michelf.ca/projects/php-markdown/",
-            "keywords": [
-                "markdown"
-            ],
-            "support": {
-                "issues": "https://github.com/michelf/php-markdown/issues",
-                "source": "https://github.com/michelf/php-markdown/tree/1.9.1"
-            },
-            "time": "2021-11-24T02:52:38+00:00"
         },
         {
             "name": "mjordan/persistent_identifiers",
@@ -13385,16 +13245,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "ad74890513d07060255df2575703daf971de92c7"
+                "reference": "2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/ad74890513d07060255df2575703daf971de92c7",
-                "reference": "ad74890513d07060255df2575703daf971de92c7",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b",
+                "reference": "2944bbc23f5f8da2b962fbcbf7c4a6109b2f4b7b",
                 "shasum": ""
             },
             "require": {
@@ -13454,7 +13314,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.4.17"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -13470,7 +13330,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-22T10:31:03+00:00"
+            "time": "2023-01-16T10:52:33+00:00"
         },
         {
             "name": "symfony/yaml",
@@ -17519,16 +17379,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v5.4.17",
+            "version": "v5.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "2232d32115383602fd7702dfd51e81178364b679"
+                "reference": "3b213e88832612c5eee0f8a9b764897896b23bf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/2232d32115383602fd7702dfd51e81178364b679",
-                "reference": "2232d32115383602fd7702dfd51e81178364b679",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/3b213e88832612c5eee0f8a9b764897896b23bf0",
+                "reference": "3b213e88832612c5eee0f8a9b764897896b23bf0",
                 "shasum": ""
             },
             "require": {
@@ -17582,7 +17442,7 @@
             "description": "Provides utilities for PHPUnit, especially user deprecation notices management",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/phpunit-bridge/tree/v5.4.17"
+                "source": "https://github.com/symfony/phpunit-bridge/tree/v5.4.19"
             },
             "funding": [
                 {
@@ -17598,7 +17458,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-12-27T08:11:33+00:00"
+            "time": "2023-01-01T08:32:19+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -17663,7 +17523,6 @@
         "drupal/mass_contact": 10,
         "drupal/rules": 15,
         "drupal/s3fs": 15,
-        "drupal/schemadotorg": 20,
         "drupal/tvi": 10,
         "drupal/webform_views": 15,
         "fsulib/doi_crossref": 20,
