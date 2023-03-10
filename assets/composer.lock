@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a8489caa0b893600d64b6ad201e6a7f",
+    "content-hash": "a146799f062fcbbefca65318a415dc9f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4892,93 +4892,6 @@
             }
         },
         {
-            "name": "drupal/login_destination",
-            "version": "2.0.0-beta5",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/login_destination.git",
-                "reference": "8.x-2.0-beta5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/login_destination-8.x-2.0-beta5.zip",
-                "reference": "8.x-2.0-beta5",
-                "shasum": "e452833477e8a577b909d10c07a86521d31dc57f"
-            },
-            "require": {
-                "drupal/core": "^8.7.10 || ^9"
-            },
-            "require-dev": {
-                "drupal/admin_toolbar": "^1.23",
-                "drupal/admin_toolbar_tools": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-2.0-beta5",
-                    "datestamp": "1665569319",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "rsvelko",
-                    "homepage": "https://www.drupal.org/u/rsvelko",
-                    "role": "Creator, Maintainer"
-                },
-                {
-                    "name": "Other Contributors",
-                    "homepage": "https://www.drupal.org/node/69051/committers",
-                    "role": "Contributors"
-                },
-                {
-                    "name": "ddrozdik",
-                    "homepage": "https://www.drupal.org/user/574124"
-                },
-                {
-                    "name": "jng12",
-                    "homepage": "https://www.drupal.org/user/204316"
-                },
-                {
-                    "name": "marcp",
-                    "homepage": "https://www.drupal.org/user/20885"
-                },
-                {
-                    "name": "mithy",
-                    "homepage": "https://www.drupal.org/user/258911"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                },
-                {
-                    "name": "Oliver Huynh",
-                    "homepage": "https://www.drupal.org/user/243730"
-                },
-                {
-                    "name": "perennial.sky",
-                    "homepage": "https://www.drupal.org/user/2622667"
-                },
-                {
-                    "name": "rsvelko",
-                    "homepage": "https://www.drupal.org/user/337401"
-                }
-            ],
-            "description": "Customizes the destination the user is redirected to after login/logout/registration/one-time login.",
-            "homepage": "https://drupal.org/project/login_destination",
-            "support": {
-                "source": "https://git.drupalcode.org/project/login_destination",
-                "issues": "https://drupal.org/project/issues/login_destination"
-            }
-        },
-        {
             "name": "drupal/masquerade",
             "version": "2.0.0-rc1",
             "source": {
@@ -6573,6 +6486,52 @@
             "homepage": "https://www.drupal.org/project/user_email_verification",
             "support": {
                 "source": "https://git.drupalcode.org/project/user_email_verification"
+            }
+        },
+        {
+            "name": "drupal/user_redirect",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/user_redirect.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/user_redirect-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "34de1d9d90d66e67730755c6b8cf9f3a300b78eb"
+            },
+            "require": {
+                "drupal/core": "^9.2 || ^10.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1649740008",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Vipin Mittal",
+                    "homepage": "https://www.drupal.org/u/vipinmittal18",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module helps user to redirect after login/logout.",
+            "homepage": "https://www.drupal.org/project/user_redirect",
+            "support": {
+                "source": "https://cgit.drupalcode.org/user_redirect",
+                "issues": "https://www.drupal.org/project/issues/user_redirect"
             }
         },
         {
@@ -8597,12 +8556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "fc081bb2aff8c86bd6f4b07603216ee8757059ea"
+                "reference": "61823c429b50bca73251e560758e8c1bd3bc347e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/fc081bb2aff8c86bd6f4b07603216ee8757059ea",
-                "reference": "fc081bb2aff8c86bd6f4b07603216ee8757059ea",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/61823c429b50bca73251e560758e8c1bd3bc347e",
+                "reference": "61823c429b50bca73251e560758e8c1bd3bc347e",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8637,7 +8596,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-01-23T21:28:16+00:00"
+            "time": "2023-03-10T22:42:54+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -17518,7 +17477,6 @@
         "drupal/flag": 10,
         "drupal/group": 5,
         "drupal/inline_entity_form": 5,
-        "drupal/login_destination": 10,
         "drupal/mass_contact": 10,
         "drupal/rules": 15,
         "drupal/s3fs": 15,
