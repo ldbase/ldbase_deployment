@@ -105,6 +105,7 @@
         "drupal/honeypot": "^2.0",
         "drupal/image_widget_crop": "^2.2",
         "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/layout_paragraphs": "^2.0",
         "drupal/masquerade": "^2.0",
         "drupal/mass_contact": "^1.0@beta",
         "drupal/matomo": "^1.9",
