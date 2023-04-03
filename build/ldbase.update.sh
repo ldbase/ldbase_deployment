@@ -1,19 +1,5 @@
 source /etc/environment
 
-case $EC2_HOSTNAME in
-  ldbase_vagrant)
-    USE_CUSTOM_HOST=1
-    ;;
-
-  ldbase_test)
-    USE_CUSTOM_HOST=0
-    ;;
-
-  ldbase_prod)
-    USE_CUSTOM_HOST=0
-    ;;
-esac
-
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 cd /ldbase_deployment; git pull
 cd /var/www/html/drupal
@@ -37,6 +23,11 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_api_endpoint "${CROSSREF_ENDPOINT}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_username "${CROSSREF_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_password "${CROSSREF_PASSWORD}" -y
+#if [ "$VAGRANT" = true ]
+#then 
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
+#fi
 
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild

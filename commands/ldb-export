@@ -1,3 +1,15 @@
 #!/bin/bash
 
+#if [ "$vagrant" = true ]
+#then 
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 0 -y
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '' -y
+#fi
+
 /var/www/html/drupal/vendor/bin/drush config:export --destination=/var/www/html/drupal/web/libraries/ldbase_config/sync
+
+#if [ "$vagrant" = true ]
+#then 
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y
+#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
+#fi
