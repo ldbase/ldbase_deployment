@@ -23,11 +23,11 @@ cd /var/www/html/drupal/
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_api_endpoint "${CROSSREF_ENDPOINT}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_username "${CROSSREF_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_password "${CROSSREF_PASSWORD}" -y
-#if [ "$VAGRANT" = true ]
-#then 
-#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y
-#  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
-#fi
+if [ "$VAGRANT" = true ]
+then 
+  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y
+  /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
+fi
 
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
