@@ -8745,12 +8745,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "505ceab03292e27758588f9c439f62810444dce1"
+                "reference": "9d708e116900fff7a643a1be2b5d65fbff1591aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/505ceab03292e27758588f9c439f62810444dce1",
-                "reference": "505ceab03292e27758588f9c439f62810444dce1",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/9d708e116900fff7a643a1be2b5d65fbff1591aa",
+                "reference": "9d708e116900fff7a643a1be2b5d65fbff1591aa",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8785,7 +8785,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-04-13T20:29:00+00:00"
+            "time": "2023-04-14T18:13:52+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -8793,12 +8793,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "1fb1ad8bfa5d687f84d2e0a9db1480e61cbd2548"
+                "reference": "c5fefa48460d5c24db6dfa94bc0e529475ad22ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/1fb1ad8bfa5d687f84d2e0a9db1480e61cbd2548",
-                "reference": "1fb1ad8bfa5d687f84d2e0a9db1480e61cbd2548",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/c5fefa48460d5c24db6dfa94bc0e529475ad22ad",
+                "reference": "c5fefa48460d5c24db6dfa94bc0e529475ad22ad",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8833,7 +8833,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2023-04-13T20:25:03+00:00"
+            "time": "2023-04-14T18:12:00+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
