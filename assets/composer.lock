@@ -8835,12 +8835,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "c29174656ef7381f321d148ed3ad60508a22b520"
+                "reference": "981f5182b8bc96dca5649252b5b758232fd51ea9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/c29174656ef7381f321d148ed3ad60508a22b520",
-                "reference": "c29174656ef7381f321d148ed3ad60508a22b520",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/981f5182b8bc96dca5649252b5b758232fd51ea9",
+                "reference": "981f5182b8bc96dca5649252b5b758232fd51ea9",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8875,7 +8875,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-04-17T17:00:51+00:00"
+            "time": "2023-04-17T18:35:58+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
