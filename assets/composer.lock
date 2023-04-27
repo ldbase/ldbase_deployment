@@ -8831,12 +8831,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "97c2367c3bd1c390c519d012fed47a42abb3b511"
+                "reference": "86235cd8b98d08474bc2d0109cc182e85bc79129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/97c2367c3bd1c390c519d012fed47a42abb3b511",
-                "reference": "97c2367c3bd1c390c519d012fed47a42abb3b511",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/86235cd8b98d08474bc2d0109cc182e85bc79129",
+                "reference": "86235cd8b98d08474bc2d0109cc182e85bc79129",
                 "shasum": ""
             },
             "type": "drupal-library",
@@ -8870,7 +8870,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/search_changes",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-04-27T19:13:04+00:00"
+            "time": "2023-04-27T21:40:03+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
