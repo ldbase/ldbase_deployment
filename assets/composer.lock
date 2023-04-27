@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "421a5e533f491f2e179f1b262de7d698",
+    "content-hash": "b07fdd98c81fec9dcd952518d8e85dd8",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8827,19 +8827,18 @@
         },
         {
             "name": "ldbase/ldbase_config",
-            "version": "dev-master",
+            "version": "dev-search_changes",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "0b721ae68518f40422955de185ccc61b30d673f1"
+                "reference": "96a1ae042d62d13d50ea1bad8fc1474b893bf122"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/0b721ae68518f40422955de185ccc61b30d673f1",
-                "reference": "0b721ae68518f40422955de185ccc61b30d673f1",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/96a1ae042d62d13d50ea1bad8fc1474b893bf122",
+                "reference": "96a1ae042d62d13d50ea1bad8fc1474b893bf122",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-library",
             "license": [
                 "GPL-2.0+"
@@ -8868,10 +8867,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_config/tree/master",
+                "source": "https://github.com/ldbase/ldbase_config/tree/search_changes",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-04-26T18:52:12+00:00"
+            "time": "2023-04-27T18:31:19+00:00"
         },
         {
             "name": "ldbase/ldbase_content",

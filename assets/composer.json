@@ -146,7 +146,7 @@
         "kint-php/kint": "^3.3",
         "ldbase/ldbase_admin": "dev-master",
         "ldbase/ldbase_citations": "dev-master",
-        "ldbase/ldbase_config": "dev-master",
+        "ldbase/ldbase_config": "dev-search_changes",
         "ldbase/ldbase_content": "dev-master",
         "ldbase/ldbase_embargoes": "dev-main",
         "ldbase/ldbase_handlers": "dev-master",
