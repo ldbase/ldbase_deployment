@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "421a5e533f491f2e179f1b262de7d698",
+    "content-hash": "ba558253008b6b20a5bf28a5e55665e1",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8827,19 +8827,18 @@
         },
         {
             "name": "ldbase/ldbase_config",
-            "version": "dev-master",
+            "version": "dev-pams_changes",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "d53623e837937a9733faa1201cbd023942cf0c98"
+                "reference": "5af121b47e7bca82b365d6c3585f36290453909d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/d53623e837937a9733faa1201cbd023942cf0c98",
-                "reference": "d53623e837937a9733faa1201cbd023942cf0c98",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/5af121b47e7bca82b365d6c3585f36290453909d",
+                "reference": "5af121b47e7bca82b365d6c3585f36290453909d",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-library",
             "license": [
                 "GPL-2.0+"
@@ -8868,10 +8867,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_config/tree/master",
+                "source": "https://github.com/ldbase/ldbase_config/tree/pams_changes",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-04-28T19:01:56+00:00"
+            "time": "2023-05-02T19:48:53+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -9026,19 +9025,18 @@
         },
         {
             "name": "ldbase/ldbase_new_account",
-            "version": "dev-master",
+            "version": "dev-pams_changes",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_new_account.git",
-                "reference": "ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8"
+                "reference": "fff59427a34c2cd21b1d3b48704a6d1b2d2dab07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_new_account/zipball/ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8",
-                "reference": "ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8",
+                "url": "https://api.github.com/repos/ldbase/ldbase_new_account/zipball/fff59427a34c2cd21b1d3b48704a6d1b2d2dab07",
+                "reference": "fff59427a34c2cd21b1d3b48704a6d1b2d2dab07",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-custom-module",
             "extra": {
                 "drush": {
@@ -9074,10 +9072,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_new_account/tree/master",
+                "source": "https://github.com/ldbase/ldbase_new_account/tree/pams_changes",
                 "issues": "https://github.com/ldbase/ldbase_new_account/issues"
             },
-            "time": "2023-03-07T22:30:24+00:00"
+            "time": "2023-05-02T18:47:04+00:00"
         },
         {
             "name": "league/container",
