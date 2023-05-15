@@ -8732,12 +8732,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "06e7e0b17f85d56fbbfb392c460f067c59288e4c"
+                "reference": "3d2b1a23cc21486a7dd0e248f3e4c2758e183503"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/06e7e0b17f85d56fbbfb392c460f067c59288e4c",
-                "reference": "06e7e0b17f85d56fbbfb392c460f067c59288e4c",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/3d2b1a23cc21486a7dd0e248f3e4c2758e183503",
+                "reference": "3d2b1a23cc21486a7dd0e248f3e4c2758e183503",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8772,7 +8772,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-05-11T19:55:07+00:00"
+            "time": "2023-05-12T14:58:17+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -8931,12 +8931,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_new_account.git",
-                "reference": "ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8"
+                "reference": "ec9daced269284e6c47a0b9a44946132b013baec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_new_account/zipball/ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8",
-                "reference": "ef7086e30b2d366c8c7c4f42c1bc1ee3d90ac5f8",
+                "url": "https://api.github.com/repos/ldbase/ldbase_new_account/zipball/ec9daced269284e6c47a0b9a44946132b013baec",
+                "reference": "ec9daced269284e6c47a0b9a44946132b013baec",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8978,7 +8978,7 @@
                 "source": "https://github.com/ldbase/ldbase_new_account/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_new_account/issues"
             },
-            "time": "2023-03-07T22:30:24+00:00"
+            "time": "2023-05-15T14:11:32+00:00"
         },
         {
             "name": "league/container",
