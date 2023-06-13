@@ -11,7 +11,7 @@ then
   /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
 fi
 
-if [[ "$ENVIRONMENT" != 'prod' ]]
+if [[ "$DATABASE_NAME" != 'ldbase_prod' ]]
 then
   rm /var/www/html/drupal/web/robots.txt
   cp /ldbase_deployment/assets/block.robots.txt /var/www/html/drupal/web/robots.txt
