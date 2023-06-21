@@ -6,6 +6,7 @@ cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.* .
 composer install --no-interaction
+/var/www/html/drupal/vendor/bin/drush updatedb -y
 
 cd /var/www/html/drupal/web/libraries/ldbase_config/
 mkdir ext
@@ -35,7 +36,6 @@ then
   cp /ldbase_deployment/assets/block.robots.txt /var/www/html/drupal/web/robots.txt
 fi
 
-/var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drupal node:access:rebuild
 /var/www/html/drupal/vendor/bin/drush cache:rebuild
 /var/www/html/drupal/vendor/bin/drush -vvv search-api:index
