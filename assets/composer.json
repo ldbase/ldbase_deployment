@@ -164,6 +164,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+	"discard-changes": true,
         "sort-packages": true,
         "preferred-install": {
             "fsulib/*": "source",
