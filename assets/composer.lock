@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c6949b2a944aa145c973c6436459d02",
+    "content-hash": "9dea7e7d1f048ccdf7841af322fc0759",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -8837,19 +8837,18 @@
         },
         {
             "name": "ldbase/ldbase_config",
-            "version": "dev-master",
+            "version": "dev-harmonized_set",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "62ebff5e15e05fdbe4bc2993b7b4f97e10d2b113"
+                "reference": "b5cffdcd725092dd700eedcd49d1c9006c156cde"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/62ebff5e15e05fdbe4bc2993b7b4f97e10d2b113",
-                "reference": "62ebff5e15e05fdbe4bc2993b7b4f97e10d2b113",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/b5cffdcd725092dd700eedcd49d1c9006c156cde",
+                "reference": "b5cffdcd725092dd700eedcd49d1c9006c156cde",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-library",
             "license": [
                 "GPL-2.0+"
@@ -8878,10 +8877,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_config/tree/master",
+                "source": "https://github.com/ldbase/ldbase_config/tree/harmonized_set",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-07-13T18:28:17+00:00"
+            "time": "2023-07-19T20:45:03+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -8981,19 +8980,18 @@
         },
         {
             "name": "ldbase/ldbase_handlers",
-            "version": "dev-master",
+            "version": "dev-harmonized_set",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_handlers.git",
-                "reference": "0949e6a279708d745a7b075753ba6ebb3dd115f3"
+                "reference": "040d02fac41ccd4dc4f64ba20f1e065c795c97d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/0949e6a279708d745a7b075753ba6ebb3dd115f3",
-                "reference": "0949e6a279708d745a7b075753ba6ebb3dd115f3",
+                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/040d02fac41ccd4dc4f64ba20f1e065c795c97d6",
+                "reference": "040d02fac41ccd4dc4f64ba20f1e065c795c97d6",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-custom-module",
             "extra": {
                 "drush": {
@@ -9029,10 +9027,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_handlers/tree/master",
+                "source": "https://github.com/ldbase/ldbase_handlers/tree/harmonized_set",
                 "issues": "https://github.com/ldbase/ldbase_handlers/issues"
             },
-            "time": "2023-06-15T15:19:11+00:00"
+            "time": "2023-07-19T20:07:40+00:00"
         },
         {
             "name": "ldbase/ldbase_new_account",
