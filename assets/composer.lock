@@ -8841,12 +8841,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "b5cffdcd725092dd700eedcd49d1c9006c156cde"
+                "reference": "2a34e4f41fd61a8edb68b3fe556515b62f429fc9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/b5cffdcd725092dd700eedcd49d1c9006c156cde",
-                "reference": "b5cffdcd725092dd700eedcd49d1c9006c156cde",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/2a34e4f41fd61a8edb68b3fe556515b62f429fc9",
+                "reference": "2a34e4f41fd61a8edb68b3fe556515b62f429fc9",
                 "shasum": ""
             },
             "type": "drupal-library",
@@ -8880,7 +8880,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/harmonized_set",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-07-19T20:45:03+00:00"
+            "time": "2023-07-21T17:48:34+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
