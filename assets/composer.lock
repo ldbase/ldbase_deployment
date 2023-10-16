@@ -7612,12 +7612,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "bda3de959e32a62cdf3eda1fd8e6934c71c5758d"
+                "reference": "a206dfebefde7baeaaf8ed5ef851c50baaffe8be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/bda3de959e32a62cdf3eda1fd8e6934c71c5758d",
-                "reference": "bda3de959e32a62cdf3eda1fd8e6934c71c5758d",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/a206dfebefde7baeaaf8ed5ef851c50baaffe8be",
+                "reference": "a206dfebefde7baeaaf8ed5ef851c50baaffe8be",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7651,7 +7651,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2023-10-10T19:59:03+00:00"
+            "time": "2023-10-16T20:11:15+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -8859,12 +8859,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "da7d7045091b3ac2baa65448c63cd34215a63b92"
+                "reference": "60d6f9e58806f0aad4e8374f9a14ac5bfdde320c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/da7d7045091b3ac2baa65448c63cd34215a63b92",
-                "reference": "da7d7045091b3ac2baa65448c63cd34215a63b92",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/60d6f9e58806f0aad4e8374f9a14ac5bfdde320c",
+                "reference": "60d6f9e58806f0aad4e8374f9a14ac5bfdde320c",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8899,7 +8899,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2023-10-10T15:27:52+00:00"
+            "time": "2023-10-16T16:40:00+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -8907,12 +8907,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "bbf13d922450069157c689407ab4dcaf716b8ef3"
+                "reference": "ee0fc4241662938dcfc51afe8a02a07fec0d42b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/bbf13d922450069157c689407ab4dcaf716b8ef3",
-                "reference": "bbf13d922450069157c689407ab4dcaf716b8ef3",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/ee0fc4241662938dcfc51afe8a02a07fec0d42b7",
+                "reference": "ee0fc4241662938dcfc51afe8a02a07fec0d42b7",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8947,7 +8947,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2023-10-10T15:25:02+00:00"
+            "time": "2023-10-16T16:07:48+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
@@ -8955,12 +8955,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_embargoes.git",
-                "reference": "4ab84f2455a8daff810a1ec9627e1c5b77eab275"
+                "reference": "4da3161f54c06c3c12033d35e31df9b3ae3d75a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_embargoes/zipball/4ab84f2455a8daff810a1ec9627e1c5b77eab275",
-                "reference": "4ab84f2455a8daff810a1ec9627e1c5b77eab275",
+                "url": "https://api.github.com/repos/ldbase/ldbase_embargoes/zipball/4da3161f54c06c3c12033d35e31df9b3ae3d75a0",
+                "reference": "4da3161f54c06c3c12033d35e31df9b3ae3d75a0",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8995,7 +8995,7 @@
                 "source": "https://github.com/ldbase/ldbase_embargoes/tree/main",
                 "issues": "https://github.com/ldbase/ldbase_embargoes/issues"
             },
-            "time": "2022-12-19T20:31:27+00:00"
+            "time": "2023-10-12T19:35:26+00:00"
         },
         {
             "name": "ldbase/ldbase_handlers",
@@ -9003,12 +9003,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_handlers.git",
-                "reference": "9bca4f6e7b14d9b3f09cb2b24682d938a802557d"
+                "reference": "95333686666458a04027656a7d3cf784339cc85c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/9bca4f6e7b14d9b3f09cb2b24682d938a802557d",
-                "reference": "9bca4f6e7b14d9b3f09cb2b24682d938a802557d",
+                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/95333686666458a04027656a7d3cf784339cc85c",
+                "reference": "95333686666458a04027656a7d3cf784339cc85c",
                 "shasum": ""
             },
             "default-branch": true,
@@ -9050,7 +9050,7 @@
                 "source": "https://github.com/ldbase/ldbase_handlers/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_handlers/issues"
             },
-            "time": "2023-09-28T15:36:34+00:00"
+            "time": "2023-10-12T19:33:30+00:00"
         },
         {
             "name": "ldbase/ldbase_new_account",
