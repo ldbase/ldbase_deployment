@@ -78,6 +78,7 @@
         "drupal/antibot": "^1.5",
         "drupal/asset_injector": "^2.6",
         "drupal/captcha": "^1.1",
+        "drupal/classy": "^1.0",
         "drupal/collapsiblock": "^3.0",
         "drupal/console": "1.9.7",
         "drupal/context": "^4.0@beta",
