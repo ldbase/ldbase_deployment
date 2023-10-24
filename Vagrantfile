@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/kinetic64"
+  config.vm.box = "ubuntu/lunar64"
   config.vm.provision :shell, 
   path: "build/vagrant.sh",
   env: {
@@ -14,7 +14,8 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
   config.vm.define 'ldbase_vagrant' do |t|
     config.vm.provider :virtualbox do |v|
-      v.customize ["modifyvm", :id, "--memory", 4096]
+	  v.gui = true 
+      v.customize ["modifyvm", :id, "--memory", 8192]
     end
   end
   config.trigger.before :halt do |trigger|
