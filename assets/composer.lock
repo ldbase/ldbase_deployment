@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb3913d8da7416759dab76463e4ca1df",
+    "content-hash": "38ba4e75180214ab1de245fc92fa56d6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4690,75 +4690,6 @@
             }
         },
         {
-            "name": "drupal/fontyourface",
-            "version": "3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/fontyourface.git",
-                "reference": "8.x-3.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/fontyourface-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "de6593bfe0b4f42c93c1f163cd0fbc97a1723586"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1615217641",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "BTMash",
-                    "homepage": "https://www.drupal.org/user/60422"
-                },
-                {
-                    "name": "Drave Robber",
-                    "homepage": "https://www.drupal.org/user/984338"
-                },
-                {
-                    "name": "hmendes",
-                    "homepage": "https://www.drupal.org/user/3673677"
-                },
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
-                },
-                {
-                    "name": "sreynen",
-                    "homepage": "https://www.drupal.org/user/109890"
-                }
-            ],
-            "description": "Web font management tools.",
-            "homepage": "https://www.drupal.org/project/fontyourface",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/fontyourface",
-                "issues": "https://drupal.org/project/issues/fontyourface"
-            }
-        },
-        {
             "name": "drupal/group",
             "version": "1.6.0",
             "source": {
@@ -6624,126 +6555,6 @@
             }
         },
         {
-            "name": "drupal/transliterate_filenames",
-            "version": "1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/transliterate_filenames.git",
-                "reference": "8.x-1.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/transliterate_filenames-8.x-1.10.zip",
-                "reference": "8.x-1.10",
-                "shasum": "8c88c6411fd94cac271e38736664538c54f243ec"
-            },
-            "require": {
-                "drupal/core": "^8.7.7 || ^9.2"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.10",
-                    "datestamp": "1644653446",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Alexander Dubovskoy",
-                    "homepage": "https://www.drupal.org/u/adubovskoy",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Andrei Ivnitskii",
-                    "homepage": "https://www.drupal.org/u/ivnish",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Krzysztof Domański",
-                    "homepage": "https://www.drupal.org/user/3572982"
-                }
-            ],
-            "description": "Transliteration for all uploading files (includes fields and ckeditor inline upload)",
-            "homepage": "https://www.drupal.org/project/transliterate_filenames",
-            "support": {
-                "source": "https://git.drupalcode.org/project/transliterate_filenames",
-                "issues": "https://www.drupal.org/project/issues/transliterate_filenames"
-            }
-        },
-        {
-            "name": "drupal/tvi",
-            "version": "1.0.0-rc4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/tvi.git",
-                "reference": "8.x-1.0-rc4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/tvi-8.x-1.0-rc4.zip",
-                "reference": "8.x-1.0-rc4",
-                "shasum": "1acdc0e671fd977a16d5c88d3b4f531286224c7e"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-rc4",
-                    "datestamp": "1623332223",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Kevin Quillen (kevinquillen)",
-                    "homepage": "https://www.drupal.org/u/kevinquillen",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "DuaelFr",
-                    "homepage": "https://www.drupal.org/user/931394"
-                },
-                {
-                    "name": "kevinquillen",
-                    "homepage": "https://www.drupal.org/user/317279"
-                },
-                {
-                    "name": "mikeohara",
-                    "homepage": "https://www.drupal.org/user/1118796"
-                },
-                {
-                    "name": "richgerdes",
-                    "homepage": "https://www.drupal.org/user/3437973"
-                }
-            ],
-            "description": "Enables you to change the presentation of taxonomy term pages with Views, allowing you to create multiple Views on the same path with different output.",
-            "homepage": "http://drupal.org/project/tvi",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/tvi",
-                "issues": "http://drupal.org/project/issues/tvi"
-            }
-        },
-        {
             "name": "drupal/typed_data",
             "version": "1.0.0-beta2",
             "source": {
@@ -7145,74 +6956,6 @@
             "homepage": "https://www.drupal.org/project/views_data_export",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_data_export"
-            }
-        },
-        {
-            "name": "drupal/views_infinite_scroll",
-            "version": "1.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/views_infinite_scroll.git",
-                "reference": "8.x-1.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.9.zip",
-                "reference": "8.x-1.9",
-                "shasum": "875d58d317d48036ed1d9ef538bc8a76bc3dcb5b"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.9",
-                    "datestamp": "1632421809",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Anybody",
-                    "homepage": "https://www.drupal.org/user/291091"
-                },
-                {
-                    "name": "Grevil",
-                    "homepage": "https://www.drupal.org/user/3668491"
-                },
-                {
-                    "name": "Honza Pobořil",
-                    "homepage": "https://www.drupal.org/user/123612"
-                },
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
-                },
-                {
-                    "name": "Remon",
-                    "homepage": "https://www.drupal.org/user/143827"
-                },
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "thomas.frobieter",
-                    "homepage": "https://www.drupal.org/user/409335"
-                }
-            ],
-            "description": "A pager which allows an infinite scroll effect for views.",
-            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
-            "support": {
-                "source": "https://git.drupalcode.org/project/views_infinite_scroll"
             }
         },
         {
@@ -18111,7 +17854,6 @@
         "drupal/rules": 15,
         "drupal/s3fs": 15,
         "drupal/schemadotorg": 15,
-        "drupal/tvi": 10,
         "drupal/webform_views": 15,
         "fsulib/doi_crossref": 20,
         "fsulib/portcullis": 20,
