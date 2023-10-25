@@ -7421,12 +7421,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/doi_crossref.git",
-                "reference": "c23111e9178114f6e05a3c12775ca1add20986b5"
+                "reference": "a93a793cc811a95d6597a79937985a434e745319"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/doi_crossref/zipball/c23111e9178114f6e05a3c12775ca1add20986b5",
-                "reference": "c23111e9178114f6e05a3c12775ca1add20986b5",
+                "url": "https://api.github.com/repos/fsulib/doi_crossref/zipball/a93a793cc811a95d6597a79937985a434e745319",
+                "reference": "a93a793cc811a95d6597a79937985a434e745319",
                 "shasum": ""
             },
             "require": {
@@ -7453,7 +7453,7 @@
                 "source": "https://github.com/fsulib/doi_crossref/tree/master",
                 "issues": "https://github.com/fsulib/doi_crossref/issues"
             },
-            "time": "2021-10-25T19:19:30+00:00"
+            "time": "2023-10-25T07:15:06+00:00"
         },
         {
             "name": "fsulib/portcullis",

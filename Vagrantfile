@@ -14,7 +14,6 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
   config.vm.define 'ldbase_vagrant' do |t|
     config.vm.provider :virtualbox do |v|
-	  v.gui = true 
       v.customize ["modifyvm", :id, "--memory", 8192]
     end
   end
