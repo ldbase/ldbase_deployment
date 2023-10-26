@@ -81,7 +81,7 @@
         "drupal/classy": "^1.0",
         "drupal/collapsiblock": "^4.1",
         "drupal/console": "1.9.7",
-        "drupal/context": "^4.0@beta",
+        "drupal/context": "^5.0@RC",
         "drupal/core": "^9.3.2",
         "drupal/core-composer-scaffold": "^9.3.2",
         "drupal/core-project-message": "^9.3.2",
