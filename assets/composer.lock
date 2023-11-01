@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04500a60b07e801b72920a97c8b2bc32",
+    "content-hash": "8d51cca30b251381f43aefee3f9003cf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -201,16 +201,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.283.14",
+            "version": "3.283.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "331894cd4751a06a4e5b3e4e2918a9233c9568dc"
+                "reference": "cb629771356d6a4d12bb030a072b832044440672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/331894cd4751a06a4e5b3e4e2918a9233c9568dc",
-                "reference": "331894cd4751a06a4e5b3e4e2918a9233c9568dc",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/cb629771356d6a4d12bb030a072b832044440672",
+                "reference": "cb629771356d6a4d12bb030a072b832044440672",
                 "shasum": ""
             },
             "require": {
@@ -290,9 +290,9 @@
             "support": {
                 "forum": "https://forums.aws.amazon.com/forum.jspa?forumID=80",
                 "issues": "https://github.com/aws/aws-sdk-php/issues",
-                "source": "https://github.com/aws/aws-sdk-php/tree/3.283.14"
+                "source": "https://github.com/aws/aws-sdk-php/tree/3.283.16"
             },
-            "time": "2023-10-27T18:06:59+00:00"
+            "time": "2023-10-31T18:21:09+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
@@ -3440,31 +3440,30 @@
         },
         {
             "name": "drupal/csv_serialization",
-            "version": "2.1.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/csv_serialization.git",
-                "reference": "8.x-2.1"
+                "reference": "3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/csv_serialization-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "10b8629a5808ed1ecf358d5ca7054d6c14a476d4"
+                "url": "https://ftp.drupal.org/files/projects/csv_serialization-3.0.1.zip",
+                "reference": "3.0.1",
+                "shasum": "05367f75a98fc3b92660c6de3852a6ebc39252e2"
             },
             "require": {
-                "drupal/core": "^8 || ^9",
-                "league/csv": "^9.1"
+                "drupal/core": "^9.4",
+                "league/csv": "^9.7"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
                 "drupal/coder": "^8.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1655054417",
+                    "version": "3.0.1",
+                    "datestamp": "1698701716",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3472,6 +3471,14 @@
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/phpcs"
+                ],
+                "test": [
+                    "@phpcs"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -4309,60 +4316,6 @@
             "homepage": "https://www.drupal.org/project/flag_anon",
             "support": {
                 "source": "https://git.drupalcode.org/project/flag_anon"
-            }
-        },
-        {
-            "name": "drupal/flag_search_api",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/flag_search_api.git",
-                "reference": "8.x-1.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/flag_search_api-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "e621e2c7d875a85ed8440c019a0c1f679a70caa0"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/flag": "*",
-                "drupal/search_api": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1648199417",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "tamerzg",
-                    "homepage": "https://www.drupal.org/user/464564"
-                },
-                {
-                    "name": "ws.agency",
-                    "homepage": "https://www.drupal.org/user/2851415"
-                },
-                {
-                    "name": "xSDx",
-                    "homepage": "https://www.drupal.org/user/3273632"
-                }
-            ],
-            "description": "Search API support for flag module.",
-            "homepage": "https://www.drupal.org/project/flag_search_api",
-            "support": {
-                "source": "https://git.drupalcode.org/project/flag_search_api"
             }
         },
         {
@@ -6852,17 +6805,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "6.2.0-rc4",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "6.2.0-rc4"
+                "reference": "6.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0-rc4.zip",
-                "reference": "6.2.0-rc4",
-                "shasum": "60543c4da378a8f9e5867fcddd1a814ae6cde5e5"
+                "url": "https://ftp.drupal.org/files/projects/webform-6.2.0.zip",
+                "reference": "6.2.0",
+                "shasum": "7a8292fb86fa60c88377279769fd6f1b1fad05c2"
             },
             "require": {
                 "drupal/core": "^9.4 || ^10",
@@ -6911,11 +6864,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.2.0-rc4",
-                    "datestamp": "1698417151",
+                    "version": "6.2.0",
+                    "datestamp": "1698674300",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "drush": {
@@ -8507,6 +8460,54 @@
             "time": "2022-12-11T15:36:27+00:00"
         },
         {
+            "name": "ldbase/flag_search_api",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ldbase/flag_search_api.git",
+                "reference": "f53e89f42674575548676a8783a36637e68e24ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ldbase/flag_search_api/zipball/f53e89f42674575548676a8783a36637e68e24ff",
+                "reference": "f53e89f42674575548676a8783a36637e68e24ff",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-custom-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Arsenault",
+                    "email": "barsenault@fsu.edu",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Bryan J. Brown",
+                    "email": "bjbrown@fsu.edu",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Favenzio Calvo",
+                    "email": "fcalvo@fsu.edu",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Fork of drupal/flag_search_api for Drupal10 compatibility",
+            "homepage": "https://github.com/ldbase/flag_search_api",
+            "keywords": [
+                "Drupal",
+                "LDbase"
+            ],
+            "support": {
+                "source": "https://github.com/ldbase/flag_search_api/tree/main",
+                "issues": "https://github.com/ldbase/flag_search_api/issues"
+            },
+            "time": "2023-10-31T19:48:06+00:00"
+        },
+        {
             "name": "ldbase/ldbase_admin",
             "version": "dev-master",
             "source": {
@@ -9996,16 +9997,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "1.10.39",
+            "version": "1.10.40",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "d9dedb0413f678b4d03cbc2279a48f91592c97c4"
+                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/d9dedb0413f678b4d03cbc2279a48f91592c97c4",
-                "reference": "d9dedb0413f678b4d03cbc2279a48f91592c97c4",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/93c84b5bf7669920d823631e39904d69b9c7dc5d",
+                "reference": "93c84b5bf7669920d823631e39904d69b9c7dc5d",
                 "shasum": ""
             },
             "require": {
@@ -10054,7 +10055,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-17T15:46:26+00:00"
+            "time": "2023-10-30T14:48:31+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -17765,6 +17766,7 @@
         "fsulib/doi_crossref": 20,
         "fsulib/portcullis": 20,
         "fsulib/tombstones": 20,
+        "ldbase/flag_search_api": 20,
         "ldbase/ldbase_admin": 20,
         "ldbase/ldbase_citations": 20,
         "ldbase/ldbase_config": 20,

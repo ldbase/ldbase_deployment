@@ -14,6 +14,11 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
+		{
+            "name": "ldbase/flag_search_api",
+            "type": "vcs",
+            "url": "git@github.com:ldbase/flag_search_api.git"
+        },
         {
             "name": "ldbase/ldbase_handlers",
             "type": "vcs",
@@ -99,7 +104,6 @@
         "drupal/field_group": "^3.0",
         "drupal/flag": "^4.0@beta",
         "drupal/flag_anon": "^1.0",
-        "drupal/flag_search_api": "^1.5",
         "drupal/fontawesome": "^2.15",
         "drupal/group": "^1.0@RC",
         "drupal/health_check": "^2.0",
@@ -142,7 +146,8 @@
         "fsulib/doi_crossref": "dev-master",
         "fsulib/portcullis": "dev-master",
         "fsulib/tombstones": "dev-main",
-        "kint-php/kint": "^3.3",
+        "kint-php/kint": "^3.3",		
+        "ldbase/flag_search_api": "dev-main",
         "ldbase/ldbase_admin": "dev-master",
         "ldbase/ldbase_citations": "dev-master",
         "ldbase/ldbase_config": "dev-master",
