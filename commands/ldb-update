@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd /ldbase_deployment; git pull
-bash /ldbase_deployment/build/ldbase.update.sh
+bash /ldbase_deployment/build/ldbase.update.sh 2>&1 | tee /root/ldb-update.$(date +%s).log
