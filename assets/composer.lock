@@ -7307,12 +7307,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "3aee8428e3551b80c45953caee8cb1a144d7fce2"
+                "reference": "5f53c95a99c07635b15c3bf285a0e53a43cdf8b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/3aee8428e3551b80c45953caee8cb1a144d7fce2",
-                "reference": "3aee8428e3551b80c45953caee8cb1a144d7fce2",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/5f53c95a99c07635b15c3bf285a0e53a43cdf8b0",
+                "reference": "5f53c95a99c07635b15c3bf285a0e53a43cdf8b0",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7346,7 +7346,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2023-10-27T14:07:00+00:00"
+            "time": "2023-11-02T20:20:34+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -8649,12 +8649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "ee0fc4241662938dcfc51afe8a02a07fec0d42b7"
+                "reference": "70572c390b87f0f4b5e5aa6b705959225996328f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/ee0fc4241662938dcfc51afe8a02a07fec0d42b7",
-                "reference": "ee0fc4241662938dcfc51afe8a02a07fec0d42b7",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/70572c390b87f0f4b5e5aa6b705959225996328f",
+                "reference": "70572c390b87f0f4b5e5aa6b705959225996328f",
                 "shasum": ""
             },
             "default-branch": true,
@@ -8689,7 +8689,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2023-10-16T16:07:48+00:00"
+            "time": "2023-11-02T20:53:15+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
