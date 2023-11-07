@@ -7354,12 +7354,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/tombstones.git",
-                "reference": "28ae3de0c2bf80e9aa8bc28cf6930778ed6eea1d"
+                "reference": "8daf0113a9743cea50ec868e987f635aa533bc6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/tombstones/zipball/28ae3de0c2bf80e9aa8bc28cf6930778ed6eea1d",
-                "reference": "28ae3de0c2bf80e9aa8bc28cf6930778ed6eea1d",
+                "url": "https://api.github.com/repos/fsulib/tombstones/zipball/8daf0113a9743cea50ec868e987f635aa533bc6a",
+                "reference": "8daf0113a9743cea50ec868e987f635aa533bc6a",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7388,7 +7388,7 @@
                 "source": "https://github.com/fsulib/tombstones/tree/main",
                 "issues": "https://github.com/fsulib/tombstones/issues"
             },
-            "time": "2022-12-19T20:30:37+00:00"
+            "time": "2023-11-07T19:29:29+00:00"
         },
         {
             "name": "graham-campbell/result-type",
