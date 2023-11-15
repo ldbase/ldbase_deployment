@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /ldbase_deployment; git pull
+bash /ldbase_deployment/scripts/ldbase9Cto10.sh 2>&1 | tee /root/ldb-upgradeDrupal.$(date +%s).log
