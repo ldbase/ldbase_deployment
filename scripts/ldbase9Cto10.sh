@@ -2,6 +2,7 @@
 source /etc/environment
 
 echo -e "\n\nBeginning upgrade of ldbase system to Drupal 10.\n\n"
+ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 cd /var/www/html/drupal/
 echo -e "\n\nChange services and settings file permissions for upgrade.\n\n"
