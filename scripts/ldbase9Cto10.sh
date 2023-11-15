@@ -1,4 +1,6 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+source /etc/environment
 
 echo -e "\n\nBeginning upgrade of ldbase system to Drupal 10.\n\n"
 
