@@ -16,7 +16,7 @@ rm composer.lock
 # Remove old requirements
 echo -e "\n\nRemoving old requirements.\n\n"
 /usr/local/bin/composer -n remove 'drupal/core' 'drupal/console' --no-update
-
+/usr/local/bin/composer -n require 'drupal/schemadotorg:1.0.0-alpha10' --update-with-dependencies --no-update 
 /usr/local/bin/composer -n require 'drush/drush:^11' --update-with-dependencies --no-update 
 /usr/local/bin/composer -n require 'drupal/core-recommended:^10' 'drupal/core-composer-scaffold:^10' 'drupal/core-project-message:^10' --update-with-dependencies --no-update
 /usr/local/bin/composer -n require 'drupal/core-dev:^10' --dev --update-with-dependencies --no-update
