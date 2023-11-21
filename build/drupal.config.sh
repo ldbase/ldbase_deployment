@@ -24,4 +24,3 @@ cd /var/www/html/drupal/
 
 # Make request to host to bootstrap instance and purge error display
 wget -O - localhost > /dev/null
-wget -O - localhost/matomo > /dev/null
