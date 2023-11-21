@@ -45,7 +45,7 @@ then
 fi
 
 echo -e "\n\nFlushing system state\n\n"
-/var/www/html/drupal/vendor/bin/drupal node:access:rebuild
+/var/www/html/drupal/vendor/bin/drush php-eval 'node_access_rebuild()'
 /var/www/html/drupal/vendor/bin/drush cache:rebuild
 /var/www/html/drupal/vendor/bin/drush -vvv search-api:index
 
