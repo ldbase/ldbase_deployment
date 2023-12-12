@@ -17,9 +17,9 @@ then
   cp /ldbase_deployment/assets/block.robots.txt /var/www/html/drupal/web/robots.txt
 fi
 
-/var/www/html/drupal/vendor/bin/drupal ldbase:importTerms
+/var/www/html/drupal/vendor/bin/drush ldbase:import-taxonomy-terms
 cd /var/www/html/drupal/
-/var/www/html/drupal/vendor/bin/drupal node:access:rebuild
+/var/www/html/drupal/vendor/bin/drush php-eval 'node_access_rebuild()'
 /var/www/html/drupal/vendor/bin/drush cr
 
 # Make request to host to bootstrap instance and purge error display
