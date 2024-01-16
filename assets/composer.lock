@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "363effe3d1522fb2d5fbdaf197f9d398",
+    "content-hash": "137bb2d083fd12fadfb340d699d66352",
     "packages": [
         {
             "name": "algolia/places",
@@ -5100,17 +5100,17 @@
         },
         {
             "name": "drupal/schemadotorg",
-            "version": "1.0.0-alpha10",
+            "version": "1.0.0-alpha14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/schemadotorg.git",
-                "reference": "1.0.0-alpha10"
+                "reference": "1.0.0-alpha14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/schemadotorg-1.0.0-alpha10.zip",
-                "reference": "1.0.0-alpha10",
-                "shasum": "ab0c6e60a5ad19b4a68f8bd97ac9db0702cb40ff"
+                "url": "https://ftp.drupal.org/files/projects/schemadotorg-1.0.0-alpha14.zip",
+                "reference": "1.0.0-alpha14",
+                "shasum": "11a0dcf8be967c1dd30d0cd70771de95093e48ef"
             },
             "require": {
                 "drupal/core": "^10.1"
@@ -5122,8 +5122,10 @@
                 "drupal/cer": "^5.0",
                 "drupal/ckeditor5_embedded_content": "^1.0",
                 "drupal/config_rewrite": "^1.0",
+                "drupal/content_model_documentation": "^1.0",
                 "drupal/custom_field": "^2.0",
                 "drupal/devel": "^5.0",
+                "drupal/embed": "^1.0",
                 "drupal/entity_reference_override": "^2.0",
                 "drupal/entity_usage": "^2.0",
                 "drupal/epp": "^1.0",
@@ -5132,10 +5134,11 @@
                 "drupal/field_validation": "^3.0",
                 "drupal/focal_point": "^2.0",
                 "drupal/geolocation": "^3.0",
-                "drupal/inline_entity_form": "^2.0",
+                "drupal/inline_entity_form": "^1.0",
                 "drupal/jsonapi_extras": "^3.0",
                 "drupal/layout_paragraphs": "^2.0",
                 "drupal/link_attributes": "^2.0",
+                "drupal/markup": "^2.0",
                 "drupal/metatag": "^1.0",
                 "drupal/office_hours": "^1.0",
                 "drupal/paragraphs": "^1.0",
@@ -5162,8 +5165,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha10",
-                    "datestamp": "1697922600",
+                    "version": "1.0.0-alpha14",
+                    "datestamp": "1704816797",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -6708,12 +6711,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "5f53c95a99c07635b15c3bf285a0e53a43cdf8b0"
+                "reference": "0e096aa9ea2309f12022875cddc89821f3c7cc6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/5f53c95a99c07635b15c3bf285a0e53a43cdf8b0",
-                "reference": "5f53c95a99c07635b15c3bf285a0e53a43cdf8b0",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/0e096aa9ea2309f12022875cddc89821f3c7cc6d",
+                "reference": "0e096aa9ea2309f12022875cddc89821f3c7cc6d",
                 "shasum": ""
             },
             "default-branch": true,
@@ -6747,7 +6750,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2023-11-02T20:20:34+00:00"
+            "time": "2024-01-12T21:43:26+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -7833,12 +7836,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "b21df7fd75e565cd606a8fabda39ef0a5161a879"
+                "reference": "22300bae16b91952381f797e71f94287012b634f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/b21df7fd75e565cd606a8fabda39ef0a5161a879",
-                "reference": "b21df7fd75e565cd606a8fabda39ef0a5161a879",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/22300bae16b91952381f797e71f94287012b634f",
+                "reference": "22300bae16b91952381f797e71f94287012b634f",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7873,7 +7876,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2024-01-11T19:00:31+00:00"
+            "time": "2024-01-16T15:50:49+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -7881,12 +7884,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "861926443d2a166e8ca0fda260712a54799c5858"
+                "reference": "29fba4bdcc30dba0afdff6b1c540f9e2cb99c520"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/861926443d2a166e8ca0fda260712a54799c5858",
-                "reference": "861926443d2a166e8ca0fda260712a54799c5858",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/29fba4bdcc30dba0afdff6b1c540f9e2cb99c520",
+                "reference": "29fba4bdcc30dba0afdff6b1c540f9e2cb99c520",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7928,7 +7931,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2023-12-12T21:03:35+00:00"
+            "time": "2024-01-12T22:12:38+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
@@ -17261,6 +17264,7 @@
         "drupal/mass_contact": 10,
         "drupal/rules": 15,
         "drupal/s3fs": 15,
+        "drupal/schemadotorg": 15,
         "drupal/webform": 5,
         "drupal/webform_views": 15,
         "fsulib/doi_crossref": 20,
