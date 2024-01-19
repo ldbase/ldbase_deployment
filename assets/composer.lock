@@ -7884,12 +7884,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "29fba4bdcc30dba0afdff6b1c540f9e2cb99c520"
+                "reference": "9e38c279dc900a9a67561df8dcd73ff5b928e9f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/29fba4bdcc30dba0afdff6b1c540f9e2cb99c520",
-                "reference": "29fba4bdcc30dba0afdff6b1c540f9e2cb99c520",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/9e38c279dc900a9a67561df8dcd73ff5b928e9f2",
+                "reference": "9e38c279dc900a9a67561df8dcd73ff5b928e9f2",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7931,7 +7931,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2024-01-12T22:12:38+00:00"
+            "time": "2024-01-19T21:05:00+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
