@@ -6,7 +6,8 @@ composer create-project drupal-composer/drupal-project:9.x-dev drupal --stabilit
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.* .
-composer --no-interaction install 
+composer --no-interaction config --no-plugins allow-plugins.phpstan/extension-installer true >> /root/install.log 2>&1
+composer --no-interaction install >> /root/install.log 2>&1
 
 cd /var/www/html/drupal
 mkdir -p private_files
