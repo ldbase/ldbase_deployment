@@ -119,6 +119,8 @@
         "drupal/paragraphs": "^1.11",
         "drupal/pathauto": "^1.6",
         "drupal/range": "^1.1",
+        "drupal/recaptcha": "^3.2",
+        "drupal/recaptcha_v3": "^2.0",
         "drupal/redirect": "^1.5",
         "drupal/rules": "^3.0@alpha",
         "drupal/s3fs": "^3.0@alpha",
