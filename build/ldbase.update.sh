@@ -8,6 +8,7 @@ cd /ldbase_deployment; git pull
 cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.* .
+export COMPOSER_ALLOW_SUPERUSER=1
 composer install --no-interaction
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drush cache:rebuild
