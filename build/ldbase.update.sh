@@ -32,6 +32,11 @@ echo -e "\n\nOverriding imported configuration with environment-dependent settin
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_api_endpoint "${CROSSREF_ENDPOINT}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_username "${CROSSREF_USERNAME}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "doi_crossref.settings" doi_crossref_password "${CROSSREF_PASSWORD}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "recaptcha.settings" site_key "${RECAPTCHA_SITEKEY}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "recaptcha.settings" secret_key "${RECAPTCHA_SECRETKEY}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" site_key "${RECAPTCHAV3_SITEKEY}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" secret_key "${RECAPTCHAV3_SECRETKEY}" -y
+
 if [ "$VAGRANT" = true ]
 then 
   /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y

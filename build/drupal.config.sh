@@ -9,6 +9,10 @@ if [ "$VAGRANT" = true ]
 then 
   /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" use_customhost 1 -y
   /var/www/html/drupal/vendor/bin/drush config:set "s3fs.settings" hostname '127.0.0.1:9000' -y
+  /var/www/html/drupal/vendor/bin/drush config:set "recaptcha.settings" site_key "${RECAPTCHA_SITEKEY}" -y
+  /var/www/html/drupal/vendor/bin/drush config:set "recaptcha.settings" secret_key "${RECAPTCHA_SECRETKEY}" -y
+  /var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" site_key "${RECAPTCHAV3_SITEKEY}" -y
+  /var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" secret_key "${RECAPTCHAV3_SECRETKEY}" -y
 fi
 
 if [[ "$DATABASE_NAME" != 'ldbase_prod' ]]
