@@ -9,6 +9,7 @@ cd /var/www/html/drupal
 rm composer.*
 cp /ldbase_deployment/assets/composer.* .
 export COMPOSER_ALLOW_SUPERUSER=1
+composer --no-interaction config --global --auth github-oauth.github.com $LDBASE_GITHUB_TOKEN
 composer install --no-interaction
 /var/www/html/drupal/vendor/bin/drush updatedb -y
 /var/www/html/drupal/vendor/bin/drush cache:rebuild
@@ -36,6 +37,7 @@ echo -e "\n\nOverriding imported configuration with environment-dependent settin
 /var/www/html/drupal/vendor/bin/drush config:set "recaptcha.settings" secret_key "${RECAPTCHA_SECRETKEY}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" site_key "${RECAPTCHAV3_SITEKEY}" -y
 /var/www/html/drupal/vendor/bin/drush config:set "recaptcha_v3.settings" secret_key "${RECAPTCHAV3_SECRETKEY}" -y
+/var/www/html/drupal/vendor/bin/drush config:set "simple_sitemap.settings" base_url "${LDBASE_SITE_URI}" -y
 
 if [ "$VAGRANT" = true ]
 then 
