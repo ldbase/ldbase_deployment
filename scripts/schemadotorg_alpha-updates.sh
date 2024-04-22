@@ -4,14 +4,17 @@
 # see https://www.drupal.org/project/schemadotorg for information
 # regarding updates between alpha releases
 #
+source /etc/environment
 
 cd /var/www/html/drupal
+export COMPOSER_ALLOW_SUPERUSER=1
+composer --no-interaction config --global --auth github-oauth.github.com $LDBASE_GITHUB_TOKEN
 
 echo -e "Beginning schemadotorg update\n\nUninstall schemadotorg and all sub-modules \n\n"
 /var/www/html/drupal/vendor/bin/drush pmu schemadotorg -y
 
 echo -e "\n\nUpdate schemadotorg module. \n\n"
-/usr/local/bin/composer -n require 'drupal/schemadotorg:^1.0@alpha'
+composer -n require 'drupal/schemadotorg:^1.0@alpha'
 
 echo -e "\n\nEnable schemadotorg and all sub-modules.\n\n"
 /var/www/html/drupal/vendor/bin/drush en schemadotorg schemadotorg_descriptions schemadotorg_jsonld schemadotorg_jsonld_breadcrumb schemadotorg_mapping_set schemadotorg_media schemadotorg_paragraphs schemadotorg_report schemadotorg_simple_sitemap schemadotorg_subtype schemadotorg_taxonomy schemadotorg_ui
