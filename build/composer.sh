@@ -17,5 +17,3 @@ chmod 0755 /usr/local/bin/composer
 /usr/local/bin/composer global config --no-plugins allow-plugins.zaporylie/composer-drupal-optimizations true
 /usr/local/bin/composer --no-interaction global require zaporylie/composer-drupal-optimizations
 /usr/local/bin/composer --no-interaction config --global --auth github-oauth.github.com $LDBASE_GITHUB_TOKEN
-
-
