@@ -12,6 +12,8 @@ if test $? -ne 0; then
 fi
 
 cp composer.phar /usr/local/bin/composer
+rm /root/composer.phar*
+
 chown root:root /usr/local/bin/composer
 chmod 0755 /usr/local/bin/composer
 /usr/local/bin/composer global config --no-plugins allow-plugins.zaporylie/composer-drupal-optimizations true
