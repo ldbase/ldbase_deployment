@@ -17,5 +17,5 @@ apt -y upgrade
 apt -y install docker.io mysql-client apache2 unzip php php-dev php-gd php-soap php-mysql php-mbstring php-zip php-curl php-intl php-xml
 service apache2 restart
 
-docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root mysql:5.7
+docker run -d -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root mysql:8.0.36
 sleep 30
