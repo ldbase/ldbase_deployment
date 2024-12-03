@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.define 'ldbase_vagrant' do |t|
     config.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--cableconnected1", "on"]
     end
   end
   config.trigger.before :halt do |trigger|
