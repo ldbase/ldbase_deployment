@@ -7723,12 +7723,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "395caae4b0a0bd0f965511016fa80b62f464fa4e"
+                "reference": "6fa63c6917e5688eabd6023b9a1eb8e13c4ca2b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/395caae4b0a0bd0f965511016fa80b62f464fa4e",
-                "reference": "395caae4b0a0bd0f965511016fa80b62f464fa4e",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/6fa63c6917e5688eabd6023b9a1eb8e13c4ca2b4",
+                "reference": "6fa63c6917e5688eabd6023b9a1eb8e13c4ca2b4",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7763,7 +7763,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2024-11-04T16:14:15+00:00"
+            "time": "2024-12-02T21:14:02+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -7874,12 +7874,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_handlers.git",
-                "reference": "62802c0be323051176aa7ef31b0135a16935810c"
+                "reference": "9e784e3584f427e8ae34d523f6bf0f3101c48b54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/62802c0be323051176aa7ef31b0135a16935810c",
-                "reference": "62802c0be323051176aa7ef31b0135a16935810c",
+                "url": "https://api.github.com/repos/ldbase/ldbase_handlers/zipball/9e784e3584f427e8ae34d523f6bf0f3101c48b54",
+                "reference": "9e784e3584f427e8ae34d523f6bf0f3101c48b54",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7921,7 +7921,7 @@
                 "source": "https://github.com/ldbase/ldbase_handlers/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_handlers/issues"
             },
-            "time": "2024-11-04T19:18:42+00:00"
+            "time": "2024-12-09T18:40:12+00:00"
         },
         {
             "name": "ldbase/ldbase_new_account",
