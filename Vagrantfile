@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/mantic64"
+  config.vm.box = "bento/ubuntu-24.04"
   config.vm.provision :shell, 
   path: "build/vagrant.sh",
   env: {
@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.define 'ldbase_vagrant' do |t|
     config.vm.provider :virtualbox do |v|
       v.customize ["modifyvm", :id, "--memory", 8192]
+      v.customize ["modifyvm", :id, "--cableconnected1", "on"]
     end
   end
   config.trigger.before :halt do |trigger|
