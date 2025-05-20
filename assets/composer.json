@@ -103,6 +103,7 @@
         "drupal/field_group": "^3.0",
         "drupal/flag": "4.0-beta5",
         "drupal/flag_anon": "^1.0",
+        "drupal/flood_control": "^3.0",
         "drupal/fontawesome": "^2.15",
         "drupal/group": "^1.0@RC",
         "drupal/health_check": "^2.0",

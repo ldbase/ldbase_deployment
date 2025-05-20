@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74ebaa3bb07116e58fc0f2137b3bc6e9",
+    "content-hash": "41cdb4647fe00a1152e657f2350ba228",
     "packages": [
         {
             "name": "algolia/places",
@@ -3746,6 +3746,63 @@
             }
         },
         {
+            "name": "drupal/flood_control",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flood_control.git",
+                "reference": "3.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flood_control-3.0.0.zip",
+                "reference": "3.0.0",
+                "shasum": "f453629f547a30670f9d5394b925b1895bb68615"
+            },
+            "require": {
+                "drupal/core": "^10.2 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0",
+                    "datestamp": "1727430687",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=9"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "batigolix",
+                    "homepage": "https://www.drupal.org/user/22175"
+                },
+                {
+                    "name": "dave reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "fabianderijk",
+                    "homepage": "https://www.drupal.org/user/278745"
+                }
+            ],
+            "description": "Provides administration possibilities for hidden flood control variables",
+            "homepage": "https://www.drupal.org/project/flood_control",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flood_control"
+            }
+        },
+        {
             "name": "drupal/fontawesome",
             "version": "2.26.0",
             "source": {
@@ -6691,12 +6748,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "b54d13f7aefcb2370d8fe37d63f0942db81e6ad5"
+                "reference": "e5162fbc0bfd7f5e734ffac501583234f0593a55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/b54d13f7aefcb2370d8fe37d63f0942db81e6ad5",
-                "reference": "b54d13f7aefcb2370d8fe37d63f0942db81e6ad5",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/e5162fbc0bfd7f5e734ffac501583234f0593a55",
+                "reference": "e5162fbc0bfd7f5e734ffac501583234f0593a55",
                 "shasum": ""
             },
             "default-branch": true,
@@ -6730,7 +6787,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2025-05-05T20:46:55+00:00"
+            "time": "2025-05-19T18:25:46+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -7717,12 +7774,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "8e2a1451200545a3b244bfa9b10d0a1c5b4fdf3c"
+                "reference": "52468d40b1296e7727398f66e28988a01d39df70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/8e2a1451200545a3b244bfa9b10d0a1c5b4fdf3c",
-                "reference": "8e2a1451200545a3b244bfa9b10d0a1c5b4fdf3c",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/52468d40b1296e7727398f66e28988a01d39df70",
+                "reference": "52468d40b1296e7727398f66e28988a01d39df70",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7757,7 +7814,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2025-05-05T20:48:46+00:00"
+            "time": "2025-05-13T18:12:56+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -7765,12 +7822,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_content.git",
-                "reference": "b9a8eac9ea8731d863575151911fb5f7ec6f733e"
+                "reference": "dec56cb75b44f7e7d356647debf085c94c021876"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/b9a8eac9ea8731d863575151911fb5f7ec6f733e",
-                "reference": "b9a8eac9ea8731d863575151911fb5f7ec6f733e",
+                "url": "https://api.github.com/repos/ldbase/ldbase_content/zipball/dec56cb75b44f7e7d356647debf085c94c021876",
+                "reference": "dec56cb75b44f7e7d356647debf085c94c021876",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7812,7 +7869,7 @@
                 "source": "https://github.com/ldbase/ldbase_content/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_content/issues"
             },
-            "time": "2025-05-06T14:04:15+00:00"
+            "time": "2025-05-19T18:23:13+00:00"
         },
         {
             "name": "ldbase/ldbase_embargoes",
