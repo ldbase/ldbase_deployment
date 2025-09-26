@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41cdb4647fe00a1152e657f2350ba228",
+    "content-hash": "23452b31e7d04bb0c2e28d4361624832",
     "packages": [
         {
             "name": "algolia/places",
@@ -7778,19 +7778,18 @@
         },
         {
             "name": "ldbase/ldbase_config",
-            "version": "dev-master",
+            "version": "dev-group_refactor",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "7d955aa65ed8fbe5e010cd0304240c3f18ec42cd"
+                "reference": "d5c563b12e9726b09c569e7efae50206509bb64b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/7d955aa65ed8fbe5e010cd0304240c3f18ec42cd",
-                "reference": "7d955aa65ed8fbe5e010cd0304240c3f18ec42cd",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/d5c563b12e9726b09c569e7efae50206509bb64b",
+                "reference": "d5c563b12e9726b09c569e7efae50206509bb64b",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-library",
             "license": [
                 "GPL-2.0+"
@@ -7819,10 +7818,10 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_config/tree/master",
+                "source": "https://github.com/ldbase/ldbase_config/tree/group_refactor",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2025-09-12T20:41:53+00:00"
+            "time": "2025-09-23T19:51:37+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
@@ -7929,7 +7928,7 @@
         },
         {
             "name": "ldbase/ldbase_handlers",
-            "version": "dev-master",
+            "version": "dev-group_refactor",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_handlers.git",
@@ -7941,7 +7940,6 @@
                 "reference": "1125a88f911cce935b32c50ba800284607170e63",
                 "shasum": ""
             },
-            "default-branch": true,
             "type": "drupal-custom-module",
             "extra": {
                 "drush": {
@@ -7977,7 +7975,7 @@
                 "LDbase"
             ],
             "support": {
-                "source": "https://github.com/ldbase/ldbase_handlers/tree/master",
+                "source": "https://github.com/ldbase/ldbase_handlers/tree/group_refactor",
                 "issues": "https://github.com/ldbase/ldbase_handlers/issues"
             },
             "time": "2025-08-22T20:33:47+00:00"
