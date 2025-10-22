@@ -205,7 +205,7 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "php -r \"if (getenv('ENVIRONMENT') != 'prod') { copy('/ldbase_deployment/assets/BingSiteAuth.xml', '/var/www/html/drupal/web/BingSiteAuth.xml'); }\""
+            "php -r \"if (getenv('DATABASE_NAME') == 'ldbase_test') { copy('/ldbase_deployment/assets/BingSiteAuth.xml', '/var/www/html/drupal/web/BingSiteAuth.xml'); }\""
         ]
     },
     "extra": {
