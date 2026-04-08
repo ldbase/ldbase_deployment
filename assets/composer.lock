@@ -6768,12 +6768,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fsulib/portcullis.git",
-                "reference": "e07b3416fd3c742f15d684bd6b3a13a371e421a4"
+                "reference": "086381661faed97d64f500944bee4ecb4e4439bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/e07b3416fd3c742f15d684bd6b3a13a371e421a4",
-                "reference": "e07b3416fd3c742f15d684bd6b3a13a371e421a4",
+                "url": "https://api.github.com/repos/fsulib/portcullis/zipball/086381661faed97d64f500944bee4ecb4e4439bc",
+                "reference": "086381661faed97d64f500944bee4ecb4e4439bc",
                 "shasum": ""
             },
             "default-branch": true,
@@ -6807,7 +6807,7 @@
                 "source": "https://github.com/fsulib/portcullis/tree/master",
                 "issues": "https://github.com/fsulib/portcullis/issues"
             },
-            "time": "2026-03-25T18:31:20+00:00"
+            "time": "2026-03-27T18:09:33+00:00"
         },
         {
             "name": "fsulib/tombstones",
@@ -7794,12 +7794,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ldbase/ldbase_config.git",
-                "reference": "732fcd23cbb3f8e4b7de223f5b651861773f62df"
+                "reference": "09fdaae4366fd6cd025fee7ef53cf91fab4d5de8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/732fcd23cbb3f8e4b7de223f5b651861773f62df",
-                "reference": "732fcd23cbb3f8e4b7de223f5b651861773f62df",
+                "url": "https://api.github.com/repos/ldbase/ldbase_config/zipball/09fdaae4366fd6cd025fee7ef53cf91fab4d5de8",
+                "reference": "09fdaae4366fd6cd025fee7ef53cf91fab4d5de8",
                 "shasum": ""
             },
             "default-branch": true,
@@ -7834,7 +7834,7 @@
                 "source": "https://github.com/ldbase/ldbase_config/tree/master",
                 "issues": "https://github.com/ldbase/ldbase_config/issues"
             },
-            "time": "2026-03-12T21:08:18+00:00"
+            "time": "2026-04-08T15:44:22+00:00"
         },
         {
             "name": "ldbase/ldbase_content",
